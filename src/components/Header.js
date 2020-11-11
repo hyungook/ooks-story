@@ -1,4 +1,8 @@
 import React from 'react'
+import styled from 'styled-components';
+import '../styles/reset.css';
+import '../styles/Header.css'
+
 
 class Header extends React.Component {
     render() {
@@ -13,7 +17,7 @@ class Header extends React.Component {
                         </li>
                     </ul>
                     <nav className={"main__nav"}>
-                        <div>
+                        <div className={"main__nav__wrap"}>
                             <a href={""}>
                                 <button>
                                     ABOUT
@@ -26,18 +30,19 @@ class Header extends React.Component {
                             </a>
                             <a href={""}>
                                 <button>
-                                    ETC
+                                    TOY
                                 </button>
                             </a>
                         </div>
                     </nav>
-                </section>
-                <section className={"section__toy"}>
-                    <button className={"toy__button"}>
-                        TOY PROJECT
-                    </button>
+                    <div className={"name__box"}>
+                        <button className={"toy__button"}>
+                            HYUNGOOK OH
+                        </button>
+                    </div>
                 </section>
             </div>
+            <div className={"line"}></div>
         </header>
     }
 }

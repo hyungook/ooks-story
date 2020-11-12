@@ -31,17 +31,17 @@ class Header extends React.Component {
                     <nav className={"main__nav"}>
                         <div className={"main__nav__wrap"}>
                             <a href={""}>
-                                <button>
+                                <button className={"nav__btn"}>
                                     ABOUT
                                 </button>
                             </a>
                             <a href={""}>
-                                <button>
+                                <button className={"nav__btn"}>
                                     WORK
                                 </button>
                             </a>
                             <a href={""}>
-                                <button>
+                                <button className={"nav__btn"}>
                                     TOY
                                 </button>
                             </a>

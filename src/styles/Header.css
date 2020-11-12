@@ -90,7 +90,7 @@ header {
   /* background-color: blue; */
 }
 
-.main__nav__wrap a button {
+.nav__btn {
   font-family: "Squada One", cursive;
   font-size: 200px;
   font-weight: 400;
@@ -99,6 +99,13 @@ header {
   text-transform: uppercase;
   color: #bbbbbb;
 }
+.nav__btn:hover,
+.nav__btn:focus {
+  color: #fff;
+  letter-spacing: 18px;
+  transition: all 300ms ease;
+}
+
 .name__box {
   display: flex;
   justify-content: center;

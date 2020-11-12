@@ -9,13 +9,25 @@ class Header extends React.Component {
         return <header>
             <div className={"header__wrap"}>
                 <section className={"section__header"}>
-                    <ul className={"header__ul"}>
-                        <li>
-                            <a href={"#"}>
-                                GitHub
-                            </a>
-                        </li>
-                    </ul>
+                    <div className={"header__top"}>
+                        <ul className={"header__ul"}>
+                            <li>
+                                <a href={"#"}>
+                                    Notion
+                                </a>
+                            </li>
+                            <li>
+                                <a href={"#"}>
+                                    GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a href={"#"}>
+                                    S N S
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <nav className={"main__nav"}>
                         <div className={"main__nav__wrap"}>
                             <a href={""}>
@@ -34,15 +46,19 @@ class Header extends React.Component {
                                 </button>
                             </a>
                         </div>
-                    </nav>
-                    <div className={"name__box"}>
-                        <button className={"toy__button"}>
-                            HYUNGOOK OH
-                        </button>
+                    <div className={"line"}></div>
+                    <div className={"button__back__box"}>
+                        <div className={"back__box left"}></div>
+                        <div className={"back__box right"}></div>
                     </div>
+                    </nav>
                 </section>
+                <div className={"name__box"}>
+                    <button className={"toy__button"}>
+                        HYUNGOOK OH
+                    </button>
+                </div>
             </div>
-            <div className={"line"}></div>
         </header>
     }
 }

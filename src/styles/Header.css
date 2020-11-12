@@ -1,67 +1,136 @@
 @charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Squada+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  /* text-align: center; */
+}
 
 .header__wrap {
+  position: relative;
   width: 100%;
   height: 100vh;
   background-color: #111;
 }
-
 .section__header {
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 
-.header__ul {
+.header__top {
   width: 100%;
-
+  height: 16vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.header__ul {
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 
   /* background-color: tomato; */
 }
 .header__ul li {
-  padding: 1.6rem 2rem;
+  padding: 0.4rem 1.4rem;
+
+  /* background-color: teal; */
 }
 .header__ul li a {
   color: #fff;
   text-decoration: none;
-  /* font-family: Noto Sans KR,sans-serif; */
-  font-size: 1.1rem;
-  /* line-height: 1.9; */
+  font-family: Noto Sans KR, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.9;
   color: #777;
   font-weight: 300;
   white-space: pre-line;
 }
-
 .main__nav {
+  position: relative;
   width: 100%;
-  height: auto;
-}
-.main__nav__wrap {
+  height: 64vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  /* background-color: red; */
+}
+.line {
+  position: absolute;
+  top: 0;
+  /* height: 65vh; */
+  height: 100%;
+  width: 1px;
+  left: 50%;
+
+  background-color: #fff;
+  opacity: 0.1;
+}
+
+.main__nav__wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+
+  /* background-color: blue; */
 }
 
 .main__nav__wrap a button {
-  color: #fff;
-
-  font-size: 100px;
+  font-family: "Squada One", cursive;
+  font-size: 200px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: #bbbbbb;
 }
 .name__box {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: blue;
 }
 .toy__button {
+  font-family: Squada One, sans-serif;
+  font-weight: 400;
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 54px;
   padding: 0 0.2em;
   bottom: 60px;
   color: #777;
-  /* border-bottom: 1px solid #296dff; */
+  border-bottom: 1px solid #296dff;
   line-height: 1.2;
+
+  /* background-color: yellow; */
+}
+
+.button__back__box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.back__box {
+  width: 300px;
+  height: 100%;
+  background-color: #222e3e;
 }

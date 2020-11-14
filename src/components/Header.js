@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
+// import Parallax from 'parallax-js'
 import '../styles/reset.css';
 import '../styles/Header.css'
+import {  } from './Header__styled';
 
 
 class Header extends React.Component {
@@ -41,18 +43,18 @@ class Header extends React.Component {
                 //mouseover
                 headerUl.addEventListener('mouseover', () => {
                         cursor.style.borderRadius = `0`;
-                        cursor.style.border = `none`;
-                        cursor.style.backgroundColor = `#2966ff6d`;  
+                        cursor.style.border = `1px solid #ffffff`;
+                        cursor.style.backgroundColor = `#2966ff20`;  
                 })
                 mainNavWrap.addEventListener('mouseover', () => {
                     cursor.style.borderRadius = `0`;  
-                    cursor.style.border = `none`;
-                    cursor.style.backgroundColor = `#2966ff6d`;
+                    cursor.style.border = `1px solid #ffffff`;
+                    cursor.style.backgroundColor = `#2966ff20`;
                 })
                 nameBox.addEventListener('mouseover', () => {
                     cursor.style.borderRadius = `0`;  
-                    cursor.style.border = `none`;
-                    cursor.style.backgroundColor = `#2966ff6d`;
+                    cursor.style.border = `1px solid #ffffff`;
+                    cursor.style.backgroundColor = `#2966ff20`;
                 })
                 //mouseout
                 headerUl.addEventListener('mouseout', () => {
@@ -71,6 +73,10 @@ class Header extends React.Component {
                     cursor.style.background = `none`;
                 })
         })
+
+
+        // let scene = document.querySelector('.scene');
+        // let parallaxInstance = new Parallax(scene);
 
     }
 
@@ -112,7 +118,7 @@ class Header extends React.Component {
                                 </a>
                                 <a href={""} className={"nav__a__3"}>
                                     <button className={"nav__btn"}>
-                                        TOY
+                                        TOY PROJ
                                     </button>
                                 </a>
                             </div>

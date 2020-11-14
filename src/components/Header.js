@@ -40,17 +40,17 @@ class Header extends React.Component {
                     <div className={"header__top"}>
                         <ul className={"header__ul"}>
                             <li>
-                                <a href={"#"}>
+                                <a href={"#"} className={"header__a"}>
                                     Notion
                                 </a>
                             </li>
                             <li>
-                                <a href={"#"}>
+                                <a href={"#"} className={"header__a"}>
                                     GitHub
                                 </a>
                             </li>
                             <li>
-                                <a href={"#"}>
+                                <a href={"#"} className={"header__a"}>
                                     S N S
                                 </a>
                             </li>

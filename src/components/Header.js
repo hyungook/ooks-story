@@ -5,6 +5,34 @@ import '../styles/Header.css'
 
 
 class Header extends React.Component {
+
+
+    // Cursor Effect
+    componentDidMount() {
+
+        let cursor = document.querySelector('.cursor');
+        let cursor2 = document.querySelector('.cursor2');
+        const cursorRect = cursor.getBoundingClientRect();
+        const cursor2Rect = cursor2.getBoundingClientRect();
+
+        const cursorHalfWidth = cursorRect.width / 2;
+        const cursorHalfHeight = cursorRect.height / 2;
+
+        const cursor2HalfWidth = cursor2Rect.width / 2;
+        const cursor2HalfHeight = cursor2Rect.height / 2;
+
+        document.addEventListener("mousemove", (e) => {
+            // cursor.styled.cssText = cursor2.styled.cssText = "left" + e.clientX + "px; top:" + e.clientY + "px;";
+            const y = e.clientY;
+            const x = e.clientX;
+
+            cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${
+                y - cursorHalfHeight}px)`;
+            cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${
+                y - cursor2HalfHeight}px)`;
+        })     
+    }
+
     render() {
         return <header>
             <div className={"header__wrap"}>
@@ -59,6 +87,8 @@ class Header extends React.Component {
                     </button>
                 </div>
             </div>
+            <div className={"cursor"}></div>
+            <div className={"cursor2"}></div>
         </header>
     }
 }

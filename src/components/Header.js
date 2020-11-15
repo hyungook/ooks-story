@@ -3,7 +3,9 @@ import styled from 'styled-components';
 // import Parallax from 'parallax-js'
 import '../styles/reset.css';
 import '../styles/Header.css'
-import {  } from './Header__styled';
+import { Container, HeaderWrap, Cursor, Cursor2, HeaderTop, HeaderUl,
+HeaderLi, HeaderA, Section, MainNav, MainNavWrap, MainNavWrapA, NavBtn,
+NameBox, ToyBtn, Line, ButtonBackBox, BackBox } from './Header__styled';
 
 
 class Header extends React.Component {
@@ -82,64 +84,64 @@ class Header extends React.Component {
 
     render() {
         return <header>
-            <div className={"container"}>
-                <div className={"header__wrap"}>
-                        <div className={"header__top"}>
-                            <ul className={"header__ul"}>
-                                <li>
-                                    <a href={"#"} className={"header__a"}>
+            <Container>
+                <HeaderWrap>
+                        <HeaderTop>
+                            <HeaderUl className={"header__ul"}>
+                                <HeaderLi>
+                                    <HeaderA href={"#"} className={"header__a"}>
                                         Notion
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href={"#"} className={"header__a"}>
+                                    </HeaderA>
+                                </HeaderLi>
+                                <HeaderLi>
+                                    <HeaderA href={"#"} className={"header__a"}>
                                         GitHub
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href={"#"} className={"header__a"}>
+                                    </HeaderA>
+                                </HeaderLi>
+                                <HeaderLi>
+                                    <HeaderA href={"#"} className={"header__a"}>
                                         S N S
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    <section className={"section"}>
-                        <nav className={"main__nav"}>
-                            <div className={"main__nav__wrap"}>
-                                <a href={""} className={"nav__a__1"}>
-                                    <button className={"nav__btn"}>
+                                    </HeaderA>
+                                </HeaderLi>
+                            </HeaderUl>
+                        </HeaderTop>
+                    <Section>
+                        <MainNav>
+                            <MainNavWrap className={"main__nav__wrap"}>
+                                <MainNavWrapA href={""} className={"nav__a__1"}>
+                                    <NavBtn className={"nav__btn"}>
                                         ABOUT
-                                    </button>
-                                </a>
-                                <a href={""} className={"nav__a__2"}>
-                                    <button className={"nav__btn"}>
+                                    </NavBtn>
+                                </MainNavWrapA>
+                                <MainNavWrapA href={""} className={"nav__a__2"}>
+                                    <NavBtn className={"nav__btn"}>
                                         WORK
-                                    </button>
-                                </a>
-                                <a href={""} className={"nav__a__3"}>
-                                    <button className={"nav__btn"}>
+                                    </NavBtn>
+                                </MainNavWrapA>
+                                <MainNavWrapA href={""} className={"nav__a__3"}>
+                                    <NavBtn className={"nav__btn"}>
                                         TOY PROJ
-                                    </button>
-                                </a>
-                            </div>
-                            <div className={"button__back__box"}>
-                                <div className={"back__box left"}></div>
-                                <div className={"back__box right"}></div>
-                            </div>
-                        </nav>
-                    </section>
-                    <div className={"name__box"}>
-                        <button className={"toy__button"}>
+                                    </NavBtn>
+                                </MainNavWrapA>
+                            </MainNavWrap>
+                        </MainNav>
+                        <ButtonBackBox className={"button__back__box"}>
+                            <BackBox className={"back__box"}></BackBox>
+                            <BackBox className={"back__box"}></BackBox>
+                        </ButtonBackBox>
+                    </Section>
+                    <NameBox className={"name__box"}>
+                        <ToyBtn className={"toy__button"}>
                             HYUNGOOK OH
-                        </button>
-                    </div>
-                    <div className={"line"}>
+                        </ToyBtn>
+                    </NameBox>
+                    <Line className={"line"}>
                         <span></span>
-                    </div>
-                </div>
-                <div className={"cursor"}></div>
-                <div className={"cursor2"}></div>
-            </div>
+                    </Line>
+                </HeaderWrap>
+                <Cursor className={"cursor"}></Cursor>
+                <Cursor2 className={"cursor2"}></Cursor2>
+            </Container>
         </header>
     }
 }

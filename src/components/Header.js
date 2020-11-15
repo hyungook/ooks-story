@@ -80,6 +80,42 @@ class Header extends React.Component {
         // let scene = document.querySelector('.scene');
         // let parallaxInstance = new Parallax(scene);
 
+
+        const MainNavWrap = document.querySelector('.main__nav__wrap');
+        const navA__1 = document.querySelector('.nav__a__1');
+        const navA__2 = document.querySelector('.nav__a__2');
+        const navA__3 = document.querySelector('.nav__a__3');
+
+
+        navA__1.addEventListener('mouseover', () => {
+            // navA__2.style.transform = `translateX(60%);`;
+            // navA__3.style.transform = `translateX(60%);`;
+            navA__2.style.opacity = `0.3`;
+            navA__3.style.opacity = `0.3`;
+        })
+        navA__1.addEventListener('mouseout', () => {
+            // navA__2.style.transform = `translate(40%, 0);`;
+            // navA__3.style.transform = `translate(40%, 0);`;
+            navA__2.style.opacity = `1.0`;
+            navA__3.style.opacity = `1.0`;
+        })
+        navA__2.addEventListener('mouseover', () => {
+            navA__1.style.opacity = `0.3`;
+            navA__3.style.opacity = `0.3`;
+        })
+        navA__2.addEventListener('mouseout', () => {
+            navA__1.style.opacity = `1.0`;
+            navA__3.style.opacity = `1.0`;
+        })
+        navA__3.addEventListener('mouseover', () => {
+            navA__1.style.opacity = `0.3`;
+            navA__2.style.opacity = `0.3`;
+        })
+        navA__3.addEventListener('mouseout', () => {
+            navA__1.style.opacity = `1.0`;
+            navA__2.style.opacity = `1.0`;
+        })
+
     }
 
     render() {

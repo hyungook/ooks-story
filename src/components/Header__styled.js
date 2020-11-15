@@ -6,6 +6,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     position: relative;
+    box-sizing: border-box;
 
     overflow: hidden;
 `;
@@ -144,7 +145,6 @@ export const HeaderA = styled.a`
 
     :focus {
         color: #fff;
-        padding: 0.5rem 0;
     }
 
     @media only screen and (min-width: 768px) {
@@ -288,24 +288,32 @@ export const MainNavWrapA = styled.a`
         // justify-content: left;
     }
 
-
     @media only screen and (min-width: 1024px) {
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
         transition-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
     
+        // :hover ~ a {
+        //     opacity: 0.4;
+        // }
+
         :nth-child(1) {
             transform: translate(-10%, 0);
         }
         :nth-child(1):hover {
-            transform: translate(10%, 0);
+            transform: translate(8%, 0);
+        }
+        :nth-child(2) {
+            transform: translate(20%, 0);
+
         }
         :nth-child(3) {
-            transform: translate(10%, 0);
+            transform: translate(30%, 0);
             transition-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
         }
         :nth-child(3):hover {
-            transform: translate(-10%, 0);
+            transform: translate(-4%, 0);
         }
+        
     }
 `;
 export const NavBtn = styled.button`
@@ -342,7 +350,7 @@ export const NavBtn = styled.button`
     @media only screen and (min-width: 1025px) {
         padding: 0;
         color: #bbbbbb;
-        font-size: 160px;
+        font-size: 200px;
         line-height: 0.8;
         text-transform: uppercase;
         cursor: none;
@@ -351,6 +359,7 @@ export const NavBtn = styled.button`
         :hover {
             color: #fff;
             letter-spacing: 10px;
+            font-size: 210px;
         }
         :focus {
             color: #fff;

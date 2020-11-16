@@ -73,6 +73,7 @@ export const MainNavWrap = styled.div`
     
     
     @media only screen and (min-width: 1024px) {
+
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -115,7 +116,7 @@ export const MainNavWrapA = styled.a`
             transition-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
         }
         :nth-child(3):hover {
-            transform: translate(-4%, 0);
+            transform: translate(-1%, 0);
         }
         
     }
@@ -162,7 +163,7 @@ export const NavBtn = styled.button`
     
         :hover {
             color: #fff;
-            letter-spacing: 10px;
+            letter-spacing: 6px;
             font-size: 200px;
         }
         :focus {

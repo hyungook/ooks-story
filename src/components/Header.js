@@ -3,8 +3,8 @@ import styled from 'styled-components';
 // import Parallax from 'parallax-js'
 import '../styles/reset.css';
 import '../styles/Header.css'
-import { Header__Wrap, Container, HeaderWrap, Cursor, Cursor2, HeaderTop, HeaderUl,
-HeaderLi, HeaderA } from './Header__styled';
+import { Header__Wrap, Container, HeaderWrap, Cursor, Cursor2,
+    HeaderTop, HeaderUl, HeaderLi, HeaderA } from './Header__styled';
 
 
 class Header extends React.Component {
@@ -43,9 +43,9 @@ class Header extends React.Component {
 
                 //mouseover
                 headerUl.addEventListener('mouseover', () => {
-                        cursor.style.borderRadius = `0`;
-                        cursor.style.border = `1px solid #ffffff`;
-                        cursor.style.backgroundColor = `#2966ff20`;  
+                    cursor.style.borderRadius = `0`;
+                    cursor.style.border = `1px solid #ffffff`;
+                    cursor.style.backgroundColor = `#2966ff20`;  
                 })
                 mainNavWrap.addEventListener('mouseover', () => {
                     cursor.style.borderRadius = `0`;  
@@ -79,36 +79,31 @@ class Header extends React.Component {
         // let scene = document.querySelector('.scene');
         // let parallaxInstance = new Parallax(scene);
 
-
-        
-
     }
 
     render() {
         return <Header__Wrap>
             <Container>
                 <HeaderWrap>
-                        <HeaderTop>
-                            <HeaderUl className={"header__ul"}>
-                                <HeaderLi>
-                                    <HeaderA href={"#"} className={"header__a"}>
-                                        Notion
-                                    </HeaderA>
-                                </HeaderLi>
-                                <HeaderLi>
-                                    <HeaderA href={"#"} className={"header__a"}>
-                                        GitHub
-                                    </HeaderA>
-                                </HeaderLi>
-                                <HeaderLi>
-                                    <HeaderA href={"#"} className={"header__a"}>
-                                        S N S
-                                    </HeaderA>
-                                </HeaderLi>
-                            </HeaderUl>
-                        </HeaderTop>
-                    
-                        
+                    <HeaderTop>
+                        <HeaderUl className={"header__ul"}>
+                            <HeaderLi>
+                                <HeaderA href={"#"} className={"header__a"}>
+                                    Notion
+                                </HeaderA>
+                            </HeaderLi>
+                            <HeaderLi>
+                                <HeaderA href={"#"} className={"header__a"}>
+                                    GitHub
+                                </HeaderA>
+                            </HeaderLi>
+                            <HeaderLi>
+                                <HeaderA href={"#"} className={"header__a"}>
+                                    S N S
+                                </HeaderA>
+                            </HeaderLi>
+                        </HeaderUl>
+                    </HeaderTop>
                 </HeaderWrap>
                 <Cursor className={"cursor"}></Cursor>
                 <Cursor2 className={"cursor2"}></Cursor2>

@@ -27,6 +27,7 @@ export const Section = styled.section`
         justify-content: center;
         flex-direction: column;
         text-align: center;
+        overflow: hidden;
     }
 `;
 export const MainNav = styled.nav`
@@ -53,6 +54,8 @@ export const MainNav = styled.nav`
         justify-content: space-between;
         align-items: center;
     }
+
+    
 `;
 export const MainNavWrap = styled.div`
     width: 100%;
@@ -158,7 +161,6 @@ export const NavBtn = styled.button`
         font-size: 190px;
         line-height: 0.8;
         text-transform: uppercase;
-        cursor: none;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
     
         :hover {
@@ -170,6 +172,20 @@ export const NavBtn = styled.button`
             color: #fff;
             letter-spacing: 10px;
         }
+    }
+    a {
+        color: #bbbbbb;
+        text-decoration: none;
+        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
+    }
+    a:hover {
+        color: #fff;
+        letter-spacing: 6px;
+        font-size: 200px;
+    }
+
+    @media only screen and (min-width: 1281px) {
+        cursor: none;
     }
 `;
 

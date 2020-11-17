@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
 
-// import { Link, Router, Route } from 'react-router-dom';
+import { Link, Router, Route } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-// import Work from './Work';
+import Work from './Work';
 
 import '../styles/reset.css';
 import { Section, MainNav, MainNavWrap, MainNavWrapA,
     NavBtn, ButtonBackBox, BackBox } from './MainBodyNav__styled';
 
 
-import Parallax from 'parallax-js'
+// import Parallax from 'parallax-js'
 
 class MainBodyNav extends React.Component {
 
@@ -28,8 +28,6 @@ class MainBodyNav extends React.Component {
             navA__3.style.opacity = `0.3`;
         })
         navA__1.addEventListener('mouseout', () => {
-            // navA__2.style.transform = `translate(40%, 0);`;
-            // navA__3.style.transform = `translate(40%, 0);`;
             navA__2.style.opacity = `1.0`;
             navA__3.style.opacity = `1.0`;
         })
@@ -64,8 +62,8 @@ class MainBodyNav extends React.Component {
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__2"}>
                     <NavBtn className={"nav__btn"}>
-                        {/* <Link to="/Work">WORK</Link> */}
-                        WORK
+                        <Link to="/Work">WORK</Link>
+                        {/* WORK */}
                     </NavBtn>
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__3"}>
@@ -82,9 +80,9 @@ class MainBodyNav extends React.Component {
         </ButtonBackBox>
 
 
-        {/* <main>
+        <main>
             <Route exact path="/Work" component={Work} />
-        </main> */}
+        </main>
 
     </Section>
     }

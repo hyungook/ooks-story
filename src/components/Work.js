@@ -1,11 +1,12 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import { Header } from './Work__styeld';
 
 
 class Work extends React.Component {
     render() {
-        return <div>hello</div>
+        return <Header>hello</Header>
     }
 }
 

@@ -14,11 +14,12 @@ import Work from './components/Work';
 class App extends React.Component{
   render() {
     return <div className={"mainWrap"}>
+      {/* <Home /> */}
       <BrowserRouter>
 
         <Switch>
           <Route exact path="/" component = { Home }/>
-          <Route path = '/Work' component = { Work }/>
+          <Route exact path = '/work' component = { Work }/>
         </Switch>
 
       </BrowserRouter>

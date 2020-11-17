@@ -62,7 +62,7 @@ class MainBodyNav extends React.Component {
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__2"}>
                     <NavBtn className={"nav__btn"}>
-                        <Link to="/Work">WORK</Link>
+                        <Link to="/work">WORK</Link>
                         {/* WORK */}
                     </NavBtn>
                 </MainNavWrapA>

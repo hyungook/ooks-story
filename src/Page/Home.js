@@ -12,16 +12,12 @@ import { Route, Switch } from 'react-router-dom';
 class Home extends React.Component{
   render() {
     return <div className={"mainWrap"}>
-      <BrowserRouter>
-      
         <Header />
         <MainBodyNav />
         <Footer />
-
         <div className={"line"}>
             <span></span>
         </div>
-      </BrowserRouter>
     </div>
   }
 }

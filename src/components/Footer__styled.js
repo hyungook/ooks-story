@@ -8,7 +8,8 @@ export const NameBox = styled.div`
     align-items: center;
     box-sizing: border-box;
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1281px) {
+        cursor: none;
     }
 `;
 export const ToyBtn = styled.button`

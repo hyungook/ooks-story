@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import { Link, Router, Route } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Work from './Work';
+
+import Work from '../Page/Work';
+import About from '../Page/About';
+import ToyProj from '../Page/ToyProject';
 
 import '../styles/reset.css';
 import { Section, MainNav, MainNavWrap, MainNavWrapA,
@@ -57,18 +60,17 @@ class MainBodyNav extends React.Component {
             <MainNavWrap className={"main__nav__wrap"}>
                 <MainNavWrapA href={""} className={"nav__a__1"}>
                     <NavBtn className={"nav__btn"}>
-                        ABOUT
+                    <Link to="/about">ABOUT</Link>
                     </NavBtn>
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__2"}>
                     <NavBtn className={"nav__btn"}>
                         <Link to="/work">WORK</Link>
-                        {/* WORK */}
                     </NavBtn>
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__3"}>
                     <NavBtn className={"nav__btn"}>
-                        TOY PROJ
+                        <Link to="/ToyProject">TOY PROJ</Link>
                     </NavBtn>
                 </MainNavWrapA>
             </MainNavWrap>
@@ -82,6 +84,8 @@ class MainBodyNav extends React.Component {
 
         <main>
             <Route exact path="/Work" component={Work} />
+            <Route exact path="/Aobut" component={About} />
+            <Route exact path="/ToyProject" component={ToyProj} />
         </main>
 
     </Section>

@@ -5,11 +5,12 @@ import './App.css';
 // import Footer from './components/Footer';
 
 import { BrowserRouter } from 'react-router-dom';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './Page/Home';
-import Work from './components/Work';
+import Work from './Page/Work';
+import About from './Page/About';
+import ToyProj from './Page/ToyProject';
 
 class App extends React.Component{
   render() {
@@ -20,6 +21,8 @@ class App extends React.Component{
         <Switch>
           <Route exact path="/" component = { Home }/>
           <Route exact path = '/work' component = { Work }/>
+          <Route exact path = '/about' component = { About }/>
+          <Route exact path = '/toyproject' component = { ToyProj}/>
         </Switch>
 
       </BrowserRouter>

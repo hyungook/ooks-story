@@ -29,6 +29,9 @@ export const Section = styled.section`
         text-align: center;
         overflow: hidden;
     }
+    @media only screen and (min-width: 1281px) {
+        cursor: none;
+    }
 `;
 export const MainNav = styled.nav`
     width: 100%;
@@ -177,6 +180,7 @@ export const NavBtn = styled.button`
         color: #bbbbbb;
         text-decoration: none;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
+        cursor: none;
     }
     a:hover {
         color: #fff;

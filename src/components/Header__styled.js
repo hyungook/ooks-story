@@ -12,6 +12,9 @@ export const Header__Wrap = styled.section`
         width: 100%;
         clear:both;
     }
+    @media only screen and (min-width: 1281px) {
+        cursor: none;
+    }
 `;
 export const Container = styled.div`
     width: 100%;

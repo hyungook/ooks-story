@@ -26,3 +26,9 @@
   background-color: #fff;
   opacity: 0.1;
 }
+
+@media (min-width: 1281px) {
+  * {
+    cursor: none;
+  }
+}

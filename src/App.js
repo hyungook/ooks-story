@@ -16,15 +16,13 @@ class App extends React.Component{
   render() {
     return <div className={"mainWrap"}>
       {/* <Home /> */}
-      <BrowserRouter>
-
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component = { Home }/>
           <Route exact path = '/work' component = { Work }/>
           <Route exact path = '/about' component = { About }/>
           <Route exact path = '/toyproject' component = { ToyProj}/>
         </Switch>
-
       </BrowserRouter>
     </div>
   }

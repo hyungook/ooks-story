@@ -1,5 +1,7 @@
 import React from'react'
 import '../styles/reset.css'
+import { Link, Route } from 'react-router-dom';
+import Home from '../Page/Home';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +14,9 @@ class Page__nav extends React.Component {
         return <Section className={"header"}>
             <Header__top className={"header__top"}>
                 <Backword className={"backward"}>
-                    <FontAwesomeIcon icon={faAngleLeft} className={"icon"}/>
+                    <Link to="/">
+                        <FontAwesomeIcon icon={faAngleLeft} className={"icon"}/>
+                    </Link>
                 </Backword>
             </Header__top>
             <Header__bottom className={"header__bottom"}>
@@ -22,6 +26,11 @@ class Page__nav extends React.Component {
                     <span className={"span"}></span>
                 </Menu__button>
             </Header__bottom>
+
+            <main>
+                <Route exact path="/" component={Home} />
+            </main>
+
         </Section>
 
     }

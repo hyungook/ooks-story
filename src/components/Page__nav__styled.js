@@ -4,10 +4,12 @@ import styled from 'styled-components';
 export const Section = styled.section`
     width: 16%;
     height: 100vh;
-
-    // background-color: #222;
+    position: fixed;
+    float: left;
 `;
 export const Header__top = styled.div`
+    clear: both;
+    
     width: 100%;
     height: 50%;
 
@@ -15,17 +17,15 @@ export const Header__top = styled.div`
     justify-content: center;
     align-items: center;
 
-    // background-color: #444;
-    background-color: #111;
+    cursor: none;
 `;
 export const Backword = styled.button`
     padding: 0.2rem 0.8rem;
-
-    // background-color: blue;
-
+    cursor: none;
     .icon {
         font-size: 2.8rem;
         color: #777;
+        cursor: none;
     }
 `;
 export const Header__bottom = styled.div`
@@ -35,8 +35,7 @@ export const Header__bottom = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #111;
+    cursor: none;
 `;
 export const Menu__button = styled.button`
 
@@ -48,6 +47,7 @@ export const Menu__button = styled.button`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    cursor: none;
 
     .span {
         width: 100%;

@@ -99,7 +99,7 @@ class Header extends React.Component {
                             </HeaderLi>
                             <HeaderLi>
                                 <HeaderA href={"#"} className={"header__a"}>
-                                    S N S
+                                    Design
                                 </HeaderA>
                             </HeaderLi>
                         </HeaderUl>

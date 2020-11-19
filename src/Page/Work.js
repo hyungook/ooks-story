@@ -1,9 +1,9 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-import styled from 'styled-components';
-import { Header, Cursor, Cursor2 } from '../components/Work__styeld';
-
 import Page__nav from '../components/Page__nav';
+import styled from 'styled-components';
+
+import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody, PortfoLI, PortfoA } from './Work__styeld';
+import { data } from '../Data/Work__data'
 
 
 class Work extends React.Component {
@@ -29,7 +29,6 @@ class Work extends React.Component {
         let mainNavWrap = document.querySelector('.main__nav__wrap');
         let nameBox = document.querySelector('.name__box');
         
-
         let tf = true;
 
         // Cursor Effect
@@ -42,15 +41,37 @@ class Work extends React.Component {
             cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
 
         })
-
     }
 
 
     render() {
         return <Header>
             <Page__nav />
+            <WorkWrap className={"work__wrap"}>
+                <MainHeader>
+                    <h1>WORK</h1>
+                    <p>특별한 경험을 만듭니다.</p>
+                </MainHeader>
+                <MainBody className={"mainBody"}>
+                    <ul>
+                    {data.map((data, idx) => {
+                    return <PortfoLI>
+                        <PortfoA href={data["url"]} target={"blank"}>
+                            <div className={"title"}>{data["title"]}</div>
+                            <div className={"subTitle"}>{data["subTitle"]}</div>
+                        </PortfoA></PortfoLI>
+                    })}
+                    </ul>
+                </MainBody>
+                <footer>
+                    <p>
+                        아무말 한 마디
+                    </p>
+                </footer>
             
             
+            </WorkWrap>
+
             <Cursor className={"cursor"}></Cursor>
             <Cursor2 className={"cursor2"}></Cursor2>
             </Header>

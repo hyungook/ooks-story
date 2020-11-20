@@ -60,7 +60,7 @@ export const WorkWrap = styled.section`
 export const MainHeader = styled.header`
     position: relative;
     width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 140px;
     
     // background-color: #333;
     
@@ -88,11 +88,11 @@ export const MainBody = styled.section`
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+
+    margin-bottom: 100px;
     
     ul {
         width: 100%;
-
-        // background-color: blue;
     }
 `;
 
@@ -105,9 +105,10 @@ export const PortfoLI = styled.li`
     position: relative;
     width: 47%;
     height: 380px;
-    // margin-right: 4%;
-    padding: 0 40px;
     display: inline-block;
+
+    box-sizing: border-box;
+    overflow: hidden;
 
     margin-bottom: 60px;
 
@@ -129,34 +130,40 @@ export const PortfoLI = styled.li`
     // }
 
     :hover {
-
        a {
         opacity: 1;   
+       }
+       img {
+        transform: scale(1.1);
        }
     }
 
 `;
 
 export const PortfoA = styled.a`
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    
     width: 100%;
-    padding: 0 12%;
-
+    height: 100%;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     z-index: 999;
-    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
+    text-decoration: none;
 
     opacity: 0;
 
-    
+    background-color: rgba(17, 17, 17, 0.7);
 
-    div {
+    .wrap {
+        position: absolute;
+        padding: 0 10%;
         width: 100%;
+        bottom: 0;
+        left: 0;
         margin-bottom: 10px;
     }
 
@@ -172,6 +179,7 @@ export const PortfoA = styled.a`
         font-family: S-CoreDream-1Thin,sans-serif;
         font-size: 18px;
         font-weight: 600;
+        line-height: 22px;
         color: #ff75a3;
         margin-bottom: 40px;
     }
@@ -184,4 +192,32 @@ export const PortfoImg = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
+`;
+
+export const Footer = styled.footer`
+    width: 100%;
+
+    padding: 0 0 300px 0;
+
+
+
+
+    strong {
+        font-size: 60px;
+        font-family: "Squada One", cursive;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        line-height: 80px;
+        color: #bbbbbb;
+    }
+    
+    p {
+        // position: absolute;
+        font-family: S-CoreDream-1Thin,sans-serif;
+        font-size: 30px;
+    }
+
+
+    // background-color: blue;
 `;

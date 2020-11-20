@@ -3,7 +3,7 @@ import Page__nav from '../components/Page__nav';
 import styled from 'styled-components';
 
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
-    PortfoLI, PortfoA, PortfoImg } from './Work__styeld';
+    PortfoLI, PortfoA, PortfoImg, Footer } from './Work__styeld';
 import { data } from '../Data/Work__data'
 
 
@@ -62,19 +62,22 @@ class Work extends React.Component {
                     {data.map((data, idx) => {
                     return <PortfoLI>
                         <PortfoA href={data["url"]} target={"blank"}>
+                            <div className={"wrap"}>
                                 <div className={"title"}>{data["title"]}</div>
                                 <div className={"subTitle"}>{data["subTitle"]}</div>
+                            </div>
                         </PortfoA>
                         <PortfoImg src={`${url+data["img"]}`} alt={data.alt}></PortfoImg>
                         </PortfoLI>
                     })}
                     </ul>
                 </MainBody>
-                <footer>
+                <Footer>
+                    <strong>Determination</strong>
                     <p>
-                        아무말 한 마디
+                        한 걸음 더 나가고 싶은 오형욱 입니다.
                     </p>
-                </footer>
+                </Footer>
             
             
             </WorkWrap>

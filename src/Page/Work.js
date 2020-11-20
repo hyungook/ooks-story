@@ -2,9 +2,13 @@ import React from 'react';
 import Page__nav from '../components/Page__nav';
 import styled from 'styled-components';
 
-import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody, PortfoLI, PortfoA } from './Work__styeld';
+import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
+    PortfoLI, PortfoA, PortfoImg } from './Work__styeld';
 import { data } from '../Data/Work__data'
 
+
+
+const url = process.env.PUBLIC_URL + '/image/';
 
 class Work extends React.Component {
 
@@ -41,6 +45,7 @@ class Work extends React.Component {
             cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
 
         })
+
     }
 
 
@@ -57,9 +62,11 @@ class Work extends React.Component {
                     {data.map((data, idx) => {
                     return <PortfoLI>
                         <PortfoA href={data["url"]} target={"blank"}>
-                            <div className={"title"}>{data["title"]}</div>
-                            <div className={"subTitle"}>{data["subTitle"]}</div>
-                        </PortfoA></PortfoLI>
+                                <div className={"title"}>{data["title"]}</div>
+                                <div className={"subTitle"}>{data["subTitle"]}</div>
+                        </PortfoA>
+                        <PortfoImg src={`${url+data["img"]}`} alt={data.alt}></PortfoImg>
+                        </PortfoLI>
                     })}
                     </ul>
                 </MainBody>

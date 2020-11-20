@@ -6,7 +6,7 @@ import Home from '../Page/Home';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
-import { Section, Header__top, Header__bottom, Backword, Menu__button } from './Page__nav__styled';
+import { Section, Header__top, Header__bottom, Backword, Menu__button, HomeMenu } from './Page__nav__styled';
 
 class Page__nav extends React.Component {
     render() {
@@ -24,6 +24,11 @@ class Page__nav extends React.Component {
                     <span className={"span"}></span>
                     <span className={"span"}></span>
                     <span className={"span"}></span>
+                    <HomeMenu className={"homeMenu"}>
+                        <li>ABOUT</li>
+                        <li>WORK</li>
+                        <li>TOY PROJ</li>
+                    </HomeMenu>
                 </Menu__button>
             </Header__bottom>
 

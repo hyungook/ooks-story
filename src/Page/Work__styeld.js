@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 
 
-
 export const Header = styled.header`
     width: 100%;
     height: 100vh;
@@ -59,22 +58,26 @@ export const WorkWrap = styled.section`
 `;
 
 export const MainHeader = styled.header`
+    position: relative;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 120px;
     
     // background-color: #333;
     
     h1 {
+        // position: absolute;
         font-size: 190px;
         font-family: "Squada One", cursive;
         font-weight: 400;
-        margin: 0;
+        margin: 0 0 10px 0;
         line-height: 150px;
         color: #bbbbbb;
     }
     p {
+        position: absolute;
         font-family: S-CoreDream-1Thin,sans-serif;
-        font-size: 50px;
+        font-size: 80px;
+        z-index: 999;
     }
 `;
 
@@ -86,40 +89,56 @@ export const MainBody = styled.section`
     align-items: center;
     flex-wrap: nowrap;
     
+    ul {
+        width: 100%;
 
-ul {
+        // background-color: blue;
+    }
+`;
+
+export const PortfoUl = styled.ul`
     width: 100%;
-
-    // background-color: blue;
-}
-
+    
 `;
 
 export const PortfoLI = styled.li`
     position: relative;
     width: 47%;
-    height: 360px;
+    height: 380px;
     // margin-right: 4%;
     padding: 0 40px;
     display: inline-block;
 
     margin-bottom: 60px;
-    
-
 
 
     background-color: teal;
 
-
-
-    :nth-child(1),:nth-child(3) {
+    // 홀수
+    :nth-child(odd) {
         margin-right: 6%;
+        // transform: translate(0, -15%);
+    } 
+    // 짝수
+    :nth-child(even) {
+        transform: translate(0, -30%);
+    } 
+
+    // :nth-child(1),:nth-child(3) {
+    //     margin-right: 6%;
+    // }
+
+    :hover {
+
+       a {
+        opacity: 1;   
+       }
     }
 
 `;
 
 export const PortfoA = styled.a`
-    position absolute;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -129,18 +148,17 @@ export const PortfoA = styled.a`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 999;
+    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
-    // background-color: red;
+    opacity: 0;
 
+    
 
     div {
         width: 100%;
         margin-bottom: 10px;
-
-
-        // background-color: pink;
     }
-
 
     div:nth-child(1) {
         font-size: 50px;
@@ -155,5 +173,15 @@ export const PortfoA = styled.a`
         font-size: 18px;
         font-weight: 600;
         color: #ff75a3;
+        margin-bottom: 40px;
     }
+`;
+
+export const PortfoImg = styled.img`
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `;

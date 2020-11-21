@@ -24,36 +24,63 @@ class MainBodyNav extends React.Component {
 
 
         navA__1.addEventListener('mouseover', () => {
-            navA__2.style.transform = `translateX(60%);`;
-            navA__3.style.transform = `translateX(60%);`;
+            navA__1.style.transform = `translateX(16%)`;
+            navA__2.style.transform = `translateX(70%)`;
+            navA__3.style.transform = `translateX(70%)`;
             
             navA__2.style.opacity = `0.3`;
             navA__3.style.opacity = `0.3`;
         })
         navA__1.addEventListener('mouseout', () => {
+            navA__1.style.transform = `translateX(-16%)`;
+            navA__2.style.transform = `translateX(20%)`;
+            navA__3.style.transform = `translateX(40%)`;
+
             navA__2.style.opacity = `1.0`;
             navA__3.style.opacity = `1.0`;
         })
         navA__2.addEventListener('mouseover', () => {
+            navA__1.style.transform = `translateX(-40%)`;
+            navA__2.style.transform = `translateX(18%)`;
+            navA__3.style.transform = `translateX(70%)`;
+
             navA__1.style.opacity = `0.3`;
             navA__3.style.opacity = `0.3`;
         })
         navA__2.addEventListener('mouseout', () => {
+            navA__1.style.transform = `translateX(-16%)`;
+            navA__2.style.transform = `translateX(20%)`;
+            navA__3.style.transform = `translateX(40%)`;
+
             navA__1.style.opacity = `1.0`;
             navA__3.style.opacity = `1.0`;
         })
         navA__3.addEventListener('mouseover', () => {
+            navA__1.style.transform = `translateX(-60%)`;
+            navA__2.style.transform = `translateX(-60%)`;
+            navA__3.style.transform = `translateX(-4%)`;
+
+
             navA__1.style.opacity = `0.3`;
             navA__2.style.opacity = `0.3`;
         })
         navA__3.addEventListener('mouseout', () => {
+            navA__1.style.transform = `translateX(-16%)`;
+            navA__2.style.transform = `translateX(20%)`;
+            navA__3.style.transform = `translateX(40%)`;
+
+
             navA__1.style.opacity = `1.0`;
             navA__2.style.opacity = `1.0`;
         })
 
         // let scene = document.querySelector('.scene');
         // let parallaxInstance = new Parallax(scene);
+
     }
+
+
+
     render() {
         return <Section>
         <MainNav>

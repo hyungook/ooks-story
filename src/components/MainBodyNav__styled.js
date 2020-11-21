@@ -77,7 +77,6 @@ export const MainNavWrap = styled.div`
         align-items: stretch;
     }
     
-    
     @media only screen and (min-width: 1024px) {
 
         position: relative;
@@ -98,31 +97,31 @@ export const MainNavWrapA = styled.a`
         // display: flex;
         // justify-content: left;
     }
-
     @media only screen and (min-width: 1024px) {
+
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
         transition-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
-    
-        // :hover ~ a {
-        //     opacity: 0.4;
-        // }
+
 
         :nth-child(1) {
-            transform: translate(-10%, 0);
-        }
-        :nth-child(1):hover {
-            transform: translate(8%, 0);
+            transform: translate(-16%, 0);
         }
         :nth-child(2) {
             transform: translate(20%, 0);
-
         }
         :nth-child(3) {
-            transform: translate(30%, 0);
-            transition-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+            min-width: 630px;
+
+            transform: translate(40%, 0);
         }
-        :nth-child(3):hover {
-            transform: translate(-1%, 0);
+
+        button a:hover{
+            color: #fff;
+            letter-spacing: 10px;
+            font-size: 200px;
+        }
+        :nth-child(3) button a:hover {
+            letter-spacing: 2px;
         }
         
     }
@@ -165,16 +164,6 @@ export const NavBtn = styled.button`
         line-height: 0.8;
         text-transform: uppercase;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
-    
-        :hover {
-            color: #fff;
-            letter-spacing: 6px;
-            font-size: 200px;
-        }
-        :focus {
-            color: #fff;
-            letter-spacing: 10px;
-        }
     }
     a {
         color: #bbbbbb;
@@ -182,11 +171,13 @@ export const NavBtn = styled.button`
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
         cursor: none;
     }
-    a:hover {
-        color: #fff;
-        letter-spacing: 6px;
-        font-size: 200px;
-    }
+
+    // a:hover {
+    //     color: #fff;
+    //     letter-spacing: 8px;
+    //     font-size: 210px;
+    // }
+
 
     @media only screen and (min-width: 1281px) {
         cursor: none;

@@ -46,6 +46,45 @@ class Work extends React.Component {
 
         })
 
+        function mousechange() {
+            cursor.style.borderRadius = `0`;
+            cursor.style.border = `1px solid #ffffff`;
+            cursor.style.backgroundColor = `#2966ff20`;  
+        }
+        
+        document.addEventListener('mouseover', (e) => {
+            let elem = e.target;
+
+            // console.log(elem.className)
+
+            if(elem.className == 'sc-hHftDr evQUgs'){
+                // console.log('ok');
+                mousechange()
+            } else if(elem.className == 'title') {
+                mousechange()
+            } else if(elem.className == 'subTitle') {
+                mousechange()
+            } else if(elem.className == 'wrap box') {
+                mousechange()
+            } else if(elem.className == 'sc-kEjbxe gAFPtC backward') {
+                mousechange()
+            } else if(elem.className == 'link') {
+                mousechange()
+            } else if(elem.className == 'svg-inline--fa fa-angle-left fa-w-8 icon') {
+                mousechange()
+            } else if(elem.className == 'span') {
+                mousechange()
+            } else if(elem.className == 'sc-crrsfI jYvJUW menuBtn') {
+                mousechange()
+            } else if(elem.className == 'menuLink') {
+                mousechange()
+            } else {
+                // console.log('no')
+                cursor.style.borderRadius = `50%`;
+                cursor.style.border = `1px solid #c6c6c6`;
+                cursor.style.background = `none`;
+            }  
+        })
     }
 
 
@@ -58,11 +97,11 @@ class Work extends React.Component {
                     <p>특별한 경험을 만듭니다.</p>
                 </MainHeader>
                 <MainBody className={"mainBody"}>
-                    <ul>
+                    <ul className={"itemWrap"}>
                     {data.map((data, idx) => {
-                    return <PortfoLI>
+                    return <PortfoLI className={"item"}>
                         <PortfoA href={data["url"]} target={"blank"}>
-                            <div className={"wrap"}>
+                            <div className={"wrap box"}>
                                 <div className={"title"}>{data["title"]}</div>
                                 <div className={"subTitle"}>{data["subTitle"]}</div>
                             </div>
@@ -74,8 +113,13 @@ class Work extends React.Component {
                 </MainBody>
                 <Footer>
                     <strong>Determination</strong>
-                    <p>
+                    <p className={"subTitle"}>
                         한 걸음 더 나가고 싶은 오형욱 입니다.
+                    </p>
+                    <p className={"mainText"}>
+                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
+                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
+                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
                     </p>
                 </Footer>
             

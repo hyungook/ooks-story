@@ -212,12 +212,17 @@ export const Footer = styled.footer`
         color: #bbbbbb;
     }
     
-    p {
+    .subTitle {
         // position: absolute;
         font-family: S-CoreDream-1Thin,sans-serif;
         font-size: 30px;
+        margin-bottom: 30px;
     }
-
-
-    // background-color: blue;
+    .mainText {
+        width: 80%;
+        font-family: S-CoreDream-1Thin,sans-serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
 `;

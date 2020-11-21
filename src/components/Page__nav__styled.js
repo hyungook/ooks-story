@@ -20,10 +20,23 @@ export const Header__top = styled.div`
     cursor: none;
 `;
 export const Backword = styled.button`
+    width: 50px;
+    height: 50px;
+
     padding: 0.2rem 0.8rem;
     cursor: none;
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+
+    
+    .link {
+        width: 100%;
+        height: 100%;
+
+        // background-color: blue;
+    }
+
     .icon {
+        
         font-size: 2.8rem;
         color: #777;
         cursor: none;
@@ -44,18 +57,19 @@ export const Header__bottom = styled.div`
     justify-content: center;
     align-items: center;
     cursor: none;
+
+    position: relative;
+
 `;
 export const Menu__button = styled.button`
 
-    width:30px;
+    width:50px;
     height: 50px;
-    
-    // background-color: #111;
+    padding: 0 10px;
 
     display: flex;
     justify-content: center;
     flex-direction: column;
-    // align-items: center;
     align-items: start;
     cursor: none;
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
@@ -83,6 +97,23 @@ export const Menu__button = styled.button`
 `;
 
 export const HomeMenu = styled.ul`
+    position: absolute;
     display: none;
     // display: block;
+    top: 60px;
+    text-align: center;
+
+    li {
+        font-size: 32px;
+        font-family: "Squada One", cursive;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+        line-height: 26px;
+        color: #bbbbbb;
+
+
+        :hover {
+            color: #fff;
+        }
+    }
 `;

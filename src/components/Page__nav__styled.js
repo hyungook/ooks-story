@@ -6,7 +6,24 @@ export const Section = styled.section`
     height: 100vh;
     position: fixed;
     float: left;
+
+
+    @media only screen and (min-width: 768px) {
+
+    }
+
+    @media only screen and (min-width: 1024px) {
+
+    }
+
+    @media only screen and (min-width: 1281px) {
+        
+    }
+
+
+
 `;
+
 export const Header__top = styled.div`
     clear: both;
     
@@ -27,16 +44,13 @@ export const Backword = styled.button`
     cursor: none;
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
-    
+    // background-color: blue;
+
     .link {
         width: 100%;
         height: 100%;
-
-        // background-color: blue;
     }
-
     .icon {
-        
         font-size: 2.8rem;
         color: #777;
         cursor: none;
@@ -98,10 +112,13 @@ export const Menu__button = styled.button`
 
 export const HomeMenu = styled.ul`
     position: absolute;
-    display: none;
+    visibility:hidden;
     // display: block;
-    top: 60px;
+    // top: 60px;
+    top: 100px;
     text-align: center;
+    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
+    opacity: 0;
 
     li {
         font-size: 32px;
@@ -111,6 +128,7 @@ export const HomeMenu = styled.ul`
         line-height: 26px;
         color: #bbbbbb;
 
+        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
         :hover {
             color: #fff;

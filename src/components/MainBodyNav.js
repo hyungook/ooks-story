@@ -87,17 +87,17 @@ class MainBodyNav extends React.Component {
             <MainNavWrap className={"main__nav__wrap"}>
                 <MainNavWrapA href={""} className={"nav__a__1"}>
                     <NavBtn className={"nav__btn"}>
-                    <Link to="/about">ABOUT</Link>
+                    <Link to="/about" className={"MainBtn"}>ABOUT</Link>
                     </NavBtn>
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__2"}>
                     <NavBtn className={"nav__btn"}>
-                        <Link to="/work">WORK</Link>
+                        <Link to="/work" className={"MainBtn"}>WORK</Link>
                     </NavBtn>
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__3"}>
                     <NavBtn className={"nav__btn"}>
-                        <Link to="/ToyProject">TOY PROJ</Link>
+                        <Link to="/ToyProject" className={"MainBtn"}>TOY PROJ</Link>
                     </NavBtn>
                 </MainNavWrapA>
             </MainNavWrap>

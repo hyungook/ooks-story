@@ -12,6 +12,7 @@ export const Header = styled.header`
     overflow-y: scroll;
     
 `;
+
 export const Cursor = styled.div`
     display:none;
 
@@ -27,7 +28,7 @@ export const Cursor = styled.div`
         pointer-events: none;
         transform: translate(-50%, -50%);
         transition: 0.1s ease;
-        z-index: 999;
+        z-index: 99999;
     }
 `;
 export const Cursor2 = styled.div`    
@@ -46,10 +47,9 @@ export const Cursor2 = styled.div`
         transform: translate(-50%, -50%);
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
     
-        z-index: 999;
+        z-index: 99999;
     }
 `;
-
 export const WorkWrap = styled.section`
     width: 84%;
     float: right;
@@ -106,12 +106,11 @@ export const PortfoLI = styled.li`
     width: 47%;
     height: 380px;
     display: inline-block;
-
     box-sizing: border-box;
     overflow: hidden;
-
     margin-bottom: 60px;
 
+    z-index: 10;
 
     background-color: teal;
 

@@ -1,0 +1,35 @@
+/* .cursor {
+  z-index: 999999 !important;
+}
+.cursor2 {
+  z-index: 999999 !important;
+} */
+
+.open {
+  visibility: visible !important;
+  opacity: 1 !important;
+  top: 60px !important;
+  /* visibility: visible;
+  opacity: 1;
+  top: 60px; */
+}
+
+.menuBtn {
+  outline: none !important;
+  transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms !important;
+}
+
+.openBtn span:nth-child(2) {
+  transform: translateX(-50px) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  outline: none !important;
+}
+
+.openBtn span:nth-child(1) {
+  /* transform: rotate(45deg) translate(35px, -35px) !important; */
+  transform: rotate(45deg) translate(6px, 8px) !important;
+}
+.openBtn span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -8px) !important;
+}

@@ -1,5 +1,6 @@
 import React from'react'
 import '../styles/reset.css'
+import '../styles/page.css'
 import { Link, Route } from 'react-router-dom';
 import Home from '../Page/Home';
 
@@ -12,7 +13,7 @@ class Page__nav extends React.Component {
 
 
     componentDidMount(){
-
+        // menu button handler
         let onOff = true;
         const menuBtn = document.querySelector('.menuBtn');
         const homeMenu = document.querySelector('.homeMenu');
@@ -20,22 +21,25 @@ class Page__nav extends React.Component {
         menuBtn.addEventListener('click', () => {
 
             if(onOff) {
-                homeMenu.style.display = `block`;
+                homeMenu.classList.add("open");
+                menuBtn.classList.add("openBtn");
+                // homeMenu.style.visibility = `visible`;
+                // homeMenu.style.opacity = `1`;
+                // homeMenu.style.top = `60px`;
                 console.log(onOff);
                 onOff = false;
             } else {
-                homeMenu.style.display = `none`;
+                homeMenu.classList.remove("open");
+                menuBtn.classList.remove("openBtn");
+                homeMenu.style.outline = `none`;
+                // homeMenu.style.visibility = `hidden`;
+                // homeMenu.style.opacity = `0`;
+                // homeMenu.style.top = `100px`;
                 console.log(onOff);
                 onOff = true;
             }
-
         })
-
-
-
-
     }
-
 
 
     render() {
@@ -55,8 +59,8 @@ class Page__nav extends React.Component {
                     <span className={"span"}></span>
                 </Menu__button>
                 <HomeMenu className={"homeMenu"}>
-                    <li className={"menuLink"}>ABOUT</li>
                     <li className={"menuLink"}>WORK</li>
+                    <li className={"menuLink"}>ABOUT</li>
                     <li className={"menuLink"}>TOY PROJ</li>
                 </HomeMenu>
             </Header__bottom>
@@ -64,7 +68,6 @@ class Page__nav extends React.Component {
             <main>
                 <Route exact path="/" component={Home} />
             </main>
-
         </Section>
 
     }

@@ -41,38 +41,31 @@ class Header extends React.Component {
             cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
             cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
 
-                //mouseover
-                headerUl.addEventListener('mouseover', () => {
-                    cursor.style.borderRadius = `0`;
-                    cursor.style.border = `1px solid #ffffff`;
-                    cursor.style.backgroundColor = `#2966ff20`;  
-                })
-                mainNavWrap.addEventListener('mouseover', () => {
-                    cursor.style.borderRadius = `0`;  
-                    cursor.style.border = `1px solid #ffffff`;
-                    cursor.style.backgroundColor = `#2966ff20`;
-                })
-                nameBox.addEventListener('mouseover', () => {
-                    cursor.style.borderRadius = `0`;  
-                    cursor.style.border = `1px solid #ffffff`;
-                    cursor.style.backgroundColor = `#2966ff20`;
-                })
-                //mouseout
-                headerUl.addEventListener('mouseout', () => {
+            function mousechange() {
+                cursor.style.borderRadius = `0`;
+                cursor.style.border = `1px solid #ffffff`;
+                cursor.style.backgroundColor = `#2966ff20`;  
+            }
+            
+            document.addEventListener('mouseover', (e) => {
+                let elem = e.target;
+    
+                // console.log(elem.className)
+                if(elem.className == 'sc-fubCfw ckSEsn header__a'){
+                    // console.log('ok');
+                    mousechange()
+                } else if(elem.className == 'MainBtn') {
+                    mousechange()
+                } else if(elem.className == 'sc-bYEvPH iirIK toy__button') {
+                    mousechange()
+                } else {
+                    // console.log('no')
                     cursor.style.borderRadius = `50%`;
                     cursor.style.border = `1px solid #c6c6c6`;
                     cursor.style.background = `none`;
-                })
-                mainNavWrap.addEventListener('mouseout', () => {
-                    cursor.style.borderRadius = `50%`;
-                    cursor.style.border = `1px solid #c6c6c6`;
-                    cursor.style.background = `none`;
-                })
-                nameBox.addEventListener('mouseout', () => {
-                    cursor.style.borderRadius = `50%`;
-                    cursor.style.border = `1px solid #c6c6c6`;
-                    cursor.style.background = `none`;
-                })
+                }  
+            })
+
         })
 
 

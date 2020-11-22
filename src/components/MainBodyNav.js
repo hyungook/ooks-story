@@ -34,7 +34,7 @@ class MainBodyNav extends React.Component {
         navA__1.addEventListener('mouseout', () => {
             navA__1.style.transform = `translateX(-16%)`;
             navA__2.style.transform = `translateX(20%)`;
-            navA__3.style.transform = `translateX(40%)`;
+            navA__3.style.transform = `translateX(30%)`;
 
             navA__2.style.opacity = `1.0`;
             navA__3.style.opacity = `1.0`;
@@ -50,7 +50,7 @@ class MainBodyNav extends React.Component {
         navA__2.addEventListener('mouseout', () => {
             navA__1.style.transform = `translateX(-16%)`;
             navA__2.style.transform = `translateX(20%)`;
-            navA__3.style.transform = `translateX(40%)`;
+            navA__3.style.transform = `translateX(30%)`;
 
             navA__1.style.opacity = `1.0`;
             navA__3.style.opacity = `1.0`;
@@ -58,7 +58,7 @@ class MainBodyNav extends React.Component {
         navA__3.addEventListener('mouseover', () => {
             navA__1.style.transform = `translateX(-60%)`;
             navA__2.style.transform = `translateX(-60%)`;
-            navA__3.style.transform = `translateX(-4%)`;
+            navA__3.style.transform = `translateX(-2%)`;
 
 
             navA__1.style.opacity = `0.3`;
@@ -67,7 +67,7 @@ class MainBodyNav extends React.Component {
         navA__3.addEventListener('mouseout', () => {
             navA__1.style.transform = `translateX(-16%)`;
             navA__2.style.transform = `translateX(20%)`;
-            navA__3.style.transform = `translateX(40%)`;
+            navA__3.style.transform = `translateX(30%)`;
 
 
             navA__1.style.opacity = `1.0`;
@@ -97,7 +97,8 @@ class MainBodyNav extends React.Component {
                 </MainNavWrapA>
                 <MainNavWrapA href={""} className={"nav__a__3"}>
                     <NavBtn className={"nav__btn"}>
-                        <Link to="/ToyProject" className={"MainBtn"}>TOY PROJ</Link>
+                        {/* <Link to="/ToyProject" className={"MainBtn"}>TOY PROJ</Link> */}
+                        <Link to="/ToyProject" className={"MainBtn"}>TOY-PJ</Link>
                     </NavBtn>
                 </MainNavWrapA>
             </MainNavWrap>

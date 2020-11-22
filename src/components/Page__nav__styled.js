@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
     width: 100%;
+
+    position: fixed;
+
+    z-index: 999999;
+    background-color: #111;
+
     display: flex;
     padding: 0.4rem 1rem;
 
@@ -10,13 +16,14 @@ export const Section = styled.section`
 
     }
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         display: block;
         width: 16%;
         height: 100vh;
         padding: 0;
         position: fixed;
         float: left;
+        z-index: 10;
     }
 
     @media only screen and (min-width: 1281px) {
@@ -32,7 +39,7 @@ export const Header__top = styled.div`
     align-items: center;
     cursor: none;
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         clear: both;    
         width: 100%;
         height: 50%;
@@ -60,7 +67,7 @@ export const Backword = styled.button`
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
     }
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         cursor: none;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
@@ -87,7 +94,7 @@ export const Header__bottom = styled.div`
 
 
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         width: 100%;
         height: 50%;
     
@@ -122,7 +129,7 @@ export const Menu__button = styled.button`
         margin-bottom: 0;
     }
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         width:50px;
         height: 50px;
         padding: 0 10px;
@@ -151,14 +158,14 @@ export const Menu__button = styled.button`
             }
         }    
     }
-
-    
 `;
 
 export const HomeMenu = styled.ul`
     display: none;
-    padding: 0.2rem 0.1rem;
+    padding: 0 0.1rem 0.2rem 0.1rem;
     background-color: #111;
+
+    transform: translate(0, -4px);
 
     border-radius: 0 0 0 1rem;
     box-shadow: 10px 5px 5px hsla(0, 0%, 0%, 0.4);
@@ -176,13 +183,13 @@ export const HomeMenu = styled.ul`
     }
 
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         position: absolute;
         visibility:hidden;
         display: block;
         padding: 0;
         // top: 60px;
-        top: 100px;
+        top: 80px;
         text-align: center;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
         opacity: 0;
@@ -201,7 +208,6 @@ export const HomeMenu = styled.ul`
 
             :hover {
                 color: #fff;
-            }
         }
     }
     

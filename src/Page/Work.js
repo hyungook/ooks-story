@@ -64,17 +64,19 @@ class Work extends React.Component {
                  mousechange()
              } else if(elem.className == 'subTitle') {
                  mousechange()
-             } else if(elem.className == 'wrap box') {
+             } else if(elem.className == 'sc-hHftDr cNlQMS') {
                  mousechange()
-             } else if(elem.className == 'backward') {
+             } else if(elem.className == 'wrap box') {
                  mousechange()
              } else if(elem.className == 'link') {
                  mousechange()
-             } else if(elem.className == 'svg-inline--fa fa-angle-left fa-w-8 icon') {
+             } else if(elem.className == 'icon') {
                  mousechange()
-             } else if(elem.className == 'span') {
+             } else if(elem.className == 'sc-kEjbxe gEZwja backward') {
+                mousechange()
+            } else if(elem.className == 'span') {
                  mousechange()
-             } else if(elem.className == 'sc-crrsfI jYvJUW menuBtn') {
+             } else if(elem.className == 'sc-crrsfI liZvO menuBtn openBtn') {
                  mousechange()
              } else if(elem.className == 'menuLink') {
                  mousechange()
@@ -84,10 +86,8 @@ class Work extends React.Component {
                  cursor.style.border = `1px solid #c6c6c6`;
                  cursor.style.background = `none`;
              }  
-         })
-       
+         })       
     }
-
 
     render() {
         return <Header>
@@ -109,6 +109,9 @@ class Work extends React.Component {
                             <div className={"wrap box"}>
                                 <div className={"title"}>{data["title"]}</div>
                                 <div className={"subTitle"}>{data["subTitle"]}</div>
+                                {/* 추가 */}
+                                <div className={"percent"}>{data["percent"]}</div>
+                                <div className={"info"}>{data["info"]}</div>
                             </div>
                         </PortfoA>
                         <PortfoImg src={`${url+data["img"]}`} alt={data.alt}></PortfoImg>

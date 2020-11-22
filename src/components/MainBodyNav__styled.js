@@ -89,6 +89,7 @@ export const MainNavWrap = styled.div`
 
 export const MainNavWrapA = styled.a`
     padding: 0.5rem 0;
+    z-index: 9999;
 
     // background-color: green;
 
@@ -112,7 +113,7 @@ export const MainNavWrapA = styled.a`
         :nth-child(3) {
             min-width: 630px;
 
-            transform: translate(40%, 0);
+            transform: translate(30%, 0);
         }
 
         button a:hover{
@@ -121,7 +122,7 @@ export const MainNavWrapA = styled.a`
             font-size: 200px;
         }
         :nth-child(3) button a:hover {
-            letter-spacing: 2px;
+            letter-spacing: 6px;
         }
         
     }

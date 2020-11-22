@@ -1,11 +1,16 @@
 import React from'react'
 import '../styles/reset.css'
 import '../styles/page.css'
-import { Link, Route } from 'react-router-dom';
-import Home from '../Page/Home';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+
+import { Link, Route } from 'react-router-dom';
+import Home from '../Page/Home';
+import Work from '../Page/Work';
+import About from '../Page/About';
+import ToyProj from '../Page/ToyProject';
+
 
 import { Section, Header__top, Header__bottom, Backword, Menu__button, HomeMenu } from './Page__nav__styled';
 
@@ -62,12 +67,20 @@ class Page__nav extends React.Component {
                     <li className={"menuLink"}>WORK</li>
                     <li className={"menuLink"}>ABOUT</li>
                     <li className={"menuLink"}>TOY PROJ</li>
+                    {/* <li className={"menuLink"}><Link to="/work" className={"MainBtn"}>WORK</Link></li>
+                    <li className={"menuLink"}><Link to="/about" className={"MainBtn"}>ABOUT</Link></li>
+                    <li className={"menuLink"}><Link to="/ToyProject" className={"MainBtn"}>TOY PROJ</Link></li> */}
+                    <li className={"menuLink"}>DESIGN</li>
                 </HomeMenu>
             </Header__bottom>
 
             <main>
                 <Route exact path="/" component={Home} />
+                {/* <Route exact path="/Work" component={Work} />
+                <Route exact path="/Aobut" component={About} />
+                <Route exact path="/ToyProject" component={ToyProj} /> */}
             </main>
+
         </Section>
 
     }

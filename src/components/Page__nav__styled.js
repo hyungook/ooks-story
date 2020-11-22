@@ -171,12 +171,12 @@ export const HomeMenu = styled.ul`
     box-shadow: 10px 5px 5px hsla(0, 0%, 0%, 0.4);
 
     li {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
-        margin: 0 0 12px 0;
+        margin: 0 0 8px 0;
         padding: 0.4rem 1rem;
-        line-height: 26px;
+        line-height: 1.2rem;
         color: #bbbbbb;
 
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;

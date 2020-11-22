@@ -75,34 +75,34 @@ export const MainHeader = styled.header`
     margin-bottom: 54px;
     
     h1 {
-        font-size: 6.4rem;
+        font-size: 4rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
-        margin: 0 0 8px 0;
-        line-height: 5rem;
+        margin: 8px 0 2px 0;
+        line-height: 4rem;
         color: #bbbbbb;
     }
     p {
         position: absolute;
         font-family: S-CoreDream-1Thin,sans-serif;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         z-index: 999;
     }
 
     @media only screen and (min-width: 768px) {
         margin-bottom: 140px;
         h1 {
-            font-size: 8rem;
+            font-size: 7rem;
             font-family: "Squada One", cursive;
             font-weight: 400;
-            margin: 0 0 20px 0;
+            margin: 0 0 8px 0;
             line-height: 5rem;
             color: #bbbbbb;
         }
         p {
             position: absolute;
             font-family: S-CoreDream-1Thin,sans-serif;
-            font-size: 3rem;
+            font-size: 2.6rem;
             z-index: 999;
         }
     }

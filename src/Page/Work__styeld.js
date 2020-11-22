@@ -51,33 +51,78 @@ export const Cursor2 = styled.div`
     }
 `;
 export const WorkWrap = styled.section`
-    width: 84%;
-    float: right;
-    padding: 80px 0 0 40px;
-    box-sizing: border-box;
+    padding: 1rem 1rem;
+    
+
+    @media only screen and (min-width: 1024px) {
+        width: 84%;
+        float: right;
+        padding: 80px 0 0 40px;
+        box-sizing: border-box;
+    }
 `;
 
 export const MainHeader = styled.header`
+
     position: relative;
     width: 100%;
-    margin-bottom: 140px;
-    
-    // background-color: #333;
+    margin-bottom: 54px;
     
     h1 {
-        // position: absolute;
-        font-size: 190px;
+        font-size: 6.4rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
-        margin: 0 0 10px 0;
-        line-height: 150px;
+        margin: 0 0 8px 0;
+        line-height: 5rem;
         color: #bbbbbb;
     }
     p {
         position: absolute;
         font-family: S-CoreDream-1Thin,sans-serif;
-        font-size: 80px;
+        font-size: 1.6rem;
         z-index: 999;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 140px;
+        h1 {
+            font-size: 8rem;
+            font-family: "Squada One", cursive;
+            font-weight: 400;
+            margin: 0 0 20px 0;
+            line-height: 5rem;
+            color: #bbbbbb;
+        }
+        p {
+            position: absolute;
+            font-family: S-CoreDream-1Thin,sans-serif;
+            font-size: 3rem;
+            z-index: 999;
+        }
+    }
+
+
+    @media only screen and (min-width: 1024px) {
+        clear: both;
+
+        margin-bottom: 140px;
+        
+        // background-color: #333;
+        
+        h1 {
+            // position: absolute;
+            font-size: 190px;
+            font-family: "Squada One", cursive;
+            font-weight: 400;
+            margin: 0 0 10px 0;
+            line-height: 150px;
+            color: #bbbbbb;
+        }
+        p {
+            font-family: S-CoreDream-1Thin,sans-serif;
+            font-size: 80px;
+            z-index: 999;
+        }
     }
 `;
 
@@ -89,7 +134,7 @@ export const MainBody = styled.section`
     align-items: center;
     flex-wrap: nowrap;
 
-    margin-bottom: 100px;
+    margin-bottom: 2rem;
     
     ul {
         width: 100%;
@@ -98,90 +143,178 @@ export const MainBody = styled.section`
 
 export const PortfoUl = styled.ul`
     width: 100%;
+
+    @media only screen and (min-width: 1281px) {
+
+    }
     
 `;
 
 export const PortfoLI = styled.li`
+
     position: relative;
-    width: 47%;
-    height: 380px;
+    width: 100%;
+    height: 180px;
     display: inline-block;
     box-sizing: border-box;
     overflow: hidden;
-    margin-bottom: 60px;
-
-    z-index: 10;
+    margin-bottom: 20px;
 
     background-color: teal;
 
-    // 홀수
-    :nth-child(odd) {
-        margin-right: 6%;
-        // transform: translate(0, -15%);
-    } 
-    // 짝수
-    :nth-child(even) {
-        transform: translate(0, -30%);
-    } 
+    @media only screen and (min-width: 768px) {
+        position: relative;
+        width: 47%;
+        height: 180px;
+        display: inline-block;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-bottom: 20px;
+    
+        // 홀수
+        :nth-child(odd) {
+            margin-right: 6%;
+        } 
+        // 짝수
+        :nth-child(even) {
+            transform: translate(0, -30%);
+        } 
+    }
 
-    // :nth-child(1),:nth-child(3) {
-    //     margin-right: 6%;
-    // }
 
-    :hover {
-       a {
-        opacity: 1;   
-       }
-       img {
-        transform: scale(1.1);
-       }
+    @media only screen and (min-width: 1024px) {
+
+        position: relative;
+        width: 47%;
+        height: 380px;
+        display: inline-block;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-bottom: 60px;
+
+        z-index: 10;
+
+        background-color: teal;
+
+        // 홀수
+        :nth-child(odd) {
+            margin-right: 6%;
+            // transform: translate(0, -15%);
+        } 
+        // 짝수
+        :nth-child(even) {
+            transform: translate(0, -30%);
+        } 
+
+        // :nth-child(1),:nth-child(3) {
+        //     margin-right: 6%;
+        // }
+
+        :hover {
+        a {
+            opacity: 1;   
+        }
+        img {
+            transform: scale(1.1);
+        }
+        }
     }
 
 `;
 
 export const PortfoA = styled.a`
     position: relative;
-    
     width: 100%;
     height: 100%;
-    padding: 0 40px;
+    padding: 0 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    z-index: 999;
-    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
     text-decoration: none;
-
-    opacity: 0;
-
-    background-color: rgba(17, 17, 17, 0.7);
+    background-color: rgba(17, 17, 17, 0.2);
+    z-index: 999;
 
     .wrap {
         position: absolute;
-        padding: 0 10%;
+        padding: 0 6%;
         width: 100%;
         bottom: 0;
         left: 0;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
     }
 
     div:nth-child(1) {
-        font-size: 50px;
+        font-size: 2.6rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
-        margin: 0;
-        line-height: 50px;
+        margin: 0 0 1rem 0;
+        line-height: 1rem;
         color: #fff;
     }
     div:nth-child(2) {
-        font-family: S-CoreDream-1Thin,sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 22px;
-        color: #ff75a3;
-        margin-bottom: 40px;
+        display: none;
     }
+
+
+    @media only screen and (min-width: 768px) {
+        div:nth-child(1) {
+            font-size: 2.6rem;
+            font-family: "Squada One", cursive;
+            font-weight: 400;
+            margin: 0 0 0.8rem 0;
+            line-height: 1rem;
+            color: #fff;
+        }
+        div:nth-child(2) {
+            display: none;
+        }
+    }
+
+
+    @media only screen and (min-width: 1024px) {
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        z-index: 999;
+        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
+        text-decoration: none;
+
+        opacity: 0;
+
+        background-color: rgba(17, 17, 17, 0.7);
+
+        .wrap {
+            position: absolute;
+            padding: 0 10%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 10px;
+        }
+
+        div:nth-child(1) {
+            font-size: 50px;
+            font-family: "Squada One", cursive;
+            font-weight: 400;
+            margin: 0;
+            line-height: 2.4rem;
+            color: #fff;
+        }
+        div:nth-child(2) {
+            display: inline-block;
+            font-family: S-CoreDream-1Thin,sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 22px;
+            color: #ff75a3;
+            margin-bottom: 40px;
+        }
+    }
+    
+    
 `;
 
 export const PortfoImg = styled.img`
@@ -196,32 +329,53 @@ export const PortfoImg = styled.img`
 
 export const Footer = styled.footer`
     width: 100%;
-
-    padding: 0 0 300px 0;
-
-
-
-
+    padding: 0 0 100px 0;
     strong {
-        font-size: 60px;
+        font-size: 2.4rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
-        margin: 0 0 10px 0;
-        line-height: 80px;
+        margin: 0 0 40px 0;
+        line-height: 1.4rem;
         color: #bbbbbb;
     }
-    
     .subTitle {
         // position: absolute;
         font-family: S-CoreDream-1Thin,sans-serif;
-        font-size: 30px;
-        margin-bottom: 30px;
+        font-size: 1.3rem;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
     .mainText {
-        width: 80%;
+        width: 86%;
         font-family: S-CoreDream-1Thin,sans-serif;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         font-weight: 400;
         line-height: 1.5rem;
     }
+
+
+    @media only screen and (min-width: 1024px) {
+        padding: 0 0 300px 0;
+
+        strong {
+            font-size: 60px;
+            margin: 0 0 10px 0;
+            line-height: 80px;
+        }
+        
+        .subTitle {
+            font-family: S-CoreDream-1Thin,sans-serif;
+            font-size: 30px;
+            margin: 0 0 30px 0;
+        }
+        .mainText {
+            width: 80%;
+            font-family: S-CoreDream-1Thin,sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+    }
+
+    
 `;

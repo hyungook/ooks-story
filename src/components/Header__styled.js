@@ -62,7 +62,7 @@ export const Cursor2 = styled.div`
         transform: translate(-50%, -50%);
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
     
-        z-index: 999;
+        z-index: 99999;
     }
 `;
 
@@ -73,6 +73,8 @@ export const HeaderTop = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 999;
 
     @media only screen and (min-width: 768px) {
         float: left;

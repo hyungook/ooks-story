@@ -2,8 +2,9 @@ import React from 'react';
 import Page__nav from '../components/Page__nav';
 import styled from 'styled-components';
 
+import '../styles/reset.css';
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
-    PortfoLI, PortfoA, PortfoImg, Footer } from './ToyProject__styeld';
+    PortfoLI, PortfoA, PortfoImg, Footer } from './ToyProject__styled';
 import { data } from '../Data/Toy__data'
 
 

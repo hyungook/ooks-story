@@ -104,6 +104,7 @@ export const MainHeader = styled.header`
             font-family: S-CoreDream-1Thin,sans-serif;
             font-size: 2.6rem;
             z-index: 999;
+            color: #bbbbbb;
         }
     }
 

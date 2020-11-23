@@ -87,6 +87,7 @@ export const MainHeader = styled.header`
         font-family: S-CoreDream-1Thin,sans-serif;
         font-size: 1.3rem;
         z-index: 999;
+        color: #bbbbbb;
     }
 
     @media only screen and (min-width: 768px) {

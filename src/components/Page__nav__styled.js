@@ -192,6 +192,7 @@ export const HomeMenu = styled.ul`
         top: 80px;
         text-align: center;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
+        box-shadow: none;
         opacity: 0;
 
         li {

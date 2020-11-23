@@ -148,5 +148,42 @@ export const About__header = styled.section`
 
 export const Section = styled.section`
     width: 100%;
+    padding: 0 7rem;
+
     
+
+    background-color: #222;
+`;
+
+export const SectionWrap = styled.div`
+    padding: 7rem 0;
+    display: flex;
+    width: 100%;
+
+    border-bottom: 1px solid rgba(187, 187, 187, 0.2);
+`;
+
+export const SectionHeader = styled.div`
+    min-width: 50%;
+    width: 50%;
+    height: auto;
+
+
+    strong {
+        font-size: 2.6rem;
+        font-family: "S-CoreDream-9Black", cursive;
+        font-weight: 400;
+        // margin: 8px 0 2px 0;
+        line-height: 4rem;
+        color: #bbbbbb;
+    }
+`;
+
+export const SectionUl = styled.ul`
+    min-width: 50%;
+    width: 50%
+    box-sizing: border-box;
+
+
+    background-color: #444;
 `;

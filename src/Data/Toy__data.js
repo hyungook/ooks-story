@@ -3,7 +3,7 @@ import React from 'react';
 export const data =[
     {
         url : "https://hyungook.github.io/CarrotGame/",
-        img : "toyProject_01.jpg",
+        img : "toyProject_01.png",
         alt : "thumnail image",
         title : "CARROT GAME",
         subTitle : "Carrot Game"},

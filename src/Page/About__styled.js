@@ -102,7 +102,7 @@ export const MainHeader = styled.header`
     @media only screen and (min-width: 1025px) {
         clear: both;
 
-        margin-bottom: 140px;
+        margin-bottom: 180px;
         
         
         h1 {
@@ -148,17 +148,23 @@ export const About__header = styled.section`
 
 export const Section = styled.section`
     width: 100%;
-    padding: 0 7rem;
+    padding: 0 9rem 0 7rem;
 
-    
-
-    background-color: #222;
 `;
 
-export const SectionWrap = styled.div`
-    padding: 7rem 0;
+export const SectionWrap = styled.ul`
     display: flex;
+    flex-direction: column;
     width: 100%;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.2);
+`;
+
+export const SectionLi = styled.li`
+    padding: 7rem 0 4rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap: wrap;
 
     border-bottom: 1px solid rgba(187, 187, 187, 0.2);
 `;
@@ -168,9 +174,8 @@ export const SectionHeader = styled.div`
     width: 50%;
     height: auto;
 
-
     strong {
-        font-size: 2.6rem;
+        font-size: 3rem;
         font-family: "S-CoreDream-9Black", cursive;
         font-weight: 400;
         // margin: 8px 0 2px 0;
@@ -179,11 +184,65 @@ export const SectionHeader = styled.div`
     }
 `;
 
-export const SectionUl = styled.ul`
+export const MapWrap = styled.section`
     min-width: 50%;
-    width: 50%
-    box-sizing: border-box;
+    width: 50%;
+    overflow: hidden;
+
+    // :last-child {
+    //     margin: none;
+    // }
+`;
+
+export const SectionBody = styled.div`
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
 
 
-    background-color: #444;
+    .skill__header {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 1.8rem;
+
+        .skillIcon {
+            width: 2rem;
+            height: 2rem;
+            overflow: hidden;
+
+            margin-right: 10px;
+
+            background-color: tomato;
+        }
+
+        p {
+            font-family: S-CoreDream-9Black;
+            font-size: 1.7rem;
+            margin-right: auto;
+        }
+        .level {
+            position: relative;
+            width: 50%;
+            height: 2px;
+            background-color: #333333;
+
+            span {
+                position: absolute;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+        }
+      }
+    .map__text {
+        font-family: Noto Sans KR,sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #777;
+        font-weight: 400;
+        white-space: pre-line;
+    }
+
 `;

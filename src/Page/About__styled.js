@@ -214,7 +214,12 @@ export const SectionBody = styled.div`
 
             margin-right: 10px;
 
-            background-color: tomato;
+            // background-color: tomato;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         p {
@@ -239,10 +244,39 @@ export const SectionBody = styled.div`
     .map__text {
         font-family: Noto Sans KR,sans-serif;
         font-size: 1.1rem;
-        line-height: 1.8;
+        line-height: 1.9;
         color: #777;
         font-weight: 400;
         white-space: pre-line;
+    }
+
+`;
+
+export const Footer = styled.footer`
+
+    width: 100%;
+    padding: 7rem;
+    display: flex;
+
+    .footer__header {
+        width: 50%;
+        font-size: 3rem;
+        line-height: 1.6;
+        white-space: pre;
+        // font-weight: 900;
+        color: #bbb;
+        font-family: S-CoreDream-3Light,"sans-serif";
+    }
+
+    .footer__body {
+        .communi li {
+            line-height: 2.3;
+            font-size: 24px;
+            font-weight: 300;
+            word-break: keep-all;
+            color: #bbb;
+            font-family: S-CoreDream-3Light,"sans-serif";
+        }
     }
 
 `;

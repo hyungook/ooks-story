@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import '../styles/reset.css';
 import '../styles/About.css';
 import { Wrap, Cursor, Cursor2, AboutWrap, MainHeader, About__header, Section, SectionWrap, SectionLi,
-        SectionHeader, MapWrap, SectionBody } from './About__styled';
+        SectionHeader, MapWrap, SectionBody, Footer } from './About__styled';
 
 import { data } from '../Data/About__data'
 
-const url = process.env.PUBLIC_URL + '/image/';
+const url = process.env.PUBLIC_URL + '/image/skill/';
 
 class About extends React.Component {
 
@@ -176,18 +176,18 @@ class About extends React.Component {
                     </SectionWrap>
                 </Section>
 
-                <footer>
+                <Footer>
                     <div className={"footer__header"}>
-                        <strong>특별한 경험들을 만나보세요.</strong>
+                        <strong>특별한 경험들을<br />만나보세요.(수정)</strong>
                     </div>
                     <div className={"footer__body"}>
-                        <ul className={"Communi"}>
-                            <li>nenonenoberneno@gmail.com</li>
-                            <li>+82 10 4100 2497</li>
-                            <li>@hyungookoh</li>
+                        <ul className={"communi"}>
+                            <li className={"communi__li"}>nenonenoberneno@gmail.com</li>
+                            <li className={"communi__li"}>+82 10 4100 2497</li>
+                            <li className={"communi__li"}>@hyungookoh</li>
                         </ul>
                     </div>
-                </footer>
+                </Footer>
 
             </AboutWrap>
         </Wrap>

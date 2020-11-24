@@ -3,7 +3,7 @@ import React from 'react';
 export const data =[
     {
         category: "front-end",
-        image: "#",
+        image: "js.png",
         alt: "Javascript",
         skillName: "Javascript",
         level: "5",
@@ -12,7 +12,7 @@ export const data =[
     },
     {
         category: "front-end",
-        image: "#",
+        image: "html.png",
         alt: "HTML5",
         skillName: "HTML5",
         level: "8",
@@ -21,7 +21,7 @@ export const data =[
     },
     {
         category: "front-end",
-        image: "#",
+        image: "css.png",
         alt: "CSS3",
         skillName: "CSS3",
         level: "8",
@@ -30,7 +30,7 @@ export const data =[
     },
     {
         category: "Library",
-        image: "#",
+        image: "react.png",
         alt: "React JS",
         skillName: "React JS",
         level: "5",
@@ -39,7 +39,7 @@ export const data =[
     },
     {
         category: "Library",
-        image: "#",
+        image: "react.png",
         alt: "React Native",
         skillName: "React Native",
         level: "1",
@@ -48,25 +48,25 @@ export const data =[
     },
     {
         category: "Library",
-        image: "#",
+        image: "typescript.png",
         alt: "Typescript",
         skillName: "Typescript",
         level: "1",
         text: "현재 개발중입니다.",
-        color : "#01d7fe",
+        color : "#007acc",
     },
     {
         category: "Library",
-        image: "#",
+        image: "jquery.png",
         alt: "Jquery",
         skillName: "Jquery",
         level: "3",
         text: "현재 개발중입니다.",
-        color : "#01d7fe",
+        color : "#0765a8",
     },
     {
         category: "Back-End",
-        image: "#",
+        image: "nodeJS.png",
         alt: "Node JS",
         skillName: "Node JS",
         level: "1",
@@ -75,7 +75,7 @@ export const data =[
     },
     {
         category: "Design",
-        image: "#",
+        image: "ps.png",
         alt: "Photoshop",
         skillName: "Photoshop",
         level: "6",
@@ -89,11 +89,11 @@ export const data =[
         skillName: "Adobe XD",
         level: "4",
         text: "이것도 15년 넘게 써서 꼭 필요한 만큼은 씁니다. 3D기능은 다룰 줄은 알지만 간단히 사용할 수 있습니다.",
-        color : "#ff7e1b",
+        color : "#fd68f3",
     },
     {
         category: "Design",
-        image: "#",
+        image: "ai.png",
         alt: "Illustrator",
         skillName: "Illustrator",
         level: "6",

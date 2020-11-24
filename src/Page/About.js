@@ -178,7 +178,7 @@ class About extends React.Component {
 
                 <Footer>
                     <div className={"footer__header"}>
-                        <strong>특별한 경험들을<br />만나보세요.(수정)</strong>
+                        <p>특별한 경험들을<br />만나보세요.(수정)</p>
                     </div>
                     <div className={"footer__body"}>
                         <ul className={"communi"}>

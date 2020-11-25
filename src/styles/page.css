@@ -1,4 +1,18 @@
 @charset 'utf-8';
+@font-face {
+  font-family: "SCDream1";
+  src: url(../Data/S-Core_Dream/SCDream1.otf);
+}
+@font-face {
+  font-family: "SCDream3";
+  src: url(../Data/S-Core_Dream/SCDream3.otf);
+}
+@font-face {
+  font-family: "SCDream9";
+  src: url(../Data/S-Core_Dream/SCDream9.otf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Squada+One&display=swap");
 
 .open {
   visibility: visible !important;

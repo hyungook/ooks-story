@@ -84,7 +84,7 @@ export const MainHeader = styled.header`
     }
     p {
         position: absolute;
-        font-family: S-CoreDream-1Thin,sans-serif;
+        font-family: "SCDream1",sans-serif;
         font-size: 1.3rem;
         z-index: 999;
     }
@@ -101,7 +101,7 @@ export const MainHeader = styled.header`
         }
         p {
             position: absolute;
-            font-family: S-CoreDream-1Thin,sans-serif;
+            font-family: "SCDream1",sans-serif;
             font-size: 2.6rem;
             z-index: 999;
             color: #bbbbbb;
@@ -312,7 +312,7 @@ export const PortfoA = styled.a`
         }
         div:nth-child(2) {
             display: inline-block;
-            font-family: S-CoreDream-1Thin,sans-serif;
+            font-family: "SCDream1",sans-serif;
             font-size: 18px;
             font-weight: 600;
             line-height: 22px;
@@ -347,14 +347,14 @@ export const Footer = styled.footer`
     }
     .subTitle {
         // position: absolute;
-        font-family: S-CoreDream-1Thin,sans-serif;
+        font-family: "SCDream1",sans-serif;
         font-size: 1.3rem;
         margin-top: 10px;
         margin-bottom: 20px;
     }
     .mainText {
         width: 86%;
-        font-family: S-CoreDream-1Thin,sans-serif;
+        font-family: "SCDream1",sans-serif;
         font-size: 0.8rem;
         font-weight: 400;
         line-height: 1.5rem;
@@ -371,13 +371,13 @@ export const Footer = styled.footer`
         }
         
         .subTitle {
-            font-family: S-CoreDream-1Thin,sans-serif;
+            font-family: "SCDream1",sans-serif;
             font-size: 30px;
             margin: 0 0 30px 0;
         }
         .mainText {
             width: 80%;
-            font-family: S-CoreDream-1Thin,sans-serif;
+            font-family: "SCDream1",sans-serif;
             font-size: 1.1rem;
             font-weight: 400;
             line-height: 1.5rem;

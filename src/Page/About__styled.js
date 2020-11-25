@@ -66,7 +66,7 @@ export const MainHeader = styled.header`
     
     h1 {
         font-size: 4rem;
-        font-family: "Squada One", cursive;
+        font-family: "Squada One", "cursive";
         font-weight: 400;
         margin: 8px 0 2px 0;
         line-height: 4rem;
@@ -74,7 +74,7 @@ export const MainHeader = styled.header`
     }
     p {
         position: absolute;
-        font-family: S-CoreDream-1Thin,sans-serif;
+        font-family: "SCDream1", "sans-serif";
         font-size: 1.3rem;
         z-index: 999;
         color: #bbbbbb;
@@ -84,7 +84,7 @@ export const MainHeader = styled.header`
         margin-bottom: 140px;
         h1 {
             font-size: 7rem;
-            font-family: "Squada One", cursive;
+            font-family: "Squada One", "cursive";
             font-weight: 400;
             margin: 0 0 8px 0;
             line-height: 5rem;
@@ -92,7 +92,7 @@ export const MainHeader = styled.header`
         }
         p {
             position: absolute;
-            font-family: S-CoreDream-1Thin,sans-serif;
+            font-family: "SCDream1", "sans-serif";
             font-size: 2.6rem;
             z-index: 999;
         }
@@ -108,14 +108,14 @@ export const MainHeader = styled.header`
         h1 {
             // position: absolute;
             font-size: 190px;
-            font-family: "Squada One", cursive;
+            font-family: "Squada One", "cursive";
             font-weight: 400;
             margin: 0 0 10px 0;
             line-height: 150px;
             color: #bbbbbb;
         }
         p {
-            font-family: S-CoreDream-1Thin,sans-serif;
+            font-family: "SCDream1", "sans-serif";
             font-size: 80px;
             z-index: 999;
         }
@@ -176,7 +176,7 @@ export const SectionHeader = styled.div`
 
     strong {
         font-size: 3rem;
-        font-family: "S-CoreDream-9Black", cursive;
+        font-family: "SCDream9", cursive;
         font-weight: 400;
         // margin: 8px 0 2px 0;
         line-height: 4rem;
@@ -265,17 +265,17 @@ export const Footer = styled.footer`
         white-space: pre;
         // font-weight: 900;
         color: #bbb;
-        font-family: S-CoreDream-3Light,"sans-serif";
+        font-family: "SCDream3", "Noto Sans KR", "sans-serif";
     }
 
     .footer__body {
         .communi li {
-            line-height: 2.3;
+            line-height: 2;
             font-size: 24px;
             font-weight: 300;
             word-break: keep-all;
             color: #bbb;
-            font-family: S-CoreDream-3Light,"sans-serif";
+            font-family: "SCDream3","sans-serif";
         }
     }
 

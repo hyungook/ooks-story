@@ -13,7 +13,7 @@ export const NameBox = styled.div`
     }
 `;
 export const ToyBtn = styled.button`
-    font-family: Squada One, sans-serif;
+    font-family: "Squada One", sans-serif;
     font-weight: 400;
     position: absolute;
     font-size: 36px;

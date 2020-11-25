@@ -71,15 +71,17 @@ class About extends React.Component {
     render() {
         return <Wrap>
             <Page__nav />
+
             <Cursor className={"cursor"}></Cursor>
             <Cursor2 className={"cursor2"}></Cursor2>
+
             <AboutWrap>
                 <MainHeader>
                     <h1>ABOUT</h1>
-                    <p>생각을 실천으로 옮기는 사람.</p>
+                    <p>글 적자 글 적자 글 적자.</p>
                 </MainHeader>
                 <About__header className={"about__header"}>
-                    <p>세상을, 생활을 더 낫게 만들고 싶은 꿈은 결코 낡지 않습니다. <br />나를 필요로 하는 곳에서, 생각하고, 스케치하고, 설계하고, 만들어냅니다.</p>
+                    <p> 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자.</p>
                     <div className={"image__box"}>
                         <img src={""}></img>
                     </div>

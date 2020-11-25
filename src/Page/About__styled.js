@@ -43,9 +43,16 @@ export const Cursor2 = styled.div`
 export const Wrap = styled.section`
     width: 100%;
     box-sizing: border-box;
+
+    background-color: #111;
 `;
 
 export const AboutWrap = styled.div`
+
+    width: 100%;
+    padding: 4rem 0 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
 
     @media only screen and (min-width: 1025px) {
         margin: 0;
@@ -62,20 +69,21 @@ export const MainHeader = styled.header`
 
     position: relative;
     width: 100%;
-    margin-bottom: 54px;
+    padding: 1rem;
+    margin: 1rem 1rem 3rem 1rem;
     
     h1 {
-        font-size: 4rem;
+        font-size: 6rem;
         font-family: "Squada One", "cursive";
         font-weight: 400;
-        margin: 8px 0 2px 0;
-        line-height: 4rem;
+        // margin: 8px 0 2px 0;
+        line-height: 6rem;
         color: #bbbbbb;
     }
     p {
         position: absolute;
         font-family: "SCDream1", "sans-serif";
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         z-index: 999;
         color: #bbbbbb;
     }
@@ -98,12 +106,10 @@ export const MainHeader = styled.header`
         }
     }
 
-
     @media only screen and (min-width: 1025px) {
         clear: both;
 
         margin-bottom: 180px;
-        
         
         h1 {
             // position: absolute;
@@ -124,6 +130,28 @@ export const MainHeader = styled.header`
 
 
 export const About__header = styled.section`
+
+    width: 100%;
+    box-sizing: border-box;
+
+    p {
+        padding: 1rem 2rem;
+        width: 100%;
+        font-family: Noto Sans KR,sans-serif;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #777;
+        // font-weight: 300;
+        white-space: pre-line;
+    }
+    .image__box {
+        width: 100%;
+        height: 20vh;
+
+        background-color: #999;
+    }
+
+@media only screen and (min-width: 1025px) {
     padding-top: 6rem;
     width: 100%;
 
@@ -144,54 +172,79 @@ export const About__header = styled.section`
 
         background-color: #999;
     }
+}
 `;
 
 export const Section = styled.section`
     width: 100%;
-    padding: 0 9rem 0 7rem;
+    padding: 0;
 
+    @media only screen and (min-width: 1025px) {
+        padding: 0 9rem 0 7rem;
+    }
 `;
 
 export const SectionWrap = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0 2rem;
     border-bottom: 1px solid rgba(187, 187, 187, 0.2);
+    
+    @media only screen and (min-width: 1025px) {
+        padding: 0;
+    }
 `;
 
 export const SectionLi = styled.li`
-    padding: 7rem 0 4rem 0;
+    padding: 1rem 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    // flex-wrap: wrap;
-
+    display: block;
     border-bottom: 1px solid rgba(187, 187, 187, 0.2);
+
+    @media only screen and (min-width: 1025px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 7rem 0 4rem 0;
+    }
 `;
 
 export const SectionHeader = styled.div`
-    min-width: 50%;
-    width: 50%;
+    width: 100%;
     height: auto;
+    padding: 2rem 0 3rem 0;
 
     strong {
-        font-size: 3rem;
+        font-size: 1.9rem;
         font-family: "SCDream9", cursive;
         font-weight: 400;
-        // margin: 8px 0 2px 0;
-        line-height: 4rem;
+        line-height: 2rem;
         color: #bbbbbb;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        min-width: 50%;
+        width: 50%;
+        height: auto;
+
+        strong {
+            font-size: 3rem;
+            line-height: 4rem;
+            margin: 0;
+            color: #bbbbbb;
+        }
     }
 `;
 
 export const MapWrap = styled.section`
-    min-width: 50%;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
-
-    // :last-child {
-    //     margin: none;
-    // }
+    
+    @media only screen and (min-width: 1025px) {
+        min-width: 50%;
+        width: 50%;
+        overflow: hidden;
+    }
 `;
 
 export const SectionBody = styled.div`
@@ -199,22 +252,21 @@ export const SectionBody = styled.div`
     height: auto;
     margin-bottom: 3rem;
 
-
     .skill__header {
         width: 100%;
         display: flex;
         justify-content: start;
         align-items: center;
-        margin-bottom: 1.8rem;
+        margin-bottom: 1rem;
 
         .skillIcon {
-            width: 2rem;
-            height: 2rem;
+            min-width: 1.8rem;
+            min-height: 1.8rem;
+            width: 1.8rem;
+            height: 1.8rem;
             overflow: hidden;
 
             margin-right: 10px;
-
-            // background-color: tomato;
 
             img {
                 width: 100%;
@@ -223,13 +275,13 @@ export const SectionBody = styled.div`
         }
 
         p {
-            font-family: S-CoreDream-9Black;
-            font-size: 1.7rem;
+            font-family: "SCDream9";
+            font-size: 1.4rem;
             margin-right: auto;
         }
         .level {
             position: relative;
-            width: 50%;
+            width: 36%;
             height: 2px;
             background-color: #333333;
 
@@ -243,35 +295,91 @@ export const SectionBody = styled.div`
       }
     .map__text {
         font-family: Noto Sans KR,sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.9;
+        font-size: 1rem;
+        line-height: 1.5;
         color: #777;
         font-weight: 400;
         white-space: pre-line;
     }
 
+    @media only screen and (min-width: 1025px) {
+        width: 100%;
+        height: auto;
+        margin-bottom: 3rem;
+
+        .skill__header {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 1.8rem;
+
+            .skillIcon {
+                width: 2rem;
+                height: 2rem;
+                overflow: hidden;
+
+                margin-right: 10px;
+
+                // background-color: tomato;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p {
+                font-family: "SCDream9";
+                font-size: 1.7rem;
+                margin-right: auto;
+            }
+            .level {
+                position: relative;
+                width: 50%;
+                height: 2px;
+                background-color: #333333;
+
+                span {
+                    position: absolute;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        .map__text {
+            font-family: Noto Sans KR,sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #777;
+            font-weight: 400;
+            white-space: pre-line;
+        }
+    }
 `;
 
 export const Footer = styled.footer`
 
     width: 100%;
-    padding: 7rem;
-    display: flex;
+    padding: 7rem 2rem;
+    display: block;
 
     .footer__header {
-        width: 50%;
-        font-size: 3rem;
+        width: 100%;
+        font-size: 1.6rem;
         line-height: 1.6;
         white-space: pre;
-        // font-weight: 900;
+        font-weight: 900;
         color: #bbb;
         font-family: "SCDream3", "Noto Sans KR", "sans-serif";
+        margin-bottom: 3rem;
     }
 
     .footer__body {
         .communi li {
             line-height: 2;
-            font-size: 24px;
+            font-size: 1.1rem;
             font-weight: 300;
             word-break: keep-all;
             color: #bbb;
@@ -279,4 +387,30 @@ export const Footer = styled.footer`
         }
     }
 
+    @media only screen and (min-width: 1025px) {
+        width: 100%;
+        padding: 7rem;
+        display: flex;
+
+        .footer__header {
+            width: 50%;
+            font-size: 3rem;
+            line-height: 1.6;
+            white-space: pre;
+            color: #bbb;
+            font-family: "SCDream3", "Noto Sans KR", "sans-serif";
+            margin: 0;
+        }
+
+        .footer__body {
+            .communi li {
+                line-height: 2;
+                font-size: 24px;
+                font-weight: 300;
+                word-break: keep-all;
+                color: #bbb;
+                font-family: "SCDream3","sans-serif";
+            }
+        }
+    }
 `;

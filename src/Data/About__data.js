@@ -84,7 +84,7 @@ export const data =[
     },
     {
         category: "Design",
-        image: "#",
+        image: "xd.png",
         alt: "Adobe XD",
         skillName: "Adobe XD",
         level: "4",

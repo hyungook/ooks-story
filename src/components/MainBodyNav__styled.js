@@ -134,6 +134,7 @@ export const NavBtn = styled.button`
     font-weight: 400;
     letter-spacing: 0;
     color: #bbbbbb;
+    white-space: nowrap;
 
     :focus {
         color: #fff;

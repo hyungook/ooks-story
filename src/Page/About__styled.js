@@ -89,13 +89,13 @@ export const MainHeader = styled.header`
     }
 
     @media only screen and (min-width: 768px) {
-        margin-bottom: 140px;
+        margin-bottom: 100px;
         h1 {
-            font-size: 7rem;
+            font-size: 10rem;
             font-family: "Squada One", "cursive";
             font-weight: 400;
             margin: 0 0 8px 0;
-            line-height: 5rem;
+            line-height: 7.5rem;
             color: #bbbbbb;
         }
         p {
@@ -151,28 +151,37 @@ export const About__header = styled.section`
         background-color: #999;
     }
 
-@media only screen and (min-width: 1025px) {
-    padding-top: 6rem;
-    width: 100%;
-
-    p {
-        width: 80%;
-        font-family: Noto Sans KR,sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.9;
-        padding: 1rem 6%;
-        margin: 0 0 1rem 0;
-        color: #777;
-        font-weight: 300;
-        white-space: pre-line;
+    @media only screen and (min-width: 768px) {
+        p {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+        .image__box {
+            height: 30vh;
+        }
     }
-    .image__box {
+    @media only screen and (min-width: 1025px) {
+        padding-top: 6rem;
         width: 100%;
-        height: 40vh;
 
-        background-color: #999;
+        p {
+            width: 80%;
+            font-family: Noto Sans KR,sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            padding: 1rem 6%;
+            margin: 0 0 1rem 0;
+            color: #777;
+            font-weight: 300;
+            white-space: pre-line;
+        }
+        .image__box {
+            width: 100%;
+            height: 40vh;
+
+            background-color: #999;
+        }
     }
-}
 `;
 
 export const Section = styled.section`
@@ -202,7 +211,7 @@ export const SectionLi = styled.li`
     display: block;
     border-bottom: 1px solid rgba(187, 187, 187, 0.2);
 
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (min-width: 768px) {
         display: flex;
         justify-content: space-between;
         padding: 7rem 0 4rem 0;
@@ -222,10 +231,11 @@ export const SectionHeader = styled.div`
         color: #bbbbbb;
     }
 
-    @media only screen and (min-width: 1025px) {
-        min-width: 50%;
-        width: 50%;
+    @media only screen and (min-width: 768px) {
+        min-width: 40%;
+        width: 40%;
         height: auto;
+        padding: 0;
 
         strong {
             font-size: 3rem;
@@ -240,9 +250,9 @@ export const MapWrap = styled.section`
     width: 100%;
     overflow: hidden;
     
-    @media only screen and (min-width: 1025px) {
-        min-width: 50%;
-        width: 50%;
+    @media only screen and (min-width: 768px) {
+        min-width: 60%;
+        width: 60%;
         overflow: hidden;
     }
 `;
@@ -276,7 +286,8 @@ export const SectionBody = styled.div`
 
         p {
             font-family: "SCDream9";
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            white-space: nowrap;
             margin-right: auto;
         }
         .level {
@@ -300,6 +311,63 @@ export const SectionBody = styled.div`
         color: #777;
         font-weight: 400;
         white-space: pre-line;
+    }
+
+
+    @media only screen and (min-width: 768px) {
+        width: 100%;
+        height: auto;
+        margin-bottom: 3rem;
+
+        .skill__header {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 1.8rem;
+
+            .skillIcon {
+                width: 2rem;
+                height: 2rem;
+                overflow: hidden;
+
+                margin-right: 10px;
+
+                // background-color: tomato;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p {
+                font-family: "SCDream9";
+                font-size: 1.7rem;
+                margin-right: auto;
+            }
+            .level {
+                position: relative;
+                width: 50%;
+                height: 2px;
+                background-color: #333333;
+
+                span {
+                    position: absolute;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        .map__text {
+            font-family: Noto Sans KR,sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #777;
+            font-weight: 400;
+            white-space: pre-line;
+        }
     }
 
     @media only screen and (min-width: 1025px) {
@@ -386,11 +454,28 @@ export const Footer = styled.footer`
             font-family: "SCDream3","sans-serif";
         }
     }
+    @media only screen and (min-width: 768px) {
+        display: flex;
+
+        .footer__header {
+            width: 50%;
+            font-size: 1.9rem;
+            line-height: 1.4;
+        }
+    
+        .footer__body {
+            .communi li {
+                font-size: 1.6rem;
+                line-height: 1.4;
+                word-break: keep-all;
+                font-family: "SCDream3","sans-serif";
+            }
+        } 
+    }
+
 
     @media only screen and (min-width: 1025px) {
-        width: 100%;
         padding: 7rem;
-        display: flex;
 
         .footer__header {
             width: 50%;

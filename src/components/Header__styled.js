@@ -134,6 +134,10 @@ export const HeaderA = styled.a`
     :focus {
         color: #fff;
     }
+    .MainBtn {
+        color: #777;
+        text-decoration: none;
+    }
 
     @media only screen and (min-width: 768px) {
         font-size: 1.4rem;
@@ -151,6 +155,10 @@ export const HeaderA = styled.a`
         :hover {
             color: #111;
         }
+        .MainBtn:hover {
+            color: #111;
+        }
+
         ::before {
             position: absolute;
             content: "";

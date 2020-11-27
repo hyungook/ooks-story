@@ -11,6 +11,7 @@ import Home from './Page/Home';
 import Work from './Page/Work';
 import About from './Page/About';
 import ToyProj from './Page/ToyProject';
+import Design from './Page/Design';
 
 class App extends React.Component{
   render() {
@@ -22,6 +23,7 @@ class App extends React.Component{
           <Route exact path = '/work' component = { Work }/>
           <Route exact path = '/about' component = { About }/>
           <Route exact path = '/toyproject' component = { ToyProj}/>
+          <Route exact path = '/design' component = { Design}/>
         </Switch>
       </BrowserRouter>
     </div>

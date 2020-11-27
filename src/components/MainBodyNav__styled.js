@@ -61,7 +61,6 @@ export const MainNav = styled.nav`
         align-items: center;
     }
 `;
-
 export const MainNavWrap = styled.div`
     width: 100%;
     display: flex;
@@ -127,7 +126,6 @@ export const NavBtn = styled.button`
             font-size: 10rem;
         }
     }
-
     @media only screen and (min-width: 1025px) {
         justify-content: center;
         align-items: center;

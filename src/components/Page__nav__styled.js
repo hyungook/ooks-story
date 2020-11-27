@@ -2,19 +2,20 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
     width: 100%;
-
     position: fixed;
-
-    z-index: 999999;
-    background-color: #111;
-
     display: flex;
     padding: 0.4rem 1rem;
+    
+    z-index: 999999;
+    // background-color: #111;
+    background-color: hsla(0, 0%, 7%, 0.6);;
+
+    // filter: blur(10px);
+    // -webkit-filter: blur(10px);
 
     @media only screen and (min-width: 768px) {
 
     }
-
     @media only screen and (min-width: 1025px) {
         display: block;
         width: 16%;

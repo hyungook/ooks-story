@@ -1,6 +1,9 @@
 import React from 'react'
 
 // import Parallax from 'parallax-js'
+import { Link, Route } from 'react-router-dom';
+import Design from '../Page/Design';
+
 import '../styles/reset.css';
 import '../styles/Header.css'
 import { Header__Wrap, Container, Cursor, Cursor2,
@@ -22,7 +25,7 @@ class Header extends React.Component {
 
         const cursor2HalfWidth = cursor2Rect.width / 2;
         const cursor2HalfHeight = cursor2Rect.height / 2;
-        cursor2.style.backgroundColor = `#2966ff`;
+        cursor2.style.backgroundColor = `#2bd42e`;
         
 
         let headerUl = document.querySelector('.header__ul');
@@ -44,7 +47,7 @@ class Header extends React.Component {
             function mousechange() {
                 cursor.style.borderRadius = `0`;
                 cursor.style.border = `1px solid #ffffff`;
-                cursor.style.backgroundColor = `#2966ff20`;  
+                cursor.style.backgroundColor = `#2bd42e20`;  
             }
             
             document.addEventListener('mouseover', (e) => {
@@ -89,13 +92,20 @@ class Header extends React.Component {
                     </HeaderLi>
                     <HeaderLi>
                         <HeaderA href={"#"} className={"header__a"}>
-                            Design
+                            {/* Design */}
+                            <Link to="/Design" className={"MainBtn MainBtn__4"}>Design</Link>
                         </HeaderA>
                     </HeaderLi>
                 </HeaderUl>
             </Container>
                 <Cursor className={"cursor"}></Cursor>
                 <Cursor2 className={"cursor2"}></Cursor2>
+
+
+        <main>
+            <Route exact path="/Design" component={Design} />
+        </main>
+
         </Header__Wrap>
     }
 }

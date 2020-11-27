@@ -1,17 +1,5 @@
 import styled from 'styled-components';
 
-
-export const Header = styled.header`
-    width: 100%;
-    height: 100vh;
-    color: #fff;
-    // cursor: pointer;
-    cursor: none;
-
-    overflow-y: scroll;
-    
-`;
-
 export const Cursor = styled.div`
     display:none;
 
@@ -48,6 +36,18 @@ export const Cursor2 = styled.div`
     
         z-index: 99999;
     }
+`;
+
+
+export const Header = styled.header`
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    // cursor: pointer;
+    cursor: none;
+
+    overflow-y: scroll;
+    
 `;
 export const WorkWrap = styled.section`
 

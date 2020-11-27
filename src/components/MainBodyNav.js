@@ -35,7 +35,6 @@ class MainBodyNav extends React.Component {
         //     }) 
         // })
 
-
         window.addEventListener('resize', () => {
             // console.log(`${window.innerWidth}`);
         })

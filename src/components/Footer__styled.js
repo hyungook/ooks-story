@@ -1,36 +1,37 @@
-import React from 'react'
 import styled from 'styled-components';
 
 export const NameBox = styled.div`
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    
+    height: 80px;
 
-    @media only screen and (min-width: 1281px) {
-        cursor: none;
+    @media only screen and (min-width: 768px) {
+        height: 140px;
     }
 `;
 export const ToyBtn = styled.button`
     font-family: "Squada One", sans-serif;
     font-weight: 400;
     position: absolute;
-    font-size: 36px;
+    font-size: 2.2rem;
     padding: 0;
-    bottom: 70px;
     color: #999;
     border-bottom: 2px solid #2966ff;
 
     @media only screen and (min-width: 768px) {
-        font-size: 46px;
+        font-size: 3rem;
     }
-
-
-    @media only screen and (min-width: 1024px) {
-        font-size: 46px;
+    @media only screen and (min-width: 1025px) {
+        font-size: 3.6rem;
         padding: 0 0.2em;
-        bottom: 90px;
         color: #777;
         border-bottom: 1px solid #2966ff;
         line-height: 1.2;

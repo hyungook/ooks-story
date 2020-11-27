@@ -1,6 +1,5 @@
 import React from 'react';
 import Page__nav from '../components/Page__nav';
-import styled from 'styled-components';
 
 import '../styles/reset.css';
 import '../styles/About.css';

@@ -1,6 +1,4 @@
 import React from 'react'
-import styled from 'styled-components';
-
 import { Link, Route } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -9,98 +7,101 @@ import About from '../Page/About';
 import ToyProj from '../Page/ToyProject';
 
 import '../styles/reset.css';
-import { Section, MainNav, MainNavWrap, MainNavWrapA,
+import '../styles/MainBodyNav.css';
+import { Section, MainNav, MainNavWrap,
     NavBtn, ButtonBackBox, BackBox } from './MainBodyNav__styled';
-
-
-// import Parallax from 'parallax-js'
 
 class MainBodyNav extends React.Component {
 
-    componentDidMount() {
-        const navA__1 = document.querySelector('.nav__a__1');
-        const navA__2 = document.querySelector('.nav__a__2');
-        const navA__3 = document.querySelector('.nav__a__3');
-
-
-        navA__1.addEventListener('mouseover', () => {
-            navA__1.style.transform = `translateX(16%)`;
-            navA__2.style.transform = `translateX(70%)`;
-            navA__3.style.transform = `translateX(70%)`;
-            
-            navA__2.style.opacity = `0.3`;
-            navA__3.style.opacity = `0.3`;
-        })
-        navA__1.addEventListener('mouseout', () => {
-            navA__1.style.transform = `translateX(-16%)`;
-            navA__2.style.transform = `translateX(20%)`;
-            navA__3.style.transform = `translateX(30%)`;
-
-            navA__2.style.opacity = `1.0`;
-            navA__3.style.opacity = `1.0`;
-        })
-        navA__2.addEventListener('mouseover', () => {
-            navA__1.style.transform = `translateX(-40%)`;
-            navA__2.style.transform = `translateX(18%)`;
-            navA__3.style.transform = `translateX(70%)`;
-
-            navA__1.style.opacity = `0.3`;
-            navA__3.style.opacity = `0.3`;
-        })
-        navA__2.addEventListener('mouseout', () => {
-            navA__1.style.transform = `translateX(-16%)`;
-            navA__2.style.transform = `translateX(20%)`;
-            navA__3.style.transform = `translateX(30%)`;
-
-            navA__1.style.opacity = `1.0`;
-            navA__3.style.opacity = `1.0`;
-        })
-        navA__3.addEventListener('mouseover', () => {
-            navA__1.style.transform = `translateX(-60%)`;
-            navA__2.style.transform = `translateX(-60%)`;
-            navA__3.style.transform = `translateX(-2%)`;
-
-
-            navA__1.style.opacity = `0.3`;
-            navA__2.style.opacity = `0.3`;
-        })
-        navA__3.addEventListener('mouseout', () => {
-            navA__1.style.transform = `translateX(-16%)`;
-            navA__2.style.transform = `translateX(20%)`;
-            navA__3.style.transform = `translateX(30%)`;
-
-
-            navA__1.style.opacity = `1.0`;
-            navA__2.style.opacity = `1.0`;
-        })
-
-        // let scene = document.querySelector('.scene');
-        // let parallaxInstance = new Parallax(scene);
-
+    constructor(props){
+        super(props)
+        this.state = {
+            page: 0,
+        }
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', () => {
+            console.log(`${window.innerWidth}`);
+        })
 
+        const innerWidth = window.innerWidth;
+
+        if(innerWidth >= 1281) {
+            const MainBtn__1 = document.querySelector('.MainBtn__1')
+            const MainBtn__2 = document.querySelector('.MainBtn__2')
+            const MainBtn__3 = document.querySelector('.MainBtn__3')
+
+        // MainBtn__1
+        MainBtn__1.addEventListener('mouseover', () => {
+            MainBtn__1.style.transform = `translateX(10%)`;
+            MainBtn__2.style.transform = `translateX(70%)`;
+            MainBtn__3.style.transform = `translateX(70%)`;
+    
+            MainBtn__2.style.opacity = `0.3`;
+            MainBtn__3.style.opacity = `0.3`;
+            
+        })
+        MainBtn__1.addEventListener('mouseout', () => {
+            MainBtn__1.style.transform = `translateX(-50%)`;
+            MainBtn__2.style.transform = `translateX(0)`;
+            MainBtn__3.style.transform = `translateX(50%)`;
+            
+            MainBtn__2.style.opacity = `1`;
+            MainBtn__3.style.opacity = `1`;
+        })
+        // MainBtn__2
+        MainBtn__2.addEventListener('mouseover', () => {
+            MainBtn__1.style.transform = `translateX(-70%)`;
+            MainBtn__2.style.transform = `translateX(0%)`;
+            MainBtn__3.style.transform = `translateX(70%)`;
+            
+            MainBtn__1.style.opacity = `0.3`;
+            MainBtn__3.style.opacity = `0.3`;
+        })
+        MainBtn__2.addEventListener('mouseout', () => {
+            MainBtn__1.style.transform = `translateX(-50%)`;
+            MainBtn__2.style.transform = `translateX(0)`;
+            MainBtn__3.style.transform = `translateX(50%)`;
+            
+            MainBtn__1.style.opacity = `1`;
+            MainBtn__3.style.opacity = `1`;
+        })
+        // MainBtn__3
+        MainBtn__3.addEventListener('mouseover', () => {
+            MainBtn__1.style.transform = `translateX(-70%)`;
+            MainBtn__2.style.transform = `translateX(-70%)`;
+            MainBtn__3.style.transform = `translateX(-10%)`;
+            
+            MainBtn__1.style.opacity = `0.3`;
+            MainBtn__2.style.opacity = `0.3`;
+        })
+        MainBtn__3.addEventListener('mouseout', () => {
+            MainBtn__1.style.transform = `translateX(-50%)`;
+            MainBtn__2.style.transform = `translateX(0)`;
+            MainBtn__3.style.transform = `translateX(50%)`;
+            
+            MainBtn__1.style.opacity = `1`;
+            MainBtn__2.style.opacity = `1`;
+        })
+        } else {
+            return;
+        }
+    }
 
     render() {
         return <Section>
         <MainNav>
             <MainNavWrap className={"main__nav__wrap"}>
-                <MainNavWrapA href={""} className={"nav__a__1"}>
-                    <NavBtn className={"nav__btn"}>
-                    <Link to="/about" className={"MainBtn"}>ABOUT</Link>
-                    </NavBtn>
-                </MainNavWrapA>
-                <MainNavWrapA href={""} className={"nav__a__2"}>
-                    <NavBtn className={"nav__btn"}>
-                        <Link to="/work" className={"MainBtn"}>WORK</Link>
-                    </NavBtn>
-                </MainNavWrapA>
-                <MainNavWrapA href={""} className={"nav__a__3"}>
-                    <NavBtn className={"nav__btn"}>
-                        {/* <Link to="/ToyProject" className={"MainBtn"}>TOY PROJ</Link> */}
-                        <Link to="/ToyProject" className={"MainBtn"}>TOY-PJ</Link>
-                    </NavBtn>
-                </MainNavWrapA>
+                <NavBtn className={"nav__btn__1"}>
+                    <Link to="/about" className={"MainBtn MainBtn__1"}>ABOUT</Link>
+                </NavBtn>
+                <NavBtn className={"nav__btn__2"}>
+                    <Link to="/work" className={"MainBtn MainBtn__2"}>WORK</Link>
+                </NavBtn>
+                <NavBtn className={"nav__btn__3"}>
+                    <Link to="/ToyProject" className={"MainBtn MainBtn__3"}>TOY-PJ</Link>
+                </NavBtn>
             </MainNavWrap>
         </MainNav>
 
@@ -108,7 +109,6 @@ class MainBodyNav extends React.Component {
             <BackBox className={"back__box"}></BackBox>
             <BackBox className={"back__box"}></BackBox>
         </ButtonBackBox>
-
 
         <main>
             <Route exact path="/Work" component={Work} />

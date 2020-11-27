@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components';
 import '../styles/reset.css';
 import { NameBox, ToyBtn } from './Footer__styled';
 
@@ -15,11 +14,6 @@ class Footer extends React.Component {
 
     render() {
         return <footer>
-            {/* <NameBox className={"name__box scene"}>
-                <ToyBtn className={"toy__button"} data-depth={"0.3"}>
-                    HYUNGOOK OH
-                </ToyBtn>
-            </NameBox> */}
             <NameBox className={"name__box scene"}>
                 <ToyBtn className={"toy__button"} data-depth={"0.3"}>
                     HYUNGOOK OH

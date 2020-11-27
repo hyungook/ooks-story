@@ -1,10 +1,10 @@
 import React from 'react'
-import styled from 'styled-components';
+
 // import Parallax from 'parallax-js'
 import '../styles/reset.css';
 import '../styles/Header.css'
-import { Header__Wrap, Container, HeaderWrap, Cursor, Cursor2,
-    HeaderTop, HeaderUl, HeaderLi, HeaderA } from './Header__styled';
+import { Header__Wrap, Container, Cursor, Cursor2,
+    HeaderUl, HeaderLi, HeaderA } from './Header__styled';
 
 
 class Header extends React.Component {
@@ -68,7 +68,6 @@ class Header extends React.Component {
 
         })
 
-
         // let scene = document.querySelector('.scene');
         // let parallaxInstance = new Parallax(scene);
 
@@ -77,30 +76,26 @@ class Header extends React.Component {
     render() {
         return <Header__Wrap>
             <Container>
-                <HeaderWrap>
-                    <HeaderTop>
-                        <HeaderUl className={"header__ul"}>
-                            <HeaderLi>
-                                <HeaderA href={"#"} className={"header__a"}>
-                                    Notion
-                                </HeaderA>
-                            </HeaderLi>
-                            <HeaderLi>
-                                <HeaderA href={"https://github.com/hyungook"} className={"header__a"}>
-                                    GitHub
-                                </HeaderA>
-                            </HeaderLi>
-                            <HeaderLi>
-                                <HeaderA href={"#"} className={"header__a"}>
-                                    Design
-                                </HeaderA>
-                            </HeaderLi>
-                        </HeaderUl>
-                    </HeaderTop>
-                </HeaderWrap>
+                <HeaderUl className={"header__ul"}>
+                    <HeaderLi>
+                        <HeaderA href={"#"} className={"header__a"}>
+                            Notion
+                        </HeaderA>
+                    </HeaderLi>
+                    <HeaderLi>
+                        <HeaderA href={"https://github.com/hyungook"} className={"header__a"}>
+                            GitHub
+                        </HeaderA>
+                    </HeaderLi>
+                    <HeaderLi>
+                        <HeaderA href={"#"} className={"header__a"}>
+                            Design
+                        </HeaderA>
+                    </HeaderLi>
+                </HeaderUl>
+            </Container>
                 <Cursor className={"cursor"}></Cursor>
                 <Cursor2 className={"cursor2"}></Cursor2>
-            </Container>
         </Header__Wrap>
     }
 }

@@ -1,32 +1,5 @@
-import React from 'react'
 import styled from 'styled-components';
 
-export const Header__Wrap = styled.section`
-    width: 100%;
-    @media only screen and (min-width: 768px) {
-        width: 34%;
-        margin: 0;
-        float: left;
-    }
-    @media only screen and (min-width: 1024px) {
-        width: 100%;
-        clear:both;
-    }
-    @media only screen and (min-width: 1281px) {
-        cursor: none;
-    }
-`;
-export const Container = styled.div`
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-`;
-export const HeaderWrap = styled.div`
-    position: relative;
-    width: 100%;
-    // height: 100vh;
-`;
 export const Cursor = styled.div`
     display:none;
 
@@ -42,7 +15,7 @@ export const Cursor = styled.div`
         pointer-events: none;
         transform: translate(-50%, -50%);
         transition: 0.1s ease;
-        z-index: 999;
+        z-index: 9999;
     }
 
 `;
@@ -62,41 +35,54 @@ export const Cursor2 = styled.div`
         transform: translate(-50%, -50%);
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
     
-        z-index: 99999;
+        z-index: 9999;
     }
 `;
 
-export const HeaderTop = styled.div`
+export const Header__Wrap = styled.section`
     width: 100%;
-    height: 80px;
-    padding: 40px 0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     z-index: 999;
 
     @media only screen and (min-width: 768px) {
+        width: 34%;
+        margin: 0;
         float: left;
-        height: 50vh;
-        padding: 140px 20px 0 20px;
-        overflow: hidden;
     }
-
-    @media only screen and (min-width: 1024px) {
-        clear: both;
-        height: 16vh;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media only screen and (min-width: 1025px) {
+        width: 100%;
+        clear:both;
+    }
+    @media only screen and (min-width: 1281px) {
+        cursor: none;
     }
 `;
+export const Container = styled.div`
+    width: 100%;
+    height: 140px;
+    position: relative;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media only screen and (min-width: 768px) {
+        width: 100%;
+        height: auto;
+        padding: 140px 30px 0 30px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        padding: 60px 0;
+    }
+    // overflow: hidden;
+`;
+
 
 export const HeaderUl = styled.ul`
     width: 100%;
     height: 100%;
-    padding: 0 20%;
+    padding: 0 20px;
     
     display: flex;
     justify-content: space-around;
@@ -110,7 +96,7 @@ export const HeaderUl = styled.ul`
         flex-direction: column;
     }
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         max-width: 340px;
         display: flex;
         justify-content: space-between;
@@ -121,26 +107,20 @@ export const HeaderUl = styled.ul`
 
 export const HeaderLi = styled.li`
     position: relative;
-    border-bottom: 1px solid #777;
-
     :focus {
         border-bottom: 1px solid #fff;
     }
-
     @media only screen and (min-width: 768px) {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid #777;
-
         margin-bottom: 0.8rem;   
     }
 
-
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         position: relative;
-        // transition: color 0.4s linear;
         border: none;
     }
 `;
@@ -161,20 +141,18 @@ export const HeaderA = styled.a`
         font-size: 1.4rem;
     }
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1025px) {
         padding: 0.1rem 1.5rem;
         font-size: 1.2rem;
         line-height: 1.9;
         font-weight: 300;
         white-space: pre-line;
         transition-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
-
         z-index: 1; 
 
         :hover {
             color: #111;
         }
-
         ::before {
             position: absolute;
             content: "";

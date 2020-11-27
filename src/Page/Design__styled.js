@@ -18,7 +18,7 @@ export const Cursor = styled.div`
         z-index: 9999;
     }
 `;
-export const Cursor2 = styled.div`    
+export const Cursor2 = styled.div`
     display:none;
 
     @media only screen and (min-width: 1025px) {

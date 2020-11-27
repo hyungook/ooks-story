@@ -21,10 +21,24 @@ class MainBodyNav extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener('resize', () => {
-            console.log(`${window.innerWidth}`);
-        })
 
+        // document.addEventListener('mouseover', (e) => {
+        //     const Btn = document.querySelectorAll('.Btn');
+        //     let elem = e.target;
+
+        //     Btn.addEventListener('mouseover', () => {
+        //         if(elem == Btn) {
+        //             console.log('ok');
+        //         } else {
+        //             console.log('no')
+        //         }
+        //     }) 
+        // })
+
+
+        window.addEventListener('resize', () => {
+            // console.log(`${window.innerWidth}`);
+        })
         const innerWidth = window.innerWidth;
 
         if(innerWidth >= 1281) {
@@ -94,10 +108,10 @@ class MainBodyNav extends React.Component {
         <MainNav>
             <MainNavWrap className={"main__nav__wrap"}>
                 <NavBtn className={"nav__btn__1"}>
-                    <Link to="/about" className={"MainBtn MainBtn__1"}>ABOUT</Link>
+                    <Link to="/about" className={"MainBtn MainBtn__1 Btn"}>ABOUT</Link>
                 </NavBtn>
                 <NavBtn className={"nav__btn__2"}>
-                    <Link to="/work" className={"MainBtn MainBtn__2"}>WORK</Link>
+                    <Link to="/work" className={"MainBtn MainBtn__2 Btn"}>WORK</Link>
                 </NavBtn>
                 <NavBtn className={"nav__btn__3"}>
                     <Link to="/ToyProject" className={"MainBtn MainBtn__3"}>TOY-PJ</Link>

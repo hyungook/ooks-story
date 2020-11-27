@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+    position: relative;
     width: 100vw;
     height: 64vh;
     display: flex;
@@ -22,7 +23,6 @@ export const Section = styled.section`
     @media only screen and (min-width: 1025px) {
         clear: both;
         padding: 0;
-        position: relative;
         width: 100%;
         height: auto;
         display: flex;
@@ -155,11 +155,12 @@ export const NavBtn = styled.button`
 export const ButtonBackBox = styled.div`
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    z-index: 0;
 
     @media only screen and (min-width: 768px) {
         display: none;
@@ -184,6 +185,7 @@ export const BackBox = styled.div`
     animation-name: scaleEffect;
     animation-duration: 1000ms;
     animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+    z-index: 0;
 
     @keyframes scaleEffect {
         0% {

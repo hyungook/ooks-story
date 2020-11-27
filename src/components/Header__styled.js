@@ -17,7 +17,6 @@ export const Cursor = styled.div`
         transition: 0.1s ease;
         z-index: 9999;
     }
-
 `;
 export const Cursor2 = styled.div`    
     display:none;
@@ -38,10 +37,8 @@ export const Cursor2 = styled.div`
         z-index: 9999;
     }
 `;
-
 export const Header__Wrap = styled.section`
     width: 100%;
-    z-index: 999;
 
     @media only screen and (min-width: 768px) {
         width: 34%;
@@ -132,6 +129,7 @@ export const HeaderA = styled.a`
     text-decoration: none;
     font-family: Noto Sans KR, sans-serif;
     color: #777;
+    z-index: 999999;
 
     :focus {
         color: #fff;

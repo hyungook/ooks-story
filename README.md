@@ -16,4 +16,4 @@
 - Router
 - media query
 
-###### 본 작업물은 "hyungook oh"의 개인 포트폴리오 작업물입니다.
+###### 본 작업물은 'hyungook oh'의 개인 포트폴리오 작업물입니다.

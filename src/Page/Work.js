@@ -3,7 +3,7 @@ import Page__nav from '../components/Page__nav';
 import styled from 'styled-components';
 
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
-    PortfoLI, PortfoA, PortfoImg, Footer } from './Work__styeld';
+    PortfoLI, PortfoA, WrapBox, PortfoImg, Footer } from './Work__styeld';
 import { data } from '../Data/Work__data'
 
 
@@ -47,46 +47,43 @@ class Work extends React.Component {
  
          })
  
-         function mousechange() {
-             cursor.style.borderRadius = `0`;
-             cursor.style.border = `1px solid #ffffff`;
-             cursor.style.backgroundColor = `#2bd42e20`; 
-         }
+        // function mousechange() {
+        //      cursor.style.borderRadius = `0`;
+        //      cursor.style.border = `1px solid #ffffff`;
+        //      cursor.style.backgroundColor = `#2bd42e20`; 
+        // }
          
-         document.addEventListener('mouseover', (e) => {
-             let elem = e.target;
+        // document.addEventListener('mouseover', (e) => {
+        //      let elem = e.target;
  
-             // console.log(elem.className)
-             if(elem.className == 'sc-hHftDr evQUgs'){
-                 // console.log('ok');
-                 mousechange()
-             } else if(elem.className == 'title') {
-                 mousechange()
-             } else if(elem.className == 'subTitle') {
-                 mousechange()
-             } else if(elem.className == 'sc-hHftDr cNlQMS') {
-                 mousechange()
-             } else if(elem.className == 'wrap box') {
-                 mousechange()
-             } else if(elem.className == 'link') {
-                 mousechange()
-             } else if(elem.className == 'icon') {
-                 mousechange()
-             } else if(elem.className == 'sc-kEjbxe gEZwja backward') {
-                mousechange()
-            } else if(elem.className == 'span') {
-                 mousechange()
-             } else if(elem.className == 'sc-crrsfI liZvO menuBtn openBtn') {
-                 mousechange()
-             } else if(elem.className == 'menuLink') {
-                 mousechange()
-             } else {
-                 // console.log('no')
-                 cursor.style.borderRadius = `50%`;
-                 cursor.style.border = `1px solid #c6c6c6`;
-                 cursor.style.background = `none`;
-             }  
-         })       
+        //      if(elem.className == 'sc-hHftDr evQUgs'){
+        //          mousechange()
+        //      } else if(elem.className == 'title') {
+        //          mousechange()
+        //      } else if(elem.className == 'subTitle') {
+        //          mousechange()
+        //      } else if(elem.className == 'sc-hHftDr cNlQMS') {
+        //          mousechange()
+        //      } else if(elem.className == 'wrap box') {
+        //          mousechange()
+        //      } else if(elem.className == 'link') {
+        //          mousechange()
+        //      } else if(elem.className == 'icon') {
+        //          mousechange()
+        //      } else if(elem.className == 'sc-kEjbxe gEZwja backward') {
+        //         mousechange()
+        //     } else if(elem.className == 'span') {
+        //          mousechange()
+        //      } else if(elem.className == 'sc-crrsfI liZvO menuBtn openBtn') {
+        //          mousechange()
+        //      } else if(elem.className == 'menuLink') {
+        //          mousechange()
+        //      } else {
+        //          cursor.style.borderRadius = `50%`;
+        //          cursor.style.border = `1px solid #c6c6c6`;
+        //          cursor.style.background = `none`;
+        //      }  
+        //  })       
     }
 
     render() {
@@ -106,15 +103,23 @@ class Work extends React.Component {
                     {data.map((data, idx) => {
                     return <PortfoLI className={"item"}>
                         <PortfoA href={data["url"]} target={"blank"}>
-                            <div className={"wrap box"}>
-                                <div className={"title"}>{data["title"]}</div>
-                                <div className={"subTitle"}>{data["subTitle"]}</div>
-                                {/* 추가 */}
-                                <div className={"percent"}>{data["percent"]}</div>
+                            <button className={"goBtn"}>GO</button>
+                            <WrapBox className={"wrap box"}>
+                                <div className={"titleWrap"}>
+                                    <div className={"title"}>{data["title"]}</div>
+                                    <div className={"subTitle"}>{data["subTitle"]}</div>
+                                </div>
                                 <div className={"info"}>{data["info"]}</div>
-                            </div>
+                                <div className={"infoWrap"}>
+                                    <a href={data["github"]} target={"blank"} className={"github"}>GitHub</a>
+                                    <div className={"technic"}>{data["technic1"]}</div>
+                                    <div className={"technic"}>{data["technic2"]}</div>
+                                    <div className={"technic"}>{data["technic3"]}</div>
+                                    <div className={"technic"}>{data["technic4"]}</div>
+                                </div>
+                            </WrapBox>
                         </PortfoA>
-                        <PortfoImg src={`${url+data["img"]}`} alt={data.alt}></PortfoImg>
+                        <PortfoImg src={`${url+data["img"]}`} alt={data["alt"]}></PortfoImg>
                         </PortfoLI>
                     })}
                     </ul>

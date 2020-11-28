@@ -2,8 +2,11 @@ import React from 'react';
 import Page__nav from '../components/Page__nav';
 
 import '../styles/reset.css';
-// import '../styles/About.css';
-import { Wrap, Cursor, Cursor2, DesignWrap, MainHeader} from './Design__styled';
+import '../styles/Design.css';
+import { Wrap, Cursor, Cursor2, DesignWrap, MainHeader, 
+    MainBody, PortfoUl, PortfoLi, Footer} from './Design__styled';
+import { data } from '../Data/Design__data'
+
 
 const url = process.env.PUBLIC_URL + '/image/skill/';
 
@@ -53,19 +56,57 @@ class Design extends React.Component{
                     <h1>DESIGN</h1>
                     <p>감각적인 디자인을 추구합니다.</p>
                 </MainHeader>
-                <section>
-                    <ul>
-                        <li>
-                            <b>title</b>
-                            <img></img>
-                            <text>설명</text>
-                            <a href={"#"}></a>
-                            <p>skill</p>
-                            
-                        </li>
-                    </ul>
-                </section>
-
+                <MainBody className={"mainBody"}>
+                    <div className={"btnWrap"}>
+                        <button className={"left"}></button>
+                        <button className={"right"}></button>
+                    </div>
+                    <PortfoUl className={"portfoUl"}>
+                    {data.map((data, idx) => { 
+                        return<PortfoLi className={"PortfoLi"}>
+                        <div className={"portfoImgBox"}>
+                            <span className={"no"}>0{data["num"]}</span>
+                            <img src={`${url+data["img"]}`} alt={data.alt}></img>
+                        </div>
+                        <div className={"portfoInfo"}>
+                            <a href={data["url"]} target={"blank"} className={"portfoInfo__title"}>
+                                <div className={"title"}>
+                                    {data["title"]}<br />
+                                    {data["title2"]}
+                                    <div className={"goIcon"}>
+                                        <p>GO</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <div className={"subtitle"}>{data["subtitle"]}</div>
+                                <div className={"info"}>{data["info"]}</div>
+                                <div className={"skill"}>
+                                    <a href={data["github"]} target={"blank"}>
+                                        GitHub
+                                    </a>
+                                    <span className={"technic"}>{data["technic1"]}</span>
+                                    <span className={"technic"}>{data["technic2"]}</span>
+                                    <span className={"technic"}>{data["technic3"]}</span>
+                                    <span className={"technic"}>{data["technic4"]}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </PortfoLi>
+                    })}
+                    </PortfoUl>
+                </MainBody>
+                <Footer>
+                    <strong>Determination</strong>
+                    <p className={"subTitle"}>
+                        한 걸음 더 나가고 싶은 오형욱 입니다.
+                    </p>
+                    <p className={"mainText"}>
+                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
+                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
+                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
+                    </p>
+                </Footer>
             </DesignWrap>
         </Wrap>
     }

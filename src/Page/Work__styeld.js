@@ -38,7 +38,7 @@ export const Cursor2 = styled.div`
         position: fixed;
         width: 4px;
         height: 4px;
-        background-color: #2966ff20;
+        background-color: #2bd42e;
         border-radius: 50%;
         left: 0;
         top: 0;
@@ -149,18 +149,16 @@ export const MainBody = styled.section`
 
 export const PortfoUl = styled.ul`
     width: 100%;
-
     @media only screen and (min-width: 1281px) {
 
     }
-    
 `;
 
 export const PortfoLI = styled.li`
 
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 200px;
     display: inline-block;
     box-sizing: border-box;
     overflow: hidden;
@@ -171,7 +169,7 @@ export const PortfoLI = styled.li`
     @media only screen and (min-width: 768px) {
         position: relative;
         width: 47%;
-        height: 180px;
+        height: 240px;
         display: inline-block;
         box-sizing: border-box;
         overflow: hidden;
@@ -187,12 +185,14 @@ export const PortfoLI = styled.li`
         } 
     }
 
+    @media only screen and (min-width: 920px) {
+        height: 280px;
+    }
 
     @media only screen and (min-width: 1025px) {
-
         position: relative;
         width: 47%;
-        height: 380px;
+        height: 450px;
         display: inline-block;
         box-sizing: border-box;
         overflow: hidden;
@@ -200,7 +200,6 @@ export const PortfoLI = styled.li`
 
         z-index: 10;
 
-        background-color: teal;
 
         // 홀수
         :nth-child(odd) {
@@ -211,22 +210,19 @@ export const PortfoLI = styled.li`
         :nth-child(even) {
             transform: translate(0, -30%);
         } 
-
-        // :nth-child(1),:nth-child(3) {
-        //     margin-right: 6%;
-        // }
-
         :hover {
-        a {
-            opacity: 1;   
-        }
-        img {
-            transform: scale(1.1);
-        }
+            a {
+                opacity: 1;   
+            }
+            img {
+                transform: scale(1.1);
+                filter:blur(3px);
+            }
         }
     }
 
 `;
+
 
 export const PortfoA = styled.a`
     position: relative;
@@ -238,43 +234,26 @@ export const PortfoA = styled.a`
     align-items: center;
     flex-wrap: wrap;
     text-decoration: none;
-    background-color: rgba(17, 17, 17, 0.2);
+    background-color: rgba(17, 17, 17, 0.3);
     z-index: 999;
 
-    .wrap {
-        position: absolute;
-        padding: 0 6%;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        margin-bottom: 4px;
-    }
-
-    div:nth-child(1) {
-        font-size: 2.6rem;
-        font-family: "Squada One", cursive;
-        font-weight: 400;
-        margin: 0 0 1rem 0;
-        line-height: 1rem;
-        color: #fff;
-    }
-    div:nth-child(2) {
+    .goBtn {
         display: none;
     }
 
 
     @media only screen and (min-width: 768px) {
-        div:nth-child(1) {
-            font-size: 2.6rem;
-            font-family: "Squada One", cursive;
-            font-weight: 400;
-            margin: 0 0 0.8rem 0;
-            line-height: 1rem;
-            color: #fff;
-        }
-        div:nth-child(2) {
-            display: none;
-        }
+        // div:nth-child(1) {
+        //     font-size: 2.6rem;
+        //     font-family: "Squada One", cursive;
+        //     font-weight: 400;
+        //     margin: 0 0 0.8rem 0;
+        //     line-height: 1rem;
+        //     color: #fff;
+        // }
+        // div:nth-child(2) {
+        //     display: none;
+        // }
     }
 
 
@@ -285,43 +264,155 @@ export const PortfoA = styled.a`
         align-items: center;
         flex-wrap: wrap;
         z-index: 999;
-        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
+        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 600ms;
         text-decoration: none;
 
         opacity: 0;
 
-        background-color: rgba(17, 17, 17, 0.7);
+        background-color: rgba(17, 17, 17, 0.9);
 
-        .wrap {
-            position: absolute;
-            padding: 0 10%;
-            width: 100%;
-            bottom: 0;
-            left: 0;
-            margin-bottom: 10px;
-        }
-
-        div:nth-child(1) {
-            font-size: 50px;
+        .goBtn {
             font-family: "Squada One", cursive;
             font-weight: 400;
-            margin: 0;
-            line-height: 2.4rem;
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #111;
+            background-color: #fff;
+            cursor: none;
+        }
+    }
+`;
+
+export const WrapBox = styled.div`
+    width: 100%;
+    position: absolute;
+        left: 0;
+        bottom: 0;
+
+    .titleWrap {
+        width: 100%;
+        padding: 0 3%;
+    
+        div:nth-child(1) {
+            font-size: 2.6rem;
+            font-family: "Squada One", cursive;
+            font-weight: 400;
+            margin: 0 0 0.7rem 0;
+            line-height: 1rem;
             color: #fff;
         }
         div:nth-child(2) {
             display: inline-block;
             font-family: "SCDream1",sans-serif;
-            font-size: 18px;
+            font-size: 1.1rem;
             font-weight: 600;
             line-height: 22px;
-            color: #ff75a3;
-            margin-bottom: 40px;
+            margin: 0 0 0.7rem 0;
+            color: #ffffff80;
         }
     }
-    
-    
+    .info {
+        width: 100%;
+        padding: 0 5%;
+        color: #fff;
+        display: none;
+    }
+    .infoWrap {
+        width: 100%;
+        padding: 0 5%;
+        color: #fff;
+        display: none;
+    }
+
+
+    @media only screen and (min-width: 768px) {
+        .titleWrap {
+            padding: 0 4%;
+            div:nth-child(1) {
+                font-size: 3.2rem;
+            }
+            div:nth-child(2) {
+                font-size: 1.1rem;
+                color: #ffffff80;
+            }
+        }
+    }
+    @media only screen and (min-width: 1025px) {
+
+        .titleWrap {
+            padding: 0 5%;
+            margin-bottom: 1rem;
+            div:nth-child(1) {
+                font-size: 4.5rem;
+                margin: 0 0 2rem 0;
+            }
+            div:nth-child(2) {
+                font-size: 1.1rem;
+                color: #ff75a3;
+            }
+        }
+        .info {
+            width: 80%;
+            height: 120px;
+            display: inline-block;
+            font-family: "SCDream1",sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 22px;
+            margin: 0 0 0.4rem 0;
+            color: #ffffff90;
+
+        }
+
+        .infoWrap {
+            display: flex;
+            font-family: "SCDream1",sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 22px;
+            letter-spacing: 1px;
+            color: #ffffff80;
+
+            margin-bottom: 1.6rem;
+
+            div {
+                margin-right: 0.8rem;
+            }
+            .github {
+                font-family: "SCDream9",sans-serif;
+                text-decoration: none;
+                color: #ffffff80;
+
+                margin-right: 0.8rem;
+
+                :hover {
+                    color: #fff;
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+    }
 `;
+
+
+
+
+
+
 
 export const PortfoImg = styled.img`
     position: absolute;
@@ -350,6 +441,7 @@ export const Footer = styled.footer`
         font-size: 1.3rem;
         margin-top: 10px;
         margin-bottom: 20px;
+        color: #bbbbbb;
     }
     .mainText {
         width: 86%;
@@ -357,6 +449,7 @@ export const Footer = styled.footer`
         font-size: 0.8rem;
         font-weight: 400;
         line-height: 1.5rem;
+        color: #bbbbbb;
     }
 
 

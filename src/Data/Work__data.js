@@ -1,31 +1,50 @@
-import React from 'react';
-
 export const data =[
     {
         url : "https://hyungook.github.io/brandi-clone-coding/",
         img : "portfolio_01.jpg",
         alt : "thumnail image",
         title : "BRANDI",
-        subTitle : "Brandi Clone Coding"},
+        subTitle : "Brandi Clone Coding",
+        info : "내용내wfwkfwenlfkwenf;qlknf;lkn;wlrgjnrek;jgqnerwefwefwefwefwevwvrwve;kgj ;rvkje v;kqejv;krjn;용",
+        github : "https://github.com/hyungook/brandi-clone-coding",
+        technic1 : "React",
+        technic2 : "Javascript",
+        technic3 : "CSS",
+        technic4 : "HTML"},
     {
         url : "#",
         img : "#",
         alt : "thumnail image",
         title : "APPLE",
-        subTitle : "Apple Site Clone Codings"
-    },
+        subTitle : "Apple Site Clone Codings",
+        info : "내용내wfwkfwenlfkwenf;qlknf;lkn;wlrgjnrek;jgqnerwefwefwefwefwevwvrwve;kgj ;rvkje v;kqejv;krjn;용",
+        github : "gitgit",
+        technic1 : "React",
+        technic2 : "Javascript",
+        technic3 : "CSS",
+        technic4 : "HTML"},
     {
         url : "#",
         img : "#",
         alt : "thumnail image",
         title : "title3",
-        subTitle : "sub_title3"
-    },
+        subTitle : "sub_title3",
+        info : "내용내용",
+        github : "gitgit",
+        technic1 : "React",
+        technic2 : "Javascript",
+        technic3 : "CSS",
+        technic4 : "HTML"},
     {
         url : "#",
         img : "#",
         alt : "thumnail image",
         title : "title4",
-        subTitle : "sub_title4"
-    }
+        subTitle : "sub_title4",
+        info : "내용내용",
+        github : "gitgit",
+        technic1 : "React",
+        technic2 : "Javascript",
+        technic3 : "CSS",
+        technic4 : "HTML"}
 ];

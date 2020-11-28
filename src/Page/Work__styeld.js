@@ -396,22 +396,8 @@ export const WrapBox = styled.div`
             }
 
         }
-
-
-
-
-
-
-
-
-
     }
 `;
-
-
-
-
-
 
 
 export const PortfoImg = styled.img`

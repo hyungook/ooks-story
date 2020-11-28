@@ -65,26 +65,16 @@ class Design extends React.Component{
                     {data.map((data, idx) => { 
                         return<PortfoLi className={"PortfoLi"}>
                         <div className={"portfoImgBox"}>
-                            <span className={"no"}>0{data["num"]}</span>
                             <img src={`${url+data["img"]}`} alt={data.alt}></img>
                         </div>
                         <div className={"portfoInfo"}>
-                            <a href={data["url"]} target={"blank"} className={"portfoInfo__title"}>
-                                <div className={"title"}>
-                                    {data["title"]}<br />
-                                    {data["title2"]}
-                                    <div className={"goIcon"}>
-                                        <p>GO</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div>
-                                <div className={"subtitle"}>{data["subtitle"]}</div>
+                            <div className={"titleWrap"}>
+                                <div className={"title"}>{data["title"]}</div>
+                                <div className={"subtitle"}>{data["subTitle"]}</div>
+                            </div>
+                            <div className={"infoWrap"}>
                                 <div className={"info"}>{data["info"]}</div>
                                 <div className={"skill"}>
-                                    <a href={data["github"]} target={"blank"}>
-                                        GitHub
-                                    </a>
                                     <span className={"technic"}>{data["technic1"]}</span>
                                     <span className={"technic"}>{data["technic2"]}</span>
                                     <span className={"technic"}>{data["technic3"]}</span>

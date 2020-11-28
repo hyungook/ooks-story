@@ -3,7 +3,7 @@ import Page__nav from '../components/Page__nav';
 
 import '../styles/reset.css';
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
-    PortfoLI, PortfoA, PortfoImg, Footer } from './ToyProject__styled';
+    PortfoLI, PortfoA, WrapBox, PortfoImg, Footer } from './ToyProject__styled';
 import { data } from '../Data/Toy__data'
 
 
@@ -105,14 +105,24 @@ class ToyProject extends React.Component {
                     <ul className={"itemWrap"}>
                     {data.map((data, idx) => {
                     return <PortfoLI className={"item"}>
-                        <PortfoA href={data["url"]} target={"blank"}>
-                            <div className={"wrap box"}>
+                    <PortfoA href={data["url"]} target={"blank"}>
+                        <button className={"goBtn"}>GO</button>
+                        <WrapBox className={"wrap box"}>
+                            <div className={"titleWrap"}>
                                 <div className={"title"}>{data["title"]}</div>
                                 <div className={"subTitle"}>{data["subTitle"]}</div>
                             </div>
-                        </PortfoA>
-                        <PortfoImg src={`${url+data["img"]}`} alt={data.alt}></PortfoImg>
-                        </PortfoLI>
+                            <div className={"infoWrap"}>
+                                <a href={data["github"]} target={"blank"} className={"github"}>GitHub</a>
+                                <div className={"technic"}>{data["technic1"]}</div>
+                                <div className={"technic"}>{data["technic2"]}</div>
+                                <div className={"technic"}>{data["technic3"]}</div>
+                                <div className={"technic"}>{data["technic4"]}</div>
+                            </div>
+                        </WrapBox>
+                    </PortfoA>
+                    <PortfoImg src={`${url+data["img"]}`} alt={data["alt"]}></PortfoImg>
+                    </PortfoLI>
                     })}
                     </ul>
                 </MainBody>

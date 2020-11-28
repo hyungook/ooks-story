@@ -197,17 +197,18 @@ export const HomeMenu = styled.ul`
 
         li {
             width: auto;
-            font-size: 32px;
+            font-size: 2rem;
             font-family: "Squada One", cursive;
             font-weight: 400;
             margin: 0 0 12px 0;
             padding: 0;
             line-height: 26px;
-            color: #bbbbbb;
+            color: #ffffff80;
 
             transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
             :hover {
+                font-size: 2.2rem;
                 color: #fff;
         }
     }

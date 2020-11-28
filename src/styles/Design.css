@@ -13,7 +13,7 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Squada+One&display=swap");
-
+/* 
 .portfoUl {
   width: auto;
   overflow-x: scroll;
@@ -22,80 +22,66 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-
-  background-color: #222;
 }
-
 .PortfoLi {
+  position: relative;
   min-width: 100%;
   width: 100%;
   margin-right: 2rem;
-  padding: 1rem 3rem;
+  padding: 2rem;
   box-sizing: border-box;
-
-  background-color: #444;
 }
 .portfoImgBox {
-  position: relative;
-  width: 50%;
-  height: 500px;
+  display: inline-block;
+  width: 48%;
+  height: 420px;
   float: left;
-  background-color: seagreen;
+  margin-right: 4%;
+  background-color: black;
 }
-/* .no {
-  position: absolute;
-  top: 2rem;
-  left: -8%;
-  font-size: 8rem;
-  line-height: 1;
-  z-index: 999999;
-  color: #fff;
-  font-family: S-CoreDream-3Light, serif;
-}
-
 .portfoInfo {
-  width: 50%;
-  float: right;
-
-  background-color: sienna;
-}
-
-.portfoInfo__title {
-  position: relative;
   display: inline-block;
-  font-family: Squada One, sans-serif;
-  text-decoration: none;
-
-  background-color: slateblue;
-}
-
-.title {
-  position: relative;
-  display: inline-block;
-
-  font-family: Squada One, sans-serif;
-
-  text-decoration: none;
-  transform: translate(-20%, 20%);
-  font-size: 8rem;
-  color: #fff;
-  white-space: nowrap;
-  letter-spacing: 0;
-  line-height: 0.8;
-  text-transform: uppercase;
-}
-.goIcon {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
+  bottom: 3rem;
+  width: 48%;
+}
+.titleWrap {
+  width: 100%;
+}
+.title {
+  font-size: 7rem;
+  font-family: "Squada One", "cursive";
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  line-height: 4.4rem;
+  color: #bbbbbb;
+}
+.subtitle {
+  font-family: "SCDream1", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #ff75a3;
+  margin: 0 0 3rem 0;
+}
+.infoWrap {
+  width: 100%;
+}
+.info {
+  width: 80%;
+  height: 70px;
+  margin-bottom: 1.5rem;
+  color: #ffffff80;
+}
+.skill {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #111;
-
-  background-color: #fff;
+  font-family: "SCDream1", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #ffffff80;
+}
+.skill span {
+  margin-right: 0.8rem;
 } */

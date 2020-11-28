@@ -63,69 +63,62 @@ export const DesignWrap = styled.section`
 `;
 
 export const MainHeader = styled.header`
-
     position: relative;
     width: 100%;
-    margin-bottom: 54px;
+    padding: 1rem;
+    margin: 1rem 1rem 3rem 1rem;
     
     h1 {
-        font-size: 4rem;
-        font-family: "Squada One", cursive;
+        font-size:5rem;
+        font-family: "Squada One", "cursive";
         font-weight: 400;
-        margin: 8px 0 2px 0;
-        line-height: 4rem;
+        line-height: 6rem;
         color: #bbbbbb;
     }
     p {
         position: absolute;
-        font-family: "SCDream1",sans-serif;
-        font-size: 1.3rem;
+        font-family: "SCDream1", "sans-serif";
+        font-size: 1.2rem;
         z-index: 999;
+        color: #bbbbbb;
     }
 
     @media only screen and (min-width: 768px) {
-        margin-bottom: 140px;
+        margin-bottom: 100px;
         h1 {
-            font-size: 7rem;
-            font-family: "Squada One", cursive;
+            font-size: 10rem;
+            font-family: "Squada One", "cursive";
             font-weight: 400;
             margin: 0 0 8px 0;
-            line-height: 5rem;
+            line-height: 7.5rem;
             color: #bbbbbb;
         }
         p {
             position: absolute;
-            font-family: "SCDream1",sans-serif;
+            font-family: "SCDream1", "sans-serif";
             font-size: 2.6rem;
             z-index: 999;
-            color: #bbbbbb;
         }
     }
-
     @media only screen and (min-width: 1025px) {
         clear: both;
-
         margin-bottom: 140px;
         
         h1 {
-            // font-size: 190px;
-            font-size: 80px;
-            font-family: "Squada One", cursive;
+            font-size: 180px;
+            font-family: "Squada One", "cursive";
             font-weight: 400;
             margin: 0 0 10px 0;
-            // line-height: 150px;
-            line-height: 60px;
+            line-height: 150px;
             color: #bbbbbb;
         }
         p {
-            font-family: S-CoreDream-1Thin,sans-serif;
-            // font-size: 80px;
-            font-size: 40px;
+            font-family: "SCDream1", "sans-serif";
+            font-size: 60px;
             z-index: 999;
         }
     }
 `;
-
 export const MainBody = styled.section`
     width: 100%;
 
@@ -133,45 +126,102 @@ export const MainBody = styled.section`
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-
     margin-bottom: 2rem;
-    
     ul {
         width: 100%;
     }
 `;
-
 export const PortfoUl = styled.ul`
+
+    width: auto;
+    overflow-x: scroll;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
 
     @media only screen and (min-width: 1281px) {
     }
 `;
 
-
 export const PortfoLi = styled.li`
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+    margin-right: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+
+
+    .portfoImgBox {
+        display: inline-block;
+        width: 48%;
+        height: 420px;
+        float: left;
+        margin-right: 4%;
+        background-color: black;
+    }
+
+    .portfoInfo {
+        display: inline-block;
+        position: absolute;
+        bottom: 3rem;
+        width: 48%;
+
+
+        .titleWrap {
+            width: 100%;
+
+            .title {
+                font-size: 7rem;
+                font-family: "Squada One", "cursive";
+                font-weight: 400;
+                margin: 0 0 8px 0;
+                line-height: 4.4rem;
+                color: #bbbbbb;
+              }
+              .subtitle {
+                font-family: "SCDream1", sans-serif;
+                font-weight: 600;
+                font-size: 2rem;
+                line-height: 3rem;
+                color: #ff75a3;
+                margin: 0 0 3rem 0;
+              }
+
+        }
+
+        .infoWrap {
+            width: 100%;
+
+            .info {
+                width: 80%;
+                height: 70px;
+                margin-bottom: 1.5rem;
+                color: #ffffff80;
+              }
+              
+              .skill {
+                display: flex;
+                font-family: "SCDream1", sans-serif;
+                font-size: 1.1rem;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 1px;
+                color: #ffffff80;
+
+                span {
+                    margin-right: 0.8rem;
+                }
+
+              }
+
+        }
+
+      }
 
 `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const Footer = styled.footer`
     width: 100%;

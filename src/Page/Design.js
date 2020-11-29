@@ -4,11 +4,13 @@ import Page__nav from '../components/Page__nav';
 import '../styles/reset.css';
 import '../styles/Design.css';
 import { Wrap, Cursor, Cursor2, DesignWrap, MainHeader, 
-    MainBody, PortfoUl, PortfoLi, Footer} from './Design__styled';
+    MainBody, BtnWrap, PortfoUl, PortfoLi, Footer} from './Design__styled';
 import { data } from '../Data/Design__data'
 
 
+
 const url = process.env.PUBLIC_URL + '/image/skill/';
+const button = process.env.PUBLIC_URL + '/image/';
 
 class Design extends React.Component{
 
@@ -28,13 +30,7 @@ class Design extends React.Component{
          const cursor2HalfHeight = cursor2Rect.height / 2;
          cursor2.style.backgroundColor = `#2bd42e`;
          
- 
-         let headerUl = document.querySelector('.header__ul');
-         let mainNavWrap = document.querySelector('.main__nav__wrap');
-         let nameBox = document.querySelector('.name__box');
-         
-         let tf = true;
- 
+        
          // Cursor Effect
          document.addEventListener("mousemove", (e) => {
              // cursor.styled.cssText = cursor2.styled.cssText = "left" + e.clientX + "px; top:" + e.clientY + "px;";
@@ -44,7 +40,48 @@ class Design extends React.Component{
              cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
          })
+
+
+
+        // Slider
+        let lis = document.querySelectorAll('.portfoLi');
+        console.log(lis.length);
+
+        let slideWrap = document.querySelector('.slideWrap');
+        let leftBtn = document.querySelector('.left')
+        let rightBtn = document.querySelector('.right')
+        let transformValue = 0;
+
+        let i = 0;
+        rightBtn.addEventListener('click', () => {
+            if(i<lis.length-1){
+                transformValue = transformValue - 110;
+                slideWrap.style.transform = `translateX(${transformValue}%)`;
+                console.log(transformValue);
+                i++;
+                console.log(i);
+                return transformValue;
+            } else {
+                return;
+            }
+            // for(let i in portfoLis){
+            //     portfoLis[i].style.transform=`translateX(-${nowX}%)`
+            // }
+        })
+        leftBtn.addEventListener('click', () => {
+            if(i>0) {
+                transformValue = transformValue + 110;
+                slideWrap.style.transform = `translateX(${transformValue}%)`;
+                console.log(transformValue);
+                i--;
+                console.log(i);
+                return transformValue;
+            } else {
+                return;
+            }
+        })
     }
+
     render(){
         return<Wrap>
             <Page__nav />
@@ -57,33 +94,35 @@ class Design extends React.Component{
                     <p>감각적인 디자인을 추구합니다.</p>
                 </MainHeader>
                 <MainBody className={"mainBody"}>
-                    <div className={"btnWrap"}>
-                        <button className={"left"}></button>
-                        <button className={"right"}></button>
-                    </div>
+                    <BtnWrap className={"btnWrap"}>
+                        <button className={"btn left"}><img src={`${button+'button.png'}`} alt={"left button"}></img></button>
+                        <button className={"btn right"}><img src={`${button+'button.png'}`} alt={"left button"}></img></button>
+                    </BtnWrap>
                     <PortfoUl className={"portfoUl"}>
-                    {data.map((data, idx) => { 
-                        return<PortfoLi className={"PortfoLi"}>
-                        <div className={"portfoImgBox"}>
-                            <img src={`${url+data["img"]}`} alt={data.alt}></img>
-                        </div>
-                        <div className={"portfoInfo"}>
-                            <div className={"titleWrap"}>
-                                <div className={"title"}>{data["title"]}</div>
-                                <div className={"subtitle"}>{data["subTitle"]}</div>
-                            </div>
-                            <div className={"infoWrap"}>
-                                <div className={"info"}>{data["info"]}</div>
-                                <div className={"skill"}>
-                                    <span className={"technic"}>{data["technic1"]}</span>
-                                    <span className={"technic"}>{data["technic2"]}</span>
-                                    <span className={"technic"}>{data["technic3"]}</span>
-                                    <span className={"technic"}>{data["technic4"]}</span>
+                        <div className={"slideWrap"}>
+                            {data.map((data, idx) => { 
+                                return<PortfoLi className={"portfoLi"}>
+                                <div className={"portfoImgBox"}>
+                                    <img src={`${url+data["img"]}`} alt={data.alt}></img>
                                 </div>
-                            </div>
+                                <div className={"portfoInfo"}>
+                                    <div className={"titleWrap"}>
+                                        <div className={"title"}>{data["title"]}</div>
+                                        <div className={"subtitle"}>{data["subTitle"]}</div>
+                                    </div>
+                                    <div className={"infoWrap"}>
+                                        <div className={"info"}>{data["info"]}</div>
+                                        <div className={"skill"}>
+                                            <span className={"technic"}>{data["technic1"]}</span>
+                                            <span className={"technic"}>{data["technic2"]}</span>
+                                            <span className={"technic"}>{data["technic3"]}</span>
+                                            <span className={"technic"}>{data["technic4"]}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </PortfoLi>
+                            })}
                         </div>
-                    </PortfoLi>
-                    })}
                     </PortfoUl>
                 </MainBody>
                 <Footer>

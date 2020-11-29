@@ -120,6 +120,7 @@ export const MainHeader = styled.header`
     }
 `;
 export const MainBody = styled.section`
+    position: relative;
     width: 100%;
 
     display: flex;
@@ -127,19 +128,63 @@ export const MainBody = styled.section`
     align-items: center;
     flex-wrap: nowrap;
     margin-bottom: 2rem;
+
     ul {
         width: 100%;
     }
 `;
+
+
+export const BtnWrap = styled.div`
+    
+    display: block;
+
+    @media only screen and (min-width: 1025px) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding-right: 2%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .btn {
+            width: 60px;
+            height: 120px;
+            z-index: 999;
+            opacity: 0.4;
+            transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+        }
+        .btn:hover {
+            opacity: 1;
+        }
+        .right {
+            transform: rotate(180deg);
+        }
+    }
+`;
+
 export const PortfoUl = styled.ul`
 
     width: auto;
-    overflow-x: scroll;
+    // overflow-x: scroll;
+    overflow: hidden;
 
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+
+    .slideWrap {
+        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
 
     @media only screen and (min-width: 1281px) {
     }
@@ -149,9 +194,12 @@ export const PortfoLi = styled.li`
     position: relative;
     min-width: 100%;
     width: 100%;
-    margin-right: 2rem;
+    margin-right: 10%;
     padding: 2rem;
     box-sizing: border-box;
+    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+
+    // transform: translateX(-110%);
 
 
     .portfoImgBox {

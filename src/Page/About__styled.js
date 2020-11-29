@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Cursor = styled.div`
     display:none;
 
@@ -68,15 +67,15 @@ export const MainHeader = styled.header`
 
     position: relative;
     width: 100%;
-    padding: 1rem;
+    // padding: 1rem;
     margin: 1rem 1rem 3rem 1rem;
     
     h1 {
-        font-size: 6rem;
+        font-size: 5rem;
         font-family: "Squada One", "cursive";
         font-weight: 400;
         // margin: 8px 0 2px 0;
-        line-height: 6rem;
+        line-height: 4.6rem;
         color: #bbbbbb;
     }
     p {
@@ -127,18 +126,17 @@ export const MainHeader = styled.header`
     }
 `;
 
-
 export const About__header = styled.section`
 
     width: 100%;
     box-sizing: border-box;
 
     p {
-        padding: 1rem 2rem;
+        padding: 0.8rem;
         width: 100%;
         font-family: Noto Sans KR,sans-serif;
         font-size: 1rem;
-        line-height: 1.8;
+        line-height: 1.3;
         color: #777;
         // font-weight: 300;
         white-space: pre-line;
@@ -196,7 +194,7 @@ export const SectionWrap = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 1rem;
     border-bottom: 1px solid rgba(187, 187, 187, 0.2);
     
     @media only screen and (min-width: 1025px) {
@@ -312,7 +310,6 @@ export const SectionBody = styled.div`
         white-space: pre-line;
     }
 
-
     @media only screen and (min-width: 768px) {
         width: 100%;
         height: auto;
@@ -395,7 +392,6 @@ export const SectionBody = styled.div`
                     height: 100%;
                 }
             }
-
             p {
                 font-family: "SCDream9";
                 font-size: 1.7rem;
@@ -427,9 +423,8 @@ export const SectionBody = styled.div`
 `;
 
 export const Footer = styled.footer`
-
     width: 100%;
-    padding: 7rem 2rem;
+    padding: 5rem 1rem;
     display: block;
 
     .footer__header {
@@ -442,7 +437,6 @@ export const Footer = styled.footer`
         font-family: "SCDream3", "Noto Sans KR", "sans-serif";
         margin-bottom: 3rem;
     }
-
     .footer__body {
         .communi li {
             line-height: 2;
@@ -461,7 +455,6 @@ export const Footer = styled.footer`
             font-size: 1.9rem;
             line-height: 1.4;
         }
-    
         .footer__body {
             .communi li {
                 font-size: 1.6rem;
@@ -471,8 +464,6 @@ export const Footer = styled.footer`
             }
         } 
     }
-
-
     @media only screen and (min-width: 1025px) {
         padding: 7rem;
 

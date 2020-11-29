@@ -12,7 +12,6 @@ export const Section = styled.section`
 
     // filter: blur(10px);
     // -webkit-filter: blur(10px);
-
     @media only screen and (min-width: 768px) {
 
     }

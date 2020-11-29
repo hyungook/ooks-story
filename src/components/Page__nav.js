@@ -11,11 +11,9 @@ import Work from '../Page/Work';
 import About from '../Page/About';
 import ToyProj from '../Page/ToyProject';
 
-
 import { Section, Header__top, Header__bottom, Backword, Menu__button, HomeMenu } from './Page__nav__styled';
 
 class Page__nav extends React.Component {
-
 
     componentDidMount(){
         // menu button handler

@@ -70,7 +70,7 @@ export const data =[
         alt: "Node JS",
         skillName: "Node JS",
         level: "1",
-        text: "데이로그 서비스는 NodeJS로 구현되었습니다. 라우팅, 컨트롤러등의 개념은 이해했고 Passport, WebPack, MongoDB, GraphQL 등을 사용해 본 경험이 있습니다.",
+        text: "WebPack, MongoDB 등을 사용해 본 경험이 있습니다.",
         color : "#8fc53f",
     },
     {

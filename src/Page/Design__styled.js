@@ -67,7 +67,7 @@ export const MainHeader = styled.header`
     width: 100%;
     margin: 1rem 1rem 3rem 0;
     h1 {
-        font-size:5rem;
+        font-size: 5rem;
         font-family: "Squada One", "cursive";
         font-weight: 400;
         line-height: 5rem;

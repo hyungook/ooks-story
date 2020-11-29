@@ -137,9 +137,9 @@ export const MainBody = styled.section`
 
 export const BtnWrap = styled.div`
     
-    display: block;
+    display: none;
 
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (min-width: 1024px) {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -168,8 +168,7 @@ export const BtnWrap = styled.div`
 export const PortfoUl = styled.ul`
 
     width: auto;
-    // overflow-x: scroll;
-    overflow: hidden;
+    overflow-x: scroll;
 
     display: flex;
     justify-content: flex-start;
@@ -177,16 +176,16 @@ export const PortfoUl = styled.ul`
     flex-direction: row;
 
     .slideWrap {
-        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-direction: row;
+        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
     }
-
-    @media only screen and (min-width: 1281px) {
+    @media only screen and (min-width: 1024px) {
+        overflow: hidden;
     }
 `;
 
@@ -195,87 +194,136 @@ export const PortfoLi = styled.li`
     min-width: 100%;
     width: 100%;
     margin-right: 10%;
-    padding: 2rem;
+    margin-bottom: 2rem;
     box-sizing: border-box;
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
-    // transform: translateX(-110%);
-
-
     .portfoImgBox {
-        display: inline-block;
-        width: 48%;
-        height: 420px;
-        float: left;
-        margin-right: 4%;
-        background-color: black;
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1.7rem;
+        background-color: blue;
     }
 
     .portfoInfo {
-        display: inline-block;
-        position: absolute;
-        bottom: 3rem;
-        width: 48%;
-
+        display: block;
+        position: relative;
+        width: 100%;
 
         .titleWrap {
             width: 100%;
-
             .title {
-                font-size: 7rem;
+                font-size: 3.2rem;
                 font-family: "Squada One", "cursive";
                 font-weight: 400;
                 margin: 0 0 8px 0;
-                line-height: 4.4rem;
+                line-height: 2rem;
                 color: #bbbbbb;
               }
               .subtitle {
                 font-family: "SCDream1", sans-serif;
                 font-weight: 600;
-                font-size: 2rem;
-                line-height: 3rem;
+                font-size: 1.2rem;
+                line-height: 2rem;
                 color: #ff75a3;
-                margin: 0 0 3rem 0;
+                margin: 0 0 1.2rem 0;
               }
-
         }
-
         .infoWrap {
             width: 100%;
-
             .info {
-                width: 80%;
+                font-family: "SCDream1", sans-serif;
+                font-weight: 600;
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+                width: 100%;
                 height: 70px;
-                margin-bottom: 1.5rem;
+                margin-bottom: 1rem;
                 color: #ffffff80;
-              }
-              
-              .skill {
+            }
+            .skill {
                 display: flex;
                 font-family: "SCDream1", sans-serif;
-                font-size: 1.1rem;
-                font-weight: 700;
+                font-size: 0.9rem;
+                font-weight: 900;
                 line-height: 22px;
                 letter-spacing: 1px;
                 color: #ffffff80;
-
                 span {
                     margin-right: 0.8rem;
                 }
-
-              }
-
+            }
         }
-
       }
 
+      @media only screen and (min-width: 768px) {
+        .portfoImgBox {
+            height: 400px;
+        }
+        .portfoInfo {
+            .infoWrap {
+                .info {
+                    width: 70%;
+                }
+            }
+        }
+      }
+
+
+      @media only screen and (min-width: 1024px) {
+        margin-bottom: 0;
+    
+        .portfoImgBox {
+            display: inline-block;
+            width: 48%;
+            height: 420px;
+            float: left;
+            margin-bottom: 0;
+            margin-right: 4%;
+        }
+        
+        .portfoInfo {
+            display: inline-block;
+            position: absolute;
+            bottom: 3rem;
+            width: 48%;
+    
+            .titleWrap {
+                .title {
+                    font-size: 7rem;
+                    margin: 0 0 8px 0;
+                    line-height: 4.4rem;
+                  }
+                  .subtitle {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    margin: 0 0 3rem 0;
+                  }
+            }
+            .infoWrap {
+                .info {
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                    width: 80%;
+                    height: 70px;
+                    margin-bottom: 1.5rem;
+                }
+                .skill {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    line-height: 22px;
+                }
+            }
+          }
+    }
 `;
 
 export const Footer = styled.footer`
     width: 100%;
     padding: 0 0 100px 0;
     strong {
-        font-size: 2.4rem;
+        font-size: 2rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
         margin: 0 0 40px 0;
@@ -298,8 +346,6 @@ export const Footer = styled.footer`
         line-height: 1.5rem;
         color: #bbbbbb;
     }
-
-
     @media only screen and (min-width: 1024px) {
         padding: 0 0 300px 0;
 
@@ -308,15 +354,12 @@ export const Footer = styled.footer`
             margin: 0 0 10px 0;
             line-height: 80px;
         }
-        
         .subTitle {
-            font-family: "SCDream1",sans-serif;
             font-size: 30px;
             margin: 0 0 30px 0;
         }
         .mainText {
             width: 80%;
-            font-family: "SCDream1",sans-serif;
             font-size: 1.1rem;
             font-weight: 400;
             line-height: 1.5rem;

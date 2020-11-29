@@ -4,9 +4,8 @@ import Page__nav from '../components/Page__nav';
 import '../styles/reset.css';
 import '../styles/Design.css';
 import { Wrap, Cursor, Cursor2, DesignWrap, MainHeader, 
-    MainBody, BtnWrap, PortfoUl, PortfoLi, Footer} from './Design__styled';
+    MainBody, BtnWrap, PortfoWrap, PortfoLi, Footer} from './Design__styled';
 import { data } from '../Data/Design__data'
-
 
 
 const url = process.env.PUBLIC_URL + '/image/skill/';
@@ -41,8 +40,6 @@ class Design extends React.Component{
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
          })
 
-
-
         // Slider
         let lis = document.querySelectorAll('.portfoLi');
         console.log(lis.length);
@@ -52,6 +49,7 @@ class Design extends React.Component{
         let rightBtn = document.querySelector('.right')
         let transformValue = 0;
 
+         // 위치 변경
         let i = 0;
         rightBtn.addEventListener('click', () => {
             if(i<lis.length-1){
@@ -68,6 +66,7 @@ class Design extends React.Component{
             //     portfoLis[i].style.transform=`translateX(-${nowX}%)`
             // }
         })
+
         leftBtn.addEventListener('click', () => {
             if(i>0) {
                 transformValue = transformValue + 110;
@@ -98,8 +97,8 @@ class Design extends React.Component{
                         <button className={"btn left"}><img src={`${button+'button.png'}`} alt={"left button"}></img></button>
                         <button className={"btn right"}><img src={`${button+'button.png'}`} alt={"left button"}></img></button>
                     </BtnWrap>
-                    <PortfoUl className={"portfoUl"}>
-                        <div className={"slideWrap"}>
+                    <PortfoWrap className={"portfoWrap"}>
+                        <ul className={"slideWrap"}>
                             {data.map((data, idx) => { 
                                 return<PortfoLi className={"portfoLi"}>
                                 <div className={"portfoImgBox"}>
@@ -122,8 +121,8 @@ class Design extends React.Component{
                                 </div>
                             </PortfoLi>
                             })}
-                        </div>
-                    </PortfoUl>
+                        </ul>
+                    </PortfoWrap>
                 </MainBody>
                 <Footer>
                     <strong>Determination</strong>

@@ -65,14 +65,12 @@ export const DesignWrap = styled.section`
 export const MainHeader = styled.header`
     position: relative;
     width: 100%;
-    padding: 1rem;
-    margin: 1rem 1rem 3rem 1rem;
-    
+    margin: 1rem 1rem 3rem 0;
     h1 {
         font-size:5rem;
         font-family: "Squada One", "cursive";
         font-weight: 400;
-        line-height: 6rem;
+        line-height: 5rem;
         color: #bbbbbb;
     }
     p {
@@ -101,6 +99,7 @@ export const MainHeader = styled.header`
         }
     }
     @media only screen and (min-width: 1025px) {
+        padding: 1rem;
         clear: both;
         margin-bottom: 140px;
         
@@ -129,7 +128,7 @@ export const MainBody = styled.section`
     flex-wrap: nowrap;
     margin-bottom: 2rem;
 
-    ul {
+    .portfoWrap {
         width: 100%;
     }
 `;
@@ -165,8 +164,7 @@ export const BtnWrap = styled.div`
     }
 `;
 
-export const PortfoUl = styled.ul`
-
+export const PortfoWrap = styled.div`
     width: auto;
     overflow-x: scroll;
 
@@ -269,7 +267,6 @@ export const PortfoLi = styled.li`
             }
         }
       }
-
 
       @media only screen and (min-width: 1024px) {
         margin-bottom: 0;

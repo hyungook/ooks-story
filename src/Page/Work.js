@@ -1,6 +1,5 @@
 import React from 'react';
 import Page__nav from '../components/Page__nav';
-import styled from 'styled-components';
 
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
     PortfoLI, PortfoA, WrapBox, PortfoImg, Footer } from './Work__styeld';
@@ -29,12 +28,7 @@ class Work extends React.Component {
          const cursor2HalfHeight = cursor2Rect.height / 2;
          cursor2.style.backgroundColor = `#2bd42e`;
          
- 
-         let headerUl = document.querySelector('.header__ul');
-         let mainNavWrap = document.querySelector('.main__nav__wrap');
-         let nameBox = document.querySelector('.name__box');
-         
-         let tf = true;
+
  
          // Cursor Effect
          document.addEventListener("mousemove", (e) => {
@@ -46,44 +40,6 @@ class Work extends React.Component {
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
  
          })
- 
-        // function mousechange() {
-        //      cursor.style.borderRadius = `0`;
-        //      cursor.style.border = `1px solid #ffffff`;
-        //      cursor.style.backgroundColor = `#2bd42e20`; 
-        // }
-         
-        // document.addEventListener('mouseover', (e) => {
-        //      let elem = e.target;
- 
-        //      if(elem.className == 'sc-hHftDr evQUgs'){
-        //          mousechange()
-        //      } else if(elem.className == 'title') {
-        //          mousechange()
-        //      } else if(elem.className == 'subTitle') {
-        //          mousechange()
-        //      } else if(elem.className == 'sc-hHftDr cNlQMS') {
-        //          mousechange()
-        //      } else if(elem.className == 'wrap box') {
-        //          mousechange()
-        //      } else if(elem.className == 'link') {
-        //          mousechange()
-        //      } else if(elem.className == 'icon') {
-        //          mousechange()
-        //      } else if(elem.className == 'sc-kEjbxe gEZwja backward') {
-        //         mousechange()
-        //     } else if(elem.className == 'span') {
-        //          mousechange()
-        //      } else if(elem.className == 'sc-crrsfI liZvO menuBtn openBtn') {
-        //          mousechange()
-        //      } else if(elem.className == 'menuLink') {
-        //          mousechange()
-        //      } else {
-        //          cursor.style.borderRadius = `50%`;
-        //          cursor.style.border = `1px solid #c6c6c6`;
-        //          cursor.style.background = `none`;
-        //      }  
-        //  })       
     }
 
     render() {

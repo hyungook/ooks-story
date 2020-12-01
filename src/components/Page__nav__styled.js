@@ -81,7 +81,6 @@ export const Backword = styled.button`
             }
         }
     }
-    
 `;
 export const Header__bottom = styled.div`
     
@@ -90,8 +89,6 @@ export const Header__bottom = styled.div`
     justify-content: flex-end;
     align-items: center;
     position: relative;
-
-
 
     @media only screen and (min-width: 1025px) {
         width: 100%;
@@ -179,9 +176,18 @@ export const HomeMenu = styled.ul`
         color: #bbbbbb;
 
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+
+        a {
+            // 여기
+            text-decoration: none;
+            color: #bbbbbb;
+        }
     }
-
-
+    // li:nth-child(1) {
+    //     a {
+    //         color: #2966ff;
+    //     }
+    // }
     @media only screen and (min-width: 1025px) {
         position: absolute;
         visibility:hidden;
@@ -206,10 +212,29 @@ export const HomeMenu = styled.ul`
 
             transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
-            :hover {
-                font-size: 2.2rem;
-                color: #fff;
+            a {
+                font-size: 2rem;
+                color: #ffffff80;
+                transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+
+                :hover {
+                    font-size: 2.2rem;
+                    color: #fff;
+                }
+            }
         }
+        // li:nth-child(1) {
+        //     a {
+        //         color: #2966ff80;
+        //     }
+        // }
+        // li:nth-child(1) {
+        //     a {
+        //         :hover {
+        //             color: #2966ff;
+        //         }
+        //     }
+        // }
+            
     }
-    
 `;

@@ -135,148 +135,102 @@ export const MainHeader = styled.header`
 `;
 
 export const MainBody = styled.section`
+    position: relative;
     width: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-
     margin-bottom: 2rem;
-    
-    ul {
+
+    .portfoWrap {
         width: 100%;
     }
 `;
 
-export const PortfoUl = styled.ul`
-    width: 100%;
-    @media only screen and (min-width: 1281px) {
-    }
-`;
 
-export const PortfoLI = styled.li`
-
-    position: relative;
-    width: 100%;
-    height: 200px;
-    display: inline-block;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-bottom: 20px;
-
-    background-color: teal;
-
-    @media only screen and (min-width: 768px) {
-        position: relative;
-        width: 47%;
-        height: 240px;
-        display: inline-block;
-        box-sizing: border-box;
-        overflow: hidden;
-        margin-bottom: 20px;
+export const BtnWrap = styled.div`
     
-        // 홀수
-        :nth-child(odd) {
-            margin-right: 6%;
-        } 
-        // 짝수
-        :nth-child(even) {
-            transform: translate(0, -30%);
-        } 
-    }
+    display: none;
 
-    @media only screen and (min-width: 920px) {
-        height: 280px;
-    }
-
-    @media only screen and (min-width: 1025px) {
-        position: relative;
-        width: 47%;
-        height: 450px;
-        display: inline-block;
-        box-sizing: border-box;
-        overflow: hidden;
-        margin-bottom: 60px;
-
-        z-index: 10;
-
-
-        // 홀수
-        :nth-child(odd) {
-            margin-right: 6%;
-            // transform: translate(0, -15%);
-        } 
-        // 짝수
-        :nth-child(even) {
-            transform: translate(0, -30%);
-        } 
-        :hover {
-            a {
-                opacity: 1;   
-            }
-            img {
-                transform: scale(1.1);
-                filter:blur(3px);
-            }
-        }
-    }
-
-`;
-
-export const PortfoA = styled.a`
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    text-decoration: none;
-    background-color: rgba(17, 17, 17, 0.3);
-    z-index: 999;
-
-    .goBtn {
-        display: none;
-    }
-
-
-    @media only screen and (min-width: 768px) {
-        // div:nth-child(1) {
-        //     font-size: 2.6rem;
-        //     font-family: "Squada One", cursive;
-        //     font-weight: 400;
-        //     margin: 0 0 0.8rem 0;
-        //     line-height: 1rem;
-        //     color: #fff;
-        // }
-        // div:nth-child(2) {
-        //     display: none;
-        // }
-    }
-
-
-    @media only screen and (min-width: 1025px) {
-        padding: 0 40px;
+    @media only screen and (min-width: 1024px) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding-right: 2%;
+    
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
-        z-index: 999;
-        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 600ms;
-        text-decoration: none;
+    
+        .btn {
+            width: 60px;
+            height: 120px;
+            z-index: 999;
+            opacity: 0.4;
+            transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+        }
+        .btn:hover {
+            opacity: 1;
+        }
+        .right {
+            transform: rotate(180deg);
+        }
+    }
+`;
 
-        opacity: 0;
+export const PortfoWrap = styled.div`
+    width: auto;
+    overflow-x: scroll;
 
-        background-color: rgba(17, 17, 17, 0.9);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    .slideWrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+    }
+    @media only screen and (min-width: 1024px) {
+        overflow: hidden;
+    }
+`;
+
+export const PortfoLi = styled.li`
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+    margin-right: 10%;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+
+    .portfoImgBox {
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1.7rem;
+        background-color: blue;
+
+        a {
+            width: 100%;
+            height: 100%;
+            z-index:99;
+        }
 
         .goBtn {
             font-family: "Squada One", cursive;
             font-weight: 400;
-            font-size: 2rem;
-            width: 60px;
-            height: 60px;
+            font-size: 1.4rem;
+            width: 40px;
+            height: 40px;
             display: block;
             position: absolute;
             top: 0;
@@ -284,109 +238,159 @@ export const PortfoA = styled.a`
             color: #111;
             background-color: #fff;
             cursor: none;
+            transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
         }
     }
-`;
 
-export const PortfoImg = styled.img`
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 800ms;
-`;
-
-export const WrapBox = styled.div`
-    width: 100%;
-    position: absolute;
-        left: 0;
-        bottom: 0;
-
-    .titleWrap {
+    .portfoInfo {
+        display: block;
+        position: relative;
         width: 100%;
-        padding: 0 3%;
-    
-        div:nth-child(1) {
-            font-size: 2.6rem;
-            font-family: "Squada One", cursive;
-            font-weight: 400;
-            margin: 0 0 0.7rem 0;
-            line-height: 1rem;
-            color: #fff;
-        }
-        div:nth-child(2) {
-            display: inline-block;
-            font-family: "SCDream1",sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 22px;
-            margin: 0 0 0.7rem 0;
-            color: #ffffff80;
-        }
-    }
-    .infoWrap {
-        width: 100%;
-        padding: 0 5%;
-        color: #fff;
-        display: none;
-    }
 
-    @media only screen and (min-width: 768px) {
         .titleWrap {
-            padding: 0 4%;
-            div:nth-child(1) {
+            width: 100%;
+            .title {
                 font-size: 3.2rem;
-            }
-            div:nth-child(2) {
-                font-size: 1.1rem;
-                color: #ffffff80;
-            }
-        }
-    }
-    @media only screen and (min-width: 1025px) {
-
-        .titleWrap {
-            padding: 0 5%;
-            margin-bottom: 1rem;
-            div:nth-child(1) {
-                font-size: 4.5rem;
-                margin: 0 0 2rem 0;
-            }
-            div:nth-child(2) {
-                font-size: 1.1rem;
+                font-family: "Squada One", "cursive";
+                font-weight: 400;
+                margin: 0 0 8px 0;
+                line-height: 2rem;
+                color: #bbbbbb;
+              }
+              .subtitle {
+                font-family: "SCDream1", sans-serif;
+                font-weight: 600;
+                font-size: 1.2rem;
+                line-height: 2rem;
                 color: #ff75a3;
-            }
+                margin: 0 0 1.2rem 0;
+              }
         }
-
         .infoWrap {
-            display: flex;
-            font-family: "SCDream1",sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 22px;
-            letter-spacing: 1px;
-            color: #ffffff80;
-
-            margin-bottom: 1.6rem;
-
-            div {
-                margin-right: 0.8rem;
-            }
-            .github {
-                font-family: "SCDream9",sans-serif;
-                text-decoration: none;
+            width: 100%;
+            .info {
+                font-family: "SCDream1", sans-serif;
+                font-weight: 600;
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+                width: 100%;
+                height: 70px;
+                margin-bottom: 1rem;
                 color: #ffffff80;
-
-                margin-right: 0.8rem;
-
-                :hover {
-                    color: #fff;
+            }
+            .skill {
+                display: flex;
+                font-family: "SCDream1", sans-serif;
+                font-size: 0.9rem;
+                font-weight: 900;
+                line-height: 22px;
+                letter-spacing: 1px;
+                color: #ffffff80;
+                a {
+                    margin-right: 0.8rem;
+                }
+                span {
+                    margin-right: 0.8rem;
                 }
             }
-
         }
+      }
+
+      @media only screen and (min-width: 768px) {
+        .portfoImgBox {
+            height: 400px;
+        }
+        .portfoInfo {
+            .infoWrap {
+                .info {
+                    width: 70%;
+                }
+            }
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        margin-bottom: 0;
+    
+        .portfoImgBox {
+            position: relative;
+            display: inline-block;
+            width: 48%;
+            height: 420px;
+            float: left;
+            margin-bottom: 0;
+            margin-right: 4%;
+            transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+            
+            .goBtn {
+                opacity: 0;
+                font-family: "Squada One", cursive;
+                    font-weight: 400;
+                    font-size: 2rem;
+                    width: 60px;
+                    height: 60px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: #111;
+                    background-color: #fff;
+                    cursor: none;
+                    transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+            }
+            :hover {
+                .goBtn {
+                    opacity: 1;
+                }
+            }
+            
+        }
+        
+        .portfoInfo {
+            display: inline-block;
+            position: absolute;
+            bottom: 3rem;
+            width: 48%;
+    
+            .titleWrap {
+                .title {
+                    font-size: 7rem;
+                    margin: 0 0 8px 0;
+                    line-height: 4.4rem;
+                  }
+                  .subtitle {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    margin: 0 0 3rem 0;
+                  }
+            }
+            .infoWrap {
+                .info {
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                    width: 80%;
+                    height: 70px;
+                    margin-bottom: 1.5rem;
+                }
+                .skill {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    line-height: 22px;
+
+                    .github {
+                        font-family: "SCDream9",sans-serif;
+                        text-decoration: none;
+                        color: #ffffff80;
+        
+                        margin-right: 0.8rem;
+        
+                        :hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+          }
     }
 `;
 
@@ -394,7 +398,7 @@ export const Footer = styled.footer`
     width: 100%;
     padding: 0 0 100px 0;
     strong {
-        font-size: 2.4rem;
+        font-size: 2rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
         margin: 0 0 40px 0;
@@ -407,6 +411,7 @@ export const Footer = styled.footer`
         font-size: 1.3rem;
         margin-top: 10px;
         margin-bottom: 20px;
+        color: #bbbbbb;
     }
     .mainText {
         width: 86%;
@@ -414,9 +419,8 @@ export const Footer = styled.footer`
         font-size: 0.8rem;
         font-weight: 400;
         line-height: 1.5rem;
+        color: #bbbbbb;
     }
-
-
     @media only screen and (min-width: 1024px) {
         padding: 0 0 300px 0;
 
@@ -425,15 +429,12 @@ export const Footer = styled.footer`
             margin: 0 0 10px 0;
             line-height: 80px;
         }
-        
         .subTitle {
-            font-family: "SCDream1",sans-serif;
             font-size: 30px;
             margin: 0 0 30px 0;
         }
         .mainText {
             width: 80%;
-            font-family: "SCDream1",sans-serif;
             font-size: 1.1rem;
             font-weight: 400;
             line-height: 1.5rem;

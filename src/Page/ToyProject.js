@@ -2,13 +2,13 @@ import React from 'react';
 import Page__nav from '../components/Page__nav';
 
 import '../styles/reset.css';
-import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
-    PortfoLI, PortfoA, WrapBox, PortfoImg, Footer } from './ToyProject__styled';
+import { Header, Cursor, Cursor2, WorkWrap, MainHeader, 
+    MainBody, BtnWrap, PortfoWrap, PortfoLi, Footer } from './ToyProject__styled';
 import { data } from '../Data/Toy__data'
 
 
 const url = process.env.PUBLIC_URL + '/image/';
-
+const button = process.env.PUBLIC_URL + '/image/';
 
 class ToyProject extends React.Component {
     
@@ -29,13 +29,7 @@ class ToyProject extends React.Component {
          const cursor2HalfHeight = cursor2Rect.height / 2;
          cursor2.style.backgroundColor = `#2bd42e`;
          
- 
-         let headerUl = document.querySelector('.header__ul');
-         let mainNavWrap = document.querySelector('.main__nav__wrap');
-         let nameBox = document.querySelector('.name__box');
-         
-         let tf = true;
- 
+
          // Cursor Effect
          document.addEventListener("mousemove", (e) => {
              // cursor.styled.cssText = cursor2.styled.cssText = "left" + e.clientX + "px; top:" + e.clientY + "px;";
@@ -46,49 +40,44 @@ class ToyProject extends React.Component {
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
  
          })
- 
-         function mousechange() {
-             cursor.style.borderRadius = `0`;
-             cursor.style.border = `1px solid #ffffff`;
-             cursor.style.backgroundColor = `#2bd42e20`; 
-         }
-         
-         document.addEventListener('mouseover', (e) => {
-             let elem = e.target;
- 
-             // console.log(elem.className)
-             if(elem.className == 'sc-hHftDr evQUgs'){
-                 // console.log('ok');
-                 mousechange()
-             } else if(elem.className == 'title') {
-                 mousechange()
-             } else if(elem.className == 'subTitle') {
-                 mousechange()
-             } else if(elem.className == 'sc-hHftDr cNlQMS') {
-                 mousechange()
-             } else if(elem.className == 'wrap box') {
-                 mousechange()
-             } else if(elem.className == 'link') {
-                 mousechange()
-             } else if(elem.className == 'icon') {
-                 mousechange()
-             } else if(elem.className == 'sc-kEjbxe gEZwja backward') {
-                mousechange()
-            } else if(elem.className == 'span') {
-                 mousechange()
-             } else if(elem.className == 'sc-crrsfI liZvO menuBtn openBtn') {
-                 mousechange()
-             } else if(elem.className == 'menuLink') {
-                 mousechange()
-             } else {
-                 // console.log('no')
-                 cursor.style.borderRadius = `50%`;
-                 cursor.style.border = `1px solid #c6c6c6`;
-                 cursor.style.background = `none`;
-             }  
-         })
-    }
 
+
+         // Slider
+        let lis = document.querySelectorAll('.portfoLi');
+        console.log(lis.length);
+
+        let slideWrap = document.querySelector('.slideWrap');
+        let leftBtn = document.querySelector('.left')
+        let rightBtn = document.querySelector('.right')
+        let transformValue = 0;
+
+         // 위치 변경
+        let i = 0;
+        rightBtn.addEventListener('click', () => {
+            if(i<lis.length-1){
+                transformValue = transformValue - 110;
+                slideWrap.style.transform = `translateX(${transformValue}%)`;
+                console.log(transformValue);
+                i++;
+                console.log(i);
+                return transformValue;
+            } else {
+                return;
+            }
+        })
+        leftBtn.addEventListener('click', () => {
+            if(i>0) {
+                transformValue = transformValue + 110;
+                slideWrap.style.transform = `translateX(${transformValue}%)`;
+                console.log(transformValue);
+                i--;
+                console.log(i);
+                return transformValue;
+            } else {
+                return;
+            }
+        })
+    }
     render() {
         return <Header>
 
@@ -96,35 +85,47 @@ class ToyProject extends React.Component {
             <Cursor2 className={"cursor2"}></Cursor2>
 
             <Page__nav />
+
             <WorkWrap className={"work__wrap"}>
                 <MainHeader>
                     <h1>TOY PROJECT</h1>
                     <p>끊임없는 성장을 꿈꿉니다.</p>
                 </MainHeader>
                 <MainBody className={"mainBody"}>
-                    <ul className={"itemWrap"}>
-                    {data.map((data, idx) => {
-                    return <PortfoLI className={"item"}>
-                    <PortfoA href={data["url"]} target={"blank"}>
-                        <button className={"goBtn"}>GO</button>
-                        <WrapBox className={"wrap box"}>
-                            <div className={"titleWrap"}>
-                                <div className={"title"}>{data["title"]}</div>
-                                <div className={"subTitle"}>{data["subTitle"]}</div>
-                            </div>
-                            <div className={"infoWrap"}>
-                                <a href={data["github"]} target={"blank"} className={"github"}>GitHub</a>
-                                <div className={"technic"}>{data["technic1"]}</div>
-                                <div className={"technic"}>{data["technic2"]}</div>
-                                <div className={"technic"}>{data["technic3"]}</div>
-                                <div className={"technic"}>{data["technic4"]}</div>
-                            </div>
-                        </WrapBox>
-                    </PortfoA>
-                    <PortfoImg src={`${url+data["img"]}`} alt={data["alt"]}></PortfoImg>
-                    </PortfoLI>
-                    })}
-                    </ul>
+                    <BtnWrap className={"btnWrap"}>
+                        <button className={"btn left"}><img src={`${button+'button.png'}`} alt={"left button"}></img></button>
+                        <button className={"btn right"}><img src={`${button+'button.png'}`} alt={"left button"}></img></button>
+                    </BtnWrap>
+                    <PortfoWrap className={"portfoWrap"}>
+                        <ul className={"slideWrap"}>
+                            {data.map((data, idx) => { 
+                                return<PortfoLi className={"portfoLi"}>
+                                {/* <div className={"portfoImgBox"}> */}
+                                <a href={data["url"]} target={"blank"} className={"portfoImgBox"}>
+                                    <button className={"goBtn"}>GO</button>
+                                    <img src={`${url+data["img"]}`} alt={data.alt}></img>
+                                </a>
+                                {/* </div> */}
+                                <div className={"portfoInfo"}>
+                                    <div className={"titleWrap"}>
+                                        <div className={"title"}>{data["title"]}</div>
+                                        <div className={"subtitle"}>{data["subTitle"]}</div>
+                                    </div>
+                                    <div className={"infoWrap"}>
+                                        <div className={"info"}>{data["info"]}</div>
+                                        <div className={"skill"}>
+                                            <a href={data["github"]} target={"blank"} className={"github"}>GitHub</a>
+                                            <span className={"technic"}>{data["technic1"]}</span>
+                                            <span className={"technic"}>{data["technic2"]}</span>
+                                            <span className={"technic"}>{data["technic3"]}</span>
+                                            <span className={"technic"}>{data["technic4"]}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </PortfoLi>
+                            })}
+                        </ul>
+                    </PortfoWrap>
                 </MainBody>
                 <Footer>
                     <strong>Determination</strong>

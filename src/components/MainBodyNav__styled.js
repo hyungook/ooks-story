@@ -90,8 +90,8 @@ export const NavBtn = styled.button`
     justify-content: center;
     align-items: center;
     
-    padding: 0.5rem 0;
-    margin: 0.5rem 0;
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
 
     .MainBtn {
         font-size: 6rem;
@@ -179,7 +179,8 @@ export const ButtonBackBox = styled.div`
 export const BackBox = styled.div`
     width: 36%;
     height: 60%;
-    background-color: #222e3e;
+    // background-color: #222e3e;
+    background-color: #181d2b;
     animation-name: scaleEffect;
     animation-duration: 1000ms;
     animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
@@ -196,7 +197,6 @@ export const BackBox = styled.div`
     @media only screen and (min-width: 1025px) {
         width: 600px;
         height: 100%;
-        background-color: #222e3e;
         animation-name: scaleEffect;
         animation-duration: 1000ms;
         animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);

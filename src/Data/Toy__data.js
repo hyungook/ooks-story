@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const data =[
     {
         url : "https://hyungook.github.io/brandi-clone-coding/",

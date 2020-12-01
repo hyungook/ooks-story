@@ -21,7 +21,6 @@ class MainBodyNav extends React.Component {
     }
 
     componentDidMount() {
-
         // document.addEventListener('mouseover', (e) => {
         //     const Btn = document.querySelectorAll('.Btn');
         //     let elem = e.target;
@@ -53,7 +52,6 @@ class MainBodyNav extends React.Component {
     
             MainBtn__2.style.opacity = `0.3`;
             MainBtn__3.style.opacity = `0.3`;
-            
         })
         MainBtn__1.addEventListener('mouseout', () => {
             MainBtn__1.style.transform = `translateX(-50%)`;
@@ -101,7 +99,6 @@ class MainBodyNav extends React.Component {
             return;
         }
     }
-
     render() {
         return <Section>
         <MainNav>

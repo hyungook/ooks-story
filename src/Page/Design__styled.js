@@ -50,14 +50,13 @@ export const DesignWrap = styled.section`
     
 
     @media only screen and (min-width: 768px) {
-        margin-top: 4.4rem;
+        margin-top: 2.5rem;
     }
     @media only screen and (min-width: 1025px) {
-        margin: 0;
+        margin-top: 0;
         width: 84%;
         float: right;
-        // padding: 80px 0 0 40px;
-        padding: 60px 0 0 40px;
+        padding: 1.4rem 0 0 40px;
         box-sizing: border-box;
     }
 `;
@@ -65,55 +64,55 @@ export const DesignWrap = styled.section`
 export const MainHeader = styled.header`
     position: relative;
     width: 100%;
-    margin: 1rem 1rem 3rem 0;
+    margin: 1rem 1rem 2rem 0;
     h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         font-family: "Squada One", "cursive";
         font-weight: 400;
-        line-height: 5rem;
+        line-height: 3.2rem;
         color: #bbbbbb;
     }
     p {
         position: absolute;
         font-family: "SCDream1", "sans-serif";
-        font-size: 1.2rem;
+        font-size: 1rem;
         z-index: 999;
         color: #bbbbbb;
     }
 
     @media only screen and (min-width: 768px) {
-        margin-bottom: 100px;
+        margin-bottom: 4rem;
         h1 {
-            font-size: 10rem;
+            font-size: 5rem;
             font-family: "Squada One", "cursive";
             font-weight: 400;
-            margin: 0 0 8px 0;
-            line-height: 7.5rem;
+            margin: 0 0 6px 0;
+            line-height: 4.5rem;
             color: #bbbbbb;
         }
         p {
             position: absolute;
             font-family: "SCDream1", "sans-serif";
-            font-size: 2.6rem;
+            font-size: 1.4rem;
             z-index: 999;
         }
     }
     @media only screen and (min-width: 1025px) {
-        padding: 1rem;
+        padding: 0 1rem;
         clear: both;
-        margin-bottom: 140px;
+        margin-bottom: 4rem;
         
         h1 {
-            font-size: 180px;
+            font-size: 4rem;
             font-family: "Squada One", "cursive";
             font-weight: 400;
-            margin: 0 0 10px 0;
-            line-height: 150px;
+            line-height: 4rem;
+            margin: 0 0 4px 0;
             color: #bbbbbb;
         }
         p {
             font-family: "SCDream1", "sans-serif";
-            font-size: 60px;
+            font-size: 1.5rem;
             z-index: 999;
         }
     }
@@ -181,6 +180,7 @@ export const PortfoWrap = styled.div`
         align-items: center;
         flex-direction: row;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+
     }
     @media only screen and (min-width: 1024px) {
         overflow: hidden;
@@ -192,7 +192,7 @@ export const PortfoLi = styled.li`
     min-width: 100%;
     width: 100%;
     margin-right: 10%;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     box-sizing: border-box;
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 
@@ -208,6 +208,7 @@ export const PortfoLi = styled.li`
         display: block;
         position: relative;
         width: 100%;
+
 
         .titleWrap {
             width: 100%;
@@ -269,42 +270,42 @@ export const PortfoLi = styled.li`
       }
 
       @media only screen and (min-width: 1024px) {
-        margin-bottom: 0;
+        margin-bottom: 2rem;
     
         .portfoImgBox {
             display: inline-block;
-            width: 48%;
-            height: 420px;
-            float: left;
-            margin-bottom: 0;
-            margin-right: 4%;
+            // width: 48%;
+            width: 90%;
+            height: 540px;
+            // float: left;
+            margin-bottom: 2rem;
+            // margin-right: 4%;
         }
         
         .portfoInfo {
             display: inline-block;
-            position: absolute;
-            bottom: 3rem;
-            width: 48%;
+            // position: absolute;
+            // width: 48%;
+            width: 90%;
     
             .titleWrap {
                 .title {
-                    font-size: 7rem;
-                    margin: 0 0 8px 0;
-                    line-height: 4.4rem;
+                    font-size: 5rem;
+                    margin: 0 0 4px 0;
+                    line-height: 4rem;
                   }
                   .subtitle {
-                    font-size: 2rem;
-                    line-height: 3rem;
-                    margin: 0 0 3rem 0;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    margin: 0 0 2rem 0;
                   }
             }
             .infoWrap {
                 .info {
                     font-size: 1rem;
                     line-height: 1.4rem;
-                    width: 80%;
-                    height: 70px;
-                    margin-bottom: 1.5rem;
+                    width: 60%;
+                    height: 64px;
                 }
                 .skill {
                     font-size: 1.1rem;
@@ -317,8 +318,10 @@ export const PortfoLi = styled.li`
 `;
 
 export const Footer = styled.footer`
-    width: 100%;
-    padding: 0 0 100px 0;
+    width: 90%;
+    padding: 2rem 0 100px 0;
+
+    border-top: 1px solid #ffffff40;
     strong {
         font-size: 2rem;
         font-family: "Squada One", cursive;
@@ -344,7 +347,7 @@ export const Footer = styled.footer`
         color: #bbbbbb;
     }
     @media only screen and (min-width: 1024px) {
-        padding: 0 0 300px 0;
+        padding: 2rem 0 300px 0;
 
         strong {
             font-size: 60px;

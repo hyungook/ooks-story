@@ -1,17 +1,12 @@
 import styled from 'styled-components';
 
-
 export const Header = styled.header`
     width: 100%;
     height: 100vh;
     color: #fff;
-    // cursor: pointer;
     cursor: none;
-
     overflow-y: scroll;
-    
 `;
-
 export const Cursor = styled.div`
     display:none;
 
@@ -50,11 +45,9 @@ export const Cursor2 = styled.div`
     }
 `;
 export const WorkWrap = styled.section`
-
-    margin-top: 2.8rem;
-
-    padding: 1rem 1rem;    
-
+    margin-top: 3rem;
+    padding: 1rem 0;    
+    
     @media only screen and (min-width: 768px) {
         margin-top: 4.4rem;
     }
@@ -71,7 +64,8 @@ export const MainHeader = styled.header`
 
     position: relative;
     width: 100%;
-    margin-bottom: 54px;
+    margin-bottom: 4.5rem;
+    padding: 0 1rem;
     
     h1 {
         font-size: 4rem;
@@ -106,7 +100,6 @@ export const MainHeader = styled.header`
             z-index: 999;
         }
     }
-
 
     @media only screen and (min-width: 1025px) {
         clear: both;
@@ -157,14 +150,24 @@ export const PortfoUl = styled.ul`
 export const PortfoLI = styled.li`
 
     position: relative;
-    width: 100%;
-    height: 200px;
+    // width: 100%;
+    width: 48%;
+    height: 120px;
     display: inline-block;
     box-sizing: border-box;
     overflow: hidden;
     margin-bottom: 20px;
 
     background-color: teal;
+
+    // 홀수
+    :nth-child(odd) {
+        margin-right: 4%;
+    } 
+    // 짝수
+    :nth-child(even) {
+        transform: translate(0, -20%);
+    } 
 
     @media only screen and (min-width: 768px) {
         position: relative;
@@ -228,7 +231,7 @@ export const PortfoA = styled.a`
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 0 0.8rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -299,20 +302,20 @@ export const WrapBox = styled.div`
         padding: 0 3%;
     
         div:nth-child(1) {
-            font-size: 2.6rem;
+            font-size: 1.6rem;
             font-family: "Squada One", cursive;
             font-weight: 400;
-            margin: 0 0 0.7rem 0;
+            margin: 0;
             line-height: 1rem;
             color: #fff;
         }
         div:nth-child(2) {
             display: inline-block;
             font-family: "SCDream1",sans-serif;
-            font-size: 1.1rem;
+            font-size: 0.6rem;
             font-weight: 600;
             line-height: 22px;
-            margin: 0 0 0.7rem 0;
+            margin: 0 0 0.2rem 0;
             color: #ffffff80;
         }
     }
@@ -412,7 +415,7 @@ export const PortfoImg = styled.img`
 
 export const Footer = styled.footer`
     width: 100%;
-    padding: 0 0 100px 0;
+    padding: 0 1rem 100px 1rem;
     strong {
         font-size: 2.4rem;
         font-family: "Squada One", cursive;

@@ -71,17 +71,17 @@ export const MainHeader = styled.header`
     margin: 1rem 1rem 3rem 1rem;
     
     h1 {
-        font-size: 5rem;
-        font-family: "Squada One", "cursive";
+        font-size: 4rem;
+        font-family: "Squada One", cursive;
         font-weight: 400;
-        // margin: 8px 0 2px 0;
-        line-height: 4.6rem;
+        margin: 8px 0 2px 0;
+        line-height: 4rem;
         color: #bbbbbb;
     }
     p {
         position: absolute;
-        font-family: "SCDream1", "sans-serif";
-        font-size: 1.2rem;
+        font-family: "SCDream1",sans-serif;
+        font-size: 1.3rem;
         z-index: 999;
         color: #bbbbbb;
     }
@@ -89,16 +89,16 @@ export const MainHeader = styled.header`
     @media only screen and (min-width: 768px) {
         margin-bottom: 100px;
         h1 {
-            font-size: 10rem;
-            font-family: "Squada One", "cursive";
+            font-size: 7rem;
+            font-family: "Squada One", cursive;
             font-weight: 400;
             margin: 0 0 8px 0;
-            line-height: 7.5rem;
+            line-height: 5rem;
             color: #bbbbbb;
         }
         p {
             position: absolute;
-            font-family: "SCDream1", "sans-serif";
+            font-family: "SCDream1",sans-serif;
             font-size: 2.6rem;
             z-index: 999;
         }
@@ -106,8 +106,7 @@ export const MainHeader = styled.header`
 
     @media only screen and (min-width: 1025px) {
         clear: both;
-
-        margin-bottom: 180px;
+        margin-bottom: 8.4rem;
         
         h1 {
             // position: absolute;
@@ -127,16 +126,15 @@ export const MainHeader = styled.header`
 `;
 
 export const About__header = styled.section`
-
     width: 100%;
     box-sizing: border-box;
 
     p {
-        padding: 0.8rem;
-        width: 100%;
+        padding: 0.7rem;
+        width: 95%;
         font-family: Noto Sans KR,sans-serif;
         font-size: 1rem;
-        line-height: 1.3;
+        line-height: 1rem;
         color: #777;
         // font-weight: 300;
         white-space: pre-line;
@@ -150,8 +148,8 @@ export const About__header = styled.section`
 
     @media only screen and (min-width: 768px) {
         p {
-            font-size: 1.2rem;
-            line-height: 1.4;
+            font-size: 1rem;
+            line-height: 1rem;
         }
         .image__box {
             height: 30vh;
@@ -164,10 +162,10 @@ export const About__header = styled.section`
         p {
             width: 80%;
             font-family: Noto Sans KR,sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.9;
-            padding: 1rem 6%;
-            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            padding: 1rem 0
+            margin: 0 0 3rem 0;
             color: #777;
             font-weight: 300;
             white-space: pre-line;
@@ -264,7 +262,7 @@ export const SectionBody = styled.div`
         display: flex;
         justify-content: start;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
 
         .skillIcon {
             min-width: 1.8rem;
@@ -272,7 +270,6 @@ export const SectionBody = styled.div`
             width: 1.8rem;
             height: 1.8rem;
             overflow: hidden;
-
             margin-right: 10px;
 
             img {
@@ -303,8 +300,8 @@ export const SectionBody = styled.div`
       }
     .map__text {
         font-family: Noto Sans KR,sans-serif;
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
         color: #777;
         font-weight: 400;
         white-space: pre-line;
@@ -320,7 +317,7 @@ export const SectionBody = styled.div`
             display: flex;
             justify-content: start;
             align-items: center;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.4rem;
 
             .skillIcon {
                 width: 2rem;
@@ -358,8 +355,8 @@ export const SectionBody = styled.div`
         }
         .map__text {
             font-family: Noto Sans KR,sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.9;
+            font-size: 1rem;
+            line-height: 1.5rem;
             color: #777;
             font-weight: 400;
             white-space: pre-line;
@@ -414,7 +411,7 @@ export const SectionBody = styled.div`
         .map__text {
             font-family: Noto Sans KR,sans-serif;
             font-size: 1.1rem;
-            line-height: 1.9;
+            line-height: 1.5rem;
             color: #777;
             font-weight: 400;
             white-space: pre-line;

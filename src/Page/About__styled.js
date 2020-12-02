@@ -133,9 +133,10 @@ export const About__header = styled.section`
         padding: 0.7rem;
         width: 95%;
         font-family: Noto Sans KR,sans-serif;
-        font-size: 1rem;
+        font-size: 0.8rem;
         line-height: 1rem;
         color: #777;
+        letter-spacing: -0.4px;
         // font-weight: 300;
         white-space: pre-line;
     }
@@ -148,8 +149,9 @@ export const About__header = styled.section`
 
     @media only screen and (min-width: 768px) {
         p {
-            font-size: 1rem;
-            line-height: 1rem;
+            padding: 1rem;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
         }
         .image__box {
             height: 30vh;
@@ -164,7 +166,7 @@ export const About__header = styled.section`
             font-family: Noto Sans KR,sans-serif;
             font-size: 1.2rem;
             line-height: 2rem;
-            padding: 1rem 0
+            padding: 0 0 0 6rem;
             margin: 0 0 3rem 0;
             color: #777;
             font-weight: 300;
@@ -466,11 +468,11 @@ export const Footer = styled.footer`
 
         .footer__header {
             width: 50%;
-            font-size: 3rem;
+            font-size: 2.6rem;
             line-height: 1.6;
             white-space: pre;
             color: #bbb;
-            font-family: "SCDream3", "Noto Sans KR", "sans-serif";
+            font-family: "SCDream1", "Noto Sans KR", "sans-serif";
             margin: 0;
         }
 

@@ -5,7 +5,7 @@ export const data =[
         alt: "Javascript",
         skillName: "Javascript",
         level: "5",
-        text: "자바스크립트와 친해지기 위해 게임도 만들어보고 지금도 재미있는 시도들을 하고 있습니다. 원하는 기능들은 어찌어찌 구현하는데  당연히 아직 많이 부족합니다. ES6를 일부러 안쓰다가 지금은 ES6 이후 버전의 모던자바스크립트 위주로 공부 하고 있습니다.",
+        text: "자바스크립트와 친해지기 위해 게임도 만들어보고, 지금도 꾸준히 재미있는 시도들을 하고 있습니다. 원하는 기능들은 어찌어찌 구현은 하는데 아직 많이 부족하다 생각합니다. 라이브러리 보다는 vanilla javascript 위주로 공부하고 있습니다.",
         color : "#ffc600",
     },
     {
@@ -14,7 +14,7 @@ export const data =[
         alt: "HTML5",
         skillName: "HTML5",
         level: "8",
-        text: "HTML 마크업 코딩만 봤을때는 시멘틱 마크업을 짜고, 웹 표준을 준수하고, 반응형웹에 익숙합니다. 웹 접근성은 아직 깊게 공부하지는 못했습니다.",
+        text: "HTML 마크업 코딩만 봤을때는 시멘틱 마크업을 짜고, 웹 표준을 준수하고, 반응형웹에 익숙합니다. 웹 접근성 공부는 꾸준히 진행하고 있습니다.",
         color : "#e54d27",
     },
     {
@@ -23,7 +23,7 @@ export const data =[
         alt: "CSS3",
         skillName: "CSS3",
         level: "8",
-        text: "기본적인 레이아웃이나 애니메이션 등은 만들고 싶은건 대부분 구현합니다. 이 홈페이지와 데이로그에 SCSS(Styled-Component)가 사용되었습니다. 데이로그 개발에 Grid, Flex, Sticky 등 신 기술들을 적극 활용했습니다.",
+        text: "기본적인 레이아웃이나 애니메이션 등은 만들고 싶은건 대부분 구현 가능합니다. 이 홈페이지와 브랜디 클론코딩에 SCSS(Styled-Component)가 사용되었습니다. SCSS 신 기술들을 꾸준히 공부하고 있습니다.",
         color : "#1370b6",
     },
     {
@@ -32,7 +32,7 @@ export const data =[
         alt: "React JS",
         skillName: "React JS",
         level: "5",
-        text: "리액트로 두개의 사이트를 제작하면서 어느정도 익숙해졌습니다. Class Component, Functional Component, Hooks, Styled Component, Hash Route 등과 친해졌습니다.",
+        text: "리액트로 두개의 사이트를 제작하면서 어느정도 익숙해졌습니다. Class Component, Functional Component, Hooks, Styled Component, browserRouter등과 친해졌습니다.",
         color : "#01d7fe",
     },
     {
@@ -59,7 +59,7 @@ export const data =[
         alt: "Jquery",
         skillName: "Jquery",
         level: "3",
-        text: "현재 개발중입니다.",
+        text: "간단한 토이프로젝트를 진행하면서 어느정도 친해졌습니다.",
         color : "#0765a8",
     },
     {
@@ -77,7 +77,7 @@ export const data =[
         alt: "Photoshop",
         skillName: "Photoshop",
         level: "6",
-        text: "신 기능들을 전부 다 알진 못하지만 꼭 필요한 만큼은 쓰는 것 같습니다 거의 15년 넘게 사용했습니다.",
+        text: "신 기능들을 전부 다 알진 못하지만 꼭 필요한 만큼은 쓰는 것 같습니다. 원하는 시안은 제작할 수 있습니다.",
         color : "#37c5fe",
     },
     {
@@ -86,7 +86,7 @@ export const data =[
         alt: "Adobe XD",
         skillName: "Adobe XD",
         level: "4",
-        text: "이것도 15년 넘게 써서 꼭 필요한 만큼은 씁니다. 3D기능은 다룰 줄은 알지만 간단히 사용할 수 있습니다.",
+        text: "꾸준히 작업하며 친해지고 있습니다. 생각한 시안을 제작할 수 있습니다.",
         color : "#fd68f3",
     },
     {
@@ -95,7 +95,7 @@ export const data =[
         alt: "Illustrator",
         skillName: "Illustrator",
         level: "6",
-        text: "이것도 15년 넘게 써서 꼭 필요한 만큼은 씁니다. 3D기능은 다룰 줄은 알지만 간단히 사용할 수 있습니다.",
+        text: "신 기능들을 전부 다 알진 못하지만 꼭 필요한 만큼은 쓰는 것 같습니다. 원하는 시안은 제작할 수 있습니다.",
         color : "#ff7e1b",
     },
     

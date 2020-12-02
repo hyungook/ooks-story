@@ -357,14 +357,15 @@ export const WrapBox = styled.div`
             div:nth-child(2) {
                 font-size: 1.1rem;
                 color: #ff75a3;
+                letter-spacing: 1px;
             }
         }
         .info {
-            width: 80%;
+            width: 84%;
             height: 120px;
             display: inline-block;
             font-family: "SCDream1",sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             line-height: 22px;
             margin: 0 0 0.4rem 0;
@@ -427,7 +428,7 @@ export const Footer = styled.footer`
     .subTitle {
         // position: absolute;
         font-family: "SCDream1",sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-top: 10px;
         margin-bottom: 20px;
         color: #bbbbbb;

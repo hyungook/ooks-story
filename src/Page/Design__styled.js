@@ -333,7 +333,7 @@ export const Footer = styled.footer`
     .subTitle {
         // position: absolute;
         font-family: "SCDream1",sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-top: 10px;
         margin-bottom: 20px;
         color: #bbbbbb;
@@ -355,7 +355,7 @@ export const Footer = styled.footer`
             line-height: 80px;
         }
         .subTitle {
-            font-size: 30px;
+            font-size: 2.6rem;
             margin: 0 0 30px 0;
         }
         .mainText {

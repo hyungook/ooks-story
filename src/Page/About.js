@@ -80,7 +80,7 @@ class About extends React.Component {
                     <p>글 적자 글 적자 글 적자.</p>
                 </MainHeader>
                 <About__header className={"about__header"}>
-                    <p> 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자 글 적자.</p>
+                    <p>지금까지 습득해온 다양한 능력을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>
                     <div className={"image__box"}>
                         <img src={""}></img>
                     </div>
@@ -179,7 +179,7 @@ class About extends React.Component {
 
                 <Footer>
                     <div className={"footer__header"}>
-                        <p>특별한 경험들을<br />만나보세요.(수정)</p>
+                        <p>특별한 이야기를<br />만나보세요.</p>
                     </div>
                     <div className={"footer__body"}>
                         <ul className={"communi"}>

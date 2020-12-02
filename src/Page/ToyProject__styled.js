@@ -147,6 +147,11 @@ export const MainBody = styled.section`
     .portfoWrap {
         width: 100%;
     }
+    @media only screen and (min-width: 1024px) {
+        margin-bottom: 4rem;
+    }
+
+    
 `;
 
 
@@ -219,10 +224,18 @@ export const PortfoLi = styled.li`
         margin-bottom: 1.7rem;
         background-color: blue;
 
+        // object-fit: cover;
+
         a {
             width: 100%;
             height: 100%;
             z-index:99;
+
+            // object-fit: cover;
+
+            .mainImage {
+                // object-fit: cover;
+            }
         }
 
         .goBtn {
@@ -354,14 +367,15 @@ export const PortfoLi = styled.li`
     
             .titleWrap {
                 .title {
-                    font-size: 7rem;
-                    margin: 0 0 8px 0;
-                    line-height: 4.4rem;
+                    font-size: 6.5rem;
+                    margin: 0 0 0.7rem 0;
+                    line-height: 4.7rem;
                   }
                   .subtitle {
                     font-size: 2rem;
                     line-height: 3rem;
-                    margin: 0 0 3rem 0;
+                    letter-spacing: 1px;
+                    margin: 0 0 2rem 0;
                   }
             }
             .infoWrap {
@@ -395,8 +409,9 @@ export const PortfoLi = styled.li`
 `;
 
 export const Footer = styled.footer`
+    border-top: 1px solid #ffffff40;
     width: 100%;
-    padding: 0 0 100px 0;
+    padding: 3rem 0 100px 0;
     strong {
         font-size: 2rem;
         font-family: "Squada One", cursive;
@@ -408,7 +423,7 @@ export const Footer = styled.footer`
     .subTitle {
         // position: absolute;
         font-family: "SCDream1",sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-top: 10px;
         margin-bottom: 20px;
         color: #bbbbbb;
@@ -422,7 +437,7 @@ export const Footer = styled.footer`
         color: #bbbbbb;
     }
     @media only screen and (min-width: 1024px) {
-        padding: 0 0 300px 0;
+        padding: 2rem 0 300px 0;
 
         strong {
             font-size: 60px;

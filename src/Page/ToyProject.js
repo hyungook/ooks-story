@@ -103,7 +103,7 @@ class ToyProject extends React.Component {
                                 {/* <div className={"portfoImgBox"}> */}
                                 <a href={data["url"]} target={"blank"} className={"portfoImgBox"}>
                                     <button className={"goBtn"}>GO</button>
-                                    <img src={`${url+data["img"]}`} alt={data.alt}></img>
+                                    <img src={`${url+data["img"]}`} alt={data.alt} className={"mainImage"}></img>
                                 </a>
                                 {/* </div> */}
                                 <div className={"portfoInfo"}>

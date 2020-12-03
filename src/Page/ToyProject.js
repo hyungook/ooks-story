@@ -7,7 +7,7 @@ import { Header, Cursor, Cursor2, WorkWrap, MainHeader,
 import { data } from '../Data/Toy__data'
 
 
-const url = process.env.PUBLIC_URL + '/image/';
+const url = process.env.PUBLIC_URL + '/image/toy/';
 const button = process.env.PUBLIC_URL + '/image/';
 
 class ToyProject extends React.Component {

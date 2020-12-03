@@ -218,7 +218,7 @@ export const PortfoLI = styled.li`
                 opacity: 1;   
             }
             img {
-                transform: scale(1.1);
+                transform: scale(1.2);
                 filter:blur(3px);
             }
         }

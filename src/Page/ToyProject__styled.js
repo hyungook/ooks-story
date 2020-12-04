@@ -305,6 +305,17 @@ export const PortfoLi = styled.li`
                 span {
                     margin-right: 0.8rem;
                 }
+                .github {
+                    font-family: "SCDream9",sans-serif;
+                    text-decoration: none;
+                    color: #ffffff80;
+    
+                    margin-right: 0.8rem;
+    
+                    :hover {
+                        color: #fff;
+                    }
+                }
             }
         }
       }

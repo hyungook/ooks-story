@@ -1,7 +1,20 @@
 export const data = [
     {
+        url: "https://hyungook.github.io/best-video/",
+        github: "https://github.com/hyungook/best-video",
+        img: "bestvideo.png",
+        alt: "thumnail image",
+        title: " Best Video",
+        subTitle: "My favorite youtube video",
+        info: "validation / formik / yup 연습을 위해 제작한 토이프로젝트입니다.",
+        technic1: "React",
+        technic2: "Javascript",
+        technic3: "CSS3",
+        technic4: "HTML"
+    },
+    {
         url: "https://hyungook.github.io/CarrotGame/",
-        git: "https://github.com/hyungook/CarrotGame",
+        github: "https://github.com/hyungook/CarrotGame",
         img: "CarrotGame.png",
         alt: "thumnail image",
         title: " Carrot Game",
@@ -13,7 +26,7 @@ export const data = [
     },
     {
         url: "https://hyungook.github.io/lotto-number-generator/",
-        git: "https://github.com/hyungook/lotto-number-generator",
+        github: "https://github.com/hyungook/lotto-number-generator",
         img: "lottoNumber.png",
         alt: "thumnail image",
         title: "LOTTO",
@@ -24,25 +37,15 @@ export const data = [
         technic3: "CSS"
     },
     {
-        url: "https://hyungook.github.io/brandi-clone-coding/",
-        git: "https://hyungook.github.io/brandi-clone-coding/",
-        img: "#",
+        url: "https://hyungook.github.io/todo-list/",
+        github: "https://github.com/hyungook/todo-list",
+        img: "todolist.png",
         alt: "thumnail image",
-        title: "Illust 1",
-        subTitle: "Brandi Clone Coding",
-        info: "내용 설명 내용 설명 내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명",
-        technic1: "Illustrator",
-        technic2: "Photoshop"
-    },
-    {
-        url: "https://hyungook.github.io/brandi-clone-coding/",
-        git: "https://hyungook.github.io/brandi-clone-coding/",
-        img: "#",
-        alt: "thumnail image",
-        title: "Illust 1",
-        subTitle: "Brandi Clone Coding",
-        info: "내용 설명 내용 설명 내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명내용 설명 내용 설명",
-        technic1: "Illustrator",
-        technic2: "Photoshop"
+        title: "To-Do List",
+        subTitle: "to do list app",
+        info: "js와 친해지기 위해 작업한 토이프로젝트입니다.",
+        technic1: "Javascript",
+        technic2: "CSS",
+        technic3: "HTML"
     }
 ];

@@ -7,7 +7,7 @@ import { data } from '../Data/Work__data'
 
 
 
-const url = process.env.PUBLIC_URL + '/image/';
+const url = process.env.PUBLIC_URL + '/image/work/';
 
 class Work extends React.Component {
 

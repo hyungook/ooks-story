@@ -318,10 +318,9 @@ export const PortfoLi = styled.li`
 `;
 
 export const Footer = styled.footer`
-    width: 90%;
-    padding: 2rem 0 100px 0;
-
     border-top: 1px solid #ffffff40;
+    width: 100%;
+    padding: 3rem 0 100px 0;
     strong {
         font-size: 2rem;
         font-family: "Squada One", cursive;
@@ -355,7 +354,7 @@ export const Footer = styled.footer`
             line-height: 80px;
         }
         .subTitle {
-            font-size: 2.6rem;
+            font-size: 30px;
             margin: 0 0 30px 0;
         }
         .mainText {

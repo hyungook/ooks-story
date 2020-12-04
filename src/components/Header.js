@@ -73,7 +73,6 @@ class Header extends React.Component {
 
         // let scene = document.querySelector('.scene');
         // let parallaxInstance = new Parallax(scene);
-
     }
 
     render() {
@@ -81,7 +80,7 @@ class Header extends React.Component {
             <Container>
                 <HeaderUl className={"header__ul"}>
                     <HeaderLi>
-                        <HeaderA href={"#"} className={"header__a"}>
+                        <HeaderA href={"https://www.notion.so/React-Basic-Course-Study-Plan-Template-1ed484aa0fba43f8a1c194ac420f21dd"} className={"header__a"} target={"_blank"}>
                             Notion
                         </HeaderA>
                     </HeaderLi>

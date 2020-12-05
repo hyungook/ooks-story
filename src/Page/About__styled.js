@@ -143,8 +143,15 @@ export const About__header = styled.section`
     .image__box {
         width: 100%;
         height: 20vh;
-
+        overflow: hidden;
         background-color: #999;
+        object-fit: cover;
+
+        .aboutImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     @media only screen and (min-width: 768px) {
@@ -155,12 +162,14 @@ export const About__header = styled.section`
         }
         .image__box {
             height: 30vh;
+            .aboutImage {
+                object-fit: cover;
+            }
         }
     }
     @media only screen and (min-width: 1025px) {
         padding-top: 6rem;
         width: 100%;
-
         p {
             width: 80%;
             font-family: Noto Sans KR,sans-serif;
@@ -177,6 +186,9 @@ export const About__header = styled.section`
             height: 40vh;
 
             background-color: #999;
+            .aboutImage {
+                object-fit: cover;
+            }
         }
     }
 `;

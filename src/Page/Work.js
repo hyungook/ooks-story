@@ -1,16 +1,12 @@
 import React from 'react';
 import Page__nav from '../components/Page__nav';
-
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
     PortfoLI, PortfoA, WrapBox, PortfoImg, Footer } from './Work__styeld';
 import { data } from '../Data/Work__data'
 
-
-
 const url = process.env.PUBLIC_URL + '/image/work/';
 
 class Work extends React.Component {
-
 
     componentDidMount() {
         // mouse Effect
@@ -38,7 +34,6 @@ class Work extends React.Component {
          
              cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
- 
          })
     }
 

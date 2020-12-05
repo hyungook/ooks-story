@@ -201,7 +201,14 @@ export const PortfoLi = styled.li`
         width: 100%;
         height: 200px;
         margin-bottom: 1.7rem;
-        background-color: blue;
+        background-color: #222;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .portfoInfo {

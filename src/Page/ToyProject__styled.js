@@ -223,19 +223,13 @@ export const PortfoLi = styled.li`
         height: 200px;
         margin-bottom: 1.7rem;
         background-color: blue;
+        overflow: hidden;
+        z-index:99;
 
-        // object-fit: cover;
-
-        a {
+        .mainImage {
             width: 100%;
             height: 100%;
-            z-index:99;
-
-            // object-fit: cover;
-
-            .mainImage {
-                // object-fit: cover;
-            }
+            object-fit: cover;
         }
 
         .goBtn {
@@ -444,7 +438,7 @@ export const Footer = styled.footer`
         font-family: "SCDream1",sans-serif;
         font-size: 0.8rem;
         font-weight: 400;
-        line-height: 1.5rem;
+        line-height: 1.3rem;
         color: #bbbbbb;
     }
     @media only screen and (min-width: 1024px) {
@@ -463,7 +457,7 @@ export const Footer = styled.footer`
             width: 80%;
             font-size: 1.1rem;
             font-weight: 400;
-            line-height: 1.5rem;
+            line-height: 1.7rem;
         }
     }
 

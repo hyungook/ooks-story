@@ -237,7 +237,8 @@ export const PortfoA = styled.a`
     align-items: center;
     flex-wrap: wrap;
     text-decoration: none;
-    background-color: rgba(17, 17, 17, 0.3);
+    // background-color: rgba(17, 17, 17, 0.3);
+    background-color: rgba(17, 17, 17, 0.4);
     z-index: 999;
 
     .goBtn {
@@ -306,7 +307,7 @@ export const WrapBox = styled.div`
             font-family: "Squada One", cursive;
             font-weight: 400;
             margin: 0;
-            line-height: 1rem;
+            line-height: 1.3rem;
             color: #fff;
         }
         div:nth-child(2) {
@@ -314,8 +315,8 @@ export const WrapBox = styled.div`
             font-family: "SCDream1",sans-serif;
             font-size: 0.6rem;
             font-weight: 600;
-            line-height: 22px;
-            margin: 0 0 0.2rem 0;
+            line-height: 1rem;
+            margin: 0 0 0.3rem 0;
             color: #ffffff80;
         }
     }
@@ -338,10 +339,14 @@ export const WrapBox = styled.div`
             padding: 0 4%;
             div:nth-child(1) {
                 font-size: 3.2rem;
+                line-height: 2.8rem;
+                margin-bottom: 0.5rem;
             }
             div:nth-child(2) {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 color: #ffffff80;
+                line-height: 1.2rem;
+                margin-bottom: 1rem;
             }
         }
     }

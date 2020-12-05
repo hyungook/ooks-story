@@ -9,6 +9,7 @@ import { Wrap, Cursor, Cursor2, AboutWrap, MainHeader, About__header, Section, S
 import { data } from '../Data/About__data'
 
 const url = process.env.PUBLIC_URL + '/image/skill/';
+const img = process.env.PUBLIC_URL + '/image/';
 
 class About extends React.Component {
 
@@ -27,13 +28,6 @@ class About extends React.Component {
          const cursor2HalfWidth = cursor2Rect.width / 2;
          const cursor2HalfHeight = cursor2Rect.height / 2;
          cursor2.style.backgroundColor = `#2bd42e`;
-         
- 
-         let headerUl = document.querySelector('.header__ul');
-         let mainNavWrap = document.querySelector('.main__nav__wrap');
-         let nameBox = document.querySelector('.name__box');
-         
-         let tf = true;
  
          // Cursor Effect
          document.addEventListener("mousemove", (e) => {
@@ -66,7 +60,6 @@ class About extends React.Component {
              }  
          })
     }
-
     render() {
         return <Wrap>
             <Page__nav />
@@ -77,12 +70,12 @@ class About extends React.Component {
             <AboutWrap>
                 <MainHeader>
                     <h1>ABOUT</h1>
-                    <p>글 적자 글 적자 글 적자.</p>
+                    <p>저만의 이야기로 표현합니다.</p>
                 </MainHeader>
                 <About__header className={"about__header"}>
                     <p>지금까지 습득해온 다양한 능력을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>
                     <div className={"image__box"}>
-                        <img src={""}></img>
+                        <img src={`${img}about.png`} className={"aboutImage"}></img>
                     </div>
                 </About__header>
                 <Section className={"section__body"}>
@@ -185,7 +178,7 @@ class About extends React.Component {
                         <ul className={"communi"}>
                             <li className={"communi__li"}>nenonenoberneno@gmail.com</li>
                             <li className={"communi__li"}>+82 10 4100 2497</li>
-                            <li className={"communi__li"}>@hyungookoh</li>
+                            <li className={"communi__li"}>#hyungookoh</li>
                         </ul>
                     </div>
                 </Footer>

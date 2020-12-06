@@ -256,8 +256,23 @@ export const PortfoLi = styled.li`
                 line-height: 22px;
                 letter-spacing: 1px;
                 color: #ffffff80;
+                a {
+                    margin-right: 0.8rem;
+                    font-weight: 900;
+                }
                 span {
                     margin-right: 0.8rem;
+                }
+                .link {
+                    font-family: "SCDream9",sans-serif;
+                    text-decoration: none;
+                    color: #ffffff80;
+    
+                    margin-right: 0.8rem;
+    
+                    :hover {
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -283,7 +298,7 @@ export const PortfoLi = styled.li`
             display: inline-block;
             // width: 48%;
             width: 90%;
-            height: 540px;
+            height: 570px;
             // float: left;
             margin-bottom: 2rem;
             // margin-right: 4%;
@@ -298,7 +313,7 @@ export const PortfoLi = styled.li`
             .titleWrap {
                 .title {
                     font-size: 5rem;
-                    margin: 0 0 4px 0;
+                    margin: 0 0 0.8rem 0;
                     line-height: 4rem;
                   }
                   .subtitle {
@@ -310,9 +325,10 @@ export const PortfoLi = styled.li`
             .infoWrap {
                 .info {
                     font-size: 1rem;
-                    line-height: 1.4rem;
+                    line-height: 1.6rem;
                     width: 60%;
                     height: 64px;
+                    margin: 0 0 3rem 0;
                 }
                 .skill {
                     font-size: 1.1rem;
@@ -351,6 +367,10 @@ export const Footer = styled.footer`
         font-weight: 400;
         line-height: 1.5rem;
         color: #bbbbbb;
+
+        span {
+            opacity: 0.8;
+        }
     }
     @media only screen and (min-width: 1024px) {
         padding: 2rem 0 300px 0;
@@ -368,7 +388,7 @@ export const Footer = styled.footer`
             width: 80%;
             font-size: 1.1rem;
             font-weight: 400;
-            line-height: 1.5rem;
+            line-height: 1.7rem;
         }
     }
 

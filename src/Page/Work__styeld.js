@@ -158,7 +158,7 @@ export const PortfoLI = styled.li`
     overflow: hidden;
     margin-bottom: 20px;
 
-    background-color: teal;
+    background-color: #222;
 
     // 홀수
     :nth-child(odd) {
@@ -467,7 +467,7 @@ export const Footer = styled.footer`
             font-family: "SCDream1",sans-serif;
             font-size: 1.1rem;
             font-weight: 400;
-            line-height: 1.5rem;
+            line-height: 1.7rem;
         }
     }
 

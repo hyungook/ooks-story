@@ -8,7 +8,7 @@ import { Wrap, Cursor, Cursor2, DesignWrap, MainHeader,
 import { data } from '../Data/Design__data'
 
 
-const url = process.env.PUBLIC_URL + '/image/skill/';
+const url = process.env.PUBLIC_URL + '/image/design/';
 const button = process.env.PUBLIC_URL + '/image/';
 
 class Design extends React.Component{
@@ -90,7 +90,7 @@ class Design extends React.Component{
             <DesignWrap>
                 <MainHeader>
                     <h1>DESIGN</h1>
-                    <p>감각적인 디자인을 추구합니다.</p>
+                    <p>색다른 즐거움을 전합니다.</p>
                 </MainHeader>
                 <MainBody className={"mainBody"}>
                     <BtnWrap className={"btnWrap"}>
@@ -112,10 +112,10 @@ class Design extends React.Component{
                                     <div className={"infoWrap"}>
                                         <div className={"info"}>{data["info"]}</div>
                                         <div className={"skill"}>
+                                        <a href={data["url"]} target={"blank"} className={"link"}>Link</a>
                                             <span className={"technic"}>{data["technic1"]}</span>
                                             <span className={"technic"}>{data["technic2"]}</span>
                                             <span className={"technic"}>{data["technic3"]}</span>
-                                            <span className={"technic"}>{data["technic4"]}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -127,12 +127,12 @@ class Design extends React.Component{
                 <Footer>
                     <strong>Determination</strong>
                     <p className={"subTitle"}>
-                        한 걸음 더 나가고 싶은 오형욱 입니다.
+                        감각적인 디자인으로 보는 즐거움을 전하다.
                     </p>
                     <p className={"mainText"}>
-                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
-                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
-                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
+                        지금까지 습득해온 다양한 디자인 능력을 통해 고객과 소통하며 보는 즐거움을 전할 수 있는 결과를 만들어냅니다. <br />
+                        트렌디한 개발 능력에 감각적인 디자인을 더해 색다른 즐거움을 전달 할 수 있는 개발자가 되겠습니다.
+                        <br /><br /> <span>* 이랜드 랜섬웨어 사건으로 사내 공용 폴더에서 작업물을 가져오지 못하고 있습니다.</span>
                     </p>
                 </Footer>
             </DesignWrap>

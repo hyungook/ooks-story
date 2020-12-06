@@ -5,7 +5,7 @@ export const data =[
         alt: "Javascript",
         skillName: "Javascript",
         level: "5",
-        text: "자바스크립트와 친해지기 위해 게임도 만들어보고, 지금도 꾸준히 재미있는 시도들을 하고 있습니다. 원하는 기능들은 어찌어찌 구현은 하는데 아직 많이 부족하다 생각합니다. 라이브러리 보다는 vanilla javascript 위주로 공부하고 있습니다.",
+        text: "자바스크립트와 친해지기 위해 게임도 만들어보고, 지금도 꾸준히 재미있는 시도들을 하고 있습니다. 원하는 기능들은 어찌어찌 구현은 하는데 아직 많이 부족하다 생각합니다. 라이브러리보다는 vanilla javascript 위주로 공부하고 있습니다.",
         color : "#ffc600",
     },
     {
@@ -14,7 +14,7 @@ export const data =[
         alt: "HTML5",
         skillName: "HTML5",
         level: "8",
-        text: "HTML 마크업 코딩만 봤을때는 시멘틱 마크업을 짜고, 웹 표준을 준수하고, 반응형웹에 익숙합니다. 웹 접근성 공부는 꾸준히 진행하고 있습니다.",
+        text: "HTML 마크업 코딩만 봤을 때는 시멘틱 마크업을 짜고, 웹 표준을 준수하고, 반응형 웹에 익숙합니다. 웹 접근성 공부는 꾸준히 진행하고 있습니다.",
         color : "#e54d27",
     },
     {
@@ -23,7 +23,7 @@ export const data =[
         alt: "CSS3",
         skillName: "CSS3",
         level: "8",
-        text: "기본적인 레이아웃이나 애니메이션 등은 만들고 싶은건 대부분 구현 가능합니다. 이 홈페이지와 브랜디 클론코딩에 SCSS(Styled-Component)가 사용되었습니다. SCSS 신 기술들을 꾸준히 공부하고 있습니다.",
+        text: "기본적인 레이아웃이나 애니메이션 등은 만들고 싶은 건 대부분 구현 가능합니다. 이 홈페이지와 브랜디 클론 코딩에 SCSS(Styled-Component)가 사용되었습니다. SCSS 신 기술들을 꾸준히 공부하고 있습니다.",
         color : "#1370b6",
     },
     {
@@ -32,7 +32,7 @@ export const data =[
         alt: "React JS",
         skillName: "React JS",
         level: "5",
-        text: "리액트로 두개의 사이트를 제작하면서 어느정도 익숙해졌습니다. Class Component, Functional Component, Hooks, Styled Component, browserRouter등과 친해졌습니다.",
+        text: "리액트로 두 개의 사이트를 제작하면서 어느 정도 익숙해졌습니다. Class Component, Functional Component, Hooks, Styled Component, browserRouter 등과 친해졌습니다.",
         color : "#01d7fe",
     },
     {
@@ -41,7 +41,7 @@ export const data =[
         alt: "React Native",
         skillName: "React Native",
         level: "1",
-        text: "현재 개발중입니다.",
+        text: "현재 개발 중입니다.",
         color : "#01d7fe",
     },
     {
@@ -50,7 +50,7 @@ export const data =[
         alt: "Typescript",
         skillName: "Typescript",
         level: "1",
-        text: "현재 개발중입니다.",
+        text: "현재 개발 중입니다.",
         color : "#007acc",
     },
     {
@@ -59,7 +59,7 @@ export const data =[
         alt: "Jquery",
         skillName: "Jquery",
         level: "3",
-        text: "간단한 토이프로젝트를 진행하면서 어느정도 친해졌습니다.",
+        text: "간단한 토이 프로젝트를 진행하면서 어느 정도 친해졌습니다.",
         color : "#0765a8",
     },
     {

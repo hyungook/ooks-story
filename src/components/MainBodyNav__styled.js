@@ -89,9 +89,21 @@ export const NavBtn = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    
     padding: 0.2rem 0;
     margin: 0.2rem 0;
+
+    animation-name: opacityEffect;
+    animation-duration: 4000ms;
+    animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+
+    @keyframes opacityEffect {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
 
     .MainBtn {
         font-size: 6rem;

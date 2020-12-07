@@ -16,7 +16,7 @@ class Footer extends React.Component {
         return <footer>
             <NameBox className={"name__box scene"}>
                 <ToyBtn className={"toy__button"} data-depth={"0.3"}>
-                    HYUNGOOK OH
+                    HYUNGOOK'S STORY
                 </ToyBtn>
             </NameBox>
         </footer>

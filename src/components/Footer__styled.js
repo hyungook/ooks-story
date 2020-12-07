@@ -21,7 +21,7 @@ export const ToyBtn = styled.button`
     font-family: "Squada One", sans-serif;
     font-weight: 400;
     position: absolute;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     padding: 0;
     color: #999;
     border-bottom: 2px solid #2966ff;
@@ -30,7 +30,7 @@ export const ToyBtn = styled.button`
         font-size: 3rem;
     }
     @media only screen and (min-width: 1025px) {
-        font-size: 3.6rem;
+        font-size: 3rem;
         padding: 0 0.2em;
         color: #777;
         border-bottom: 1px solid #2966ff;

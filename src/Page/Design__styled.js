@@ -73,11 +73,11 @@ export const MainHeader = styled.header`
         color: #bbbbbb;
     }
     p {
-        position: absolute;
         font-family: "SCDream1", "sans-serif";
         font-size: 1rem;
         z-index: 999;
         color: #bbbbbb;
+        white-space:nowrap;
     }
 
     @media only screen and (min-width: 768px) {
@@ -91,7 +91,6 @@ export const MainHeader = styled.header`
             color: #bbbbbb;
         }
         p {
-            position: absolute;
             font-family: "SCDream1", "sans-serif";
             font-size: 1.4rem;
             z-index: 999;
@@ -100,7 +99,7 @@ export const MainHeader = styled.header`
     @media only screen and (min-width: 1025px) {
         padding: 0 1rem;
         clear: both;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         
         h1 {
             font-size: 4rem;
@@ -112,7 +111,7 @@ export const MainHeader = styled.header`
         }
         p {
             font-family: "SCDream1", "sans-serif";
-            font-size: 1.5rem;
+            font-size: 2rem;
             z-index: 999;
         }
     }

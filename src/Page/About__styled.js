@@ -67,37 +67,37 @@ export const MainHeader = styled.header`
 
     position: relative;
     width: 100%;
-    // padding: 1rem;
-    margin: 1rem 1rem 3rem 1rem;
+    margin: 1rem 1rem 2rem 1rem;
     
     h1 {
         font-size: 4rem;
         font-family: "Squada One", cursive;
         font-weight: 400;
-        margin: 8px 0 2px 0;
+        margin: 8px 0 4px 0;
         line-height: 4rem;
         color: #bbbbbb;
     }
     p {
-        position: absolute;
+        // position: absolute;
         font-family: "SCDream1",sans-serif;
         font-size: 1.3rem;
         z-index: 999;
         color: #bbbbbb;
+        white-space:nowrap;
     }
 
     @media only screen and (min-width: 768px) {
-        margin-bottom: 100px;
+        margin-bottom: 4rem;
         h1 {
             font-size: 7rem;
             font-family: "Squada One", cursive;
             font-weight: 400;
-            margin: 0 0 8px 0;
+            margin: 0 0 1.1rem 0;
             line-height: 5rem;
             color: #bbbbbb;
         }
         p {
-            position: absolute;
+            // position: absolute;
             font-family: "SCDream1",sans-serif;
             font-size: 2.6rem;
             z-index: 999;
@@ -106,7 +106,7 @@ export const MainHeader = styled.header`
 
     @media only screen and (min-width: 1025px) {
         clear: both;
-        margin-bottom: 8.4rem;
+        margin-bottom: 5.4rem;
         
         h1 {
             // position: absolute;

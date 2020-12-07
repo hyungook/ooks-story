@@ -143,11 +143,13 @@ export const NavBtn = styled.button`
         align-items: center;
         text-transform: uppercase;
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
+        cursor: none;
         
         .MainBtn {
             font-size: 13rem;
         }
         .MainBtn:hover, .MainBtn:focus {
+            cursor: none;
             font-size: 13rem;
             color: #fff;
             letter-spacing: 0.9rem;

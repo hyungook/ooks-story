@@ -2,6 +2,7 @@ import React from 'react';
 import Page__nav from '../components/Page__nav';
 
 import '../styles/reset.css';
+import '../styles/headerEffect.css';
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, 
     MainBody, BtnWrap, PortfoWrap, PortfoLi, Footer } from './ToyProject__styled';
 import { data } from '../Data/Toy__data'
@@ -77,9 +78,6 @@ class ToyProject extends React.Component {
                 return;
             }
         })
-
-
-        
     }
     render() {
         return <Header>
@@ -91,8 +89,19 @@ class ToyProject extends React.Component {
 
             <WorkWrap className={"work__wrap"}>
                 <MainHeader>
-                    <h1>TOY PROJECT</h1>
-                    <p>끊임없는 성장을 꿈꿉니다.</p>
+                    <h1 className={"mainH"}>TOY PROJECT</h1>
+                    <p className={"mainP"}>
+                        <span>끊</span>
+                        <span>임</span>
+                        <span>없</span>
+                        <span>는 성</span>
+                        <span>장</span>
+                        <span>을 꿈</span>
+                        <span>꿉</span>
+                        <span>니</span>
+                        <span>다.</span>
+                    </p>
+                    {/* <p>끊임없는 성장을 꿈꿉니다.</p> */}
                 </MainHeader>
                 <MainBody className={"mainBody"}>
                     <BtnWrap className={"btnWrap"}>

@@ -1,0 +1,61 @@
+@charset 'utf-8';
+
+.mainH {
+  /* transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms; */
+  animation: leftEffect;
+  animation-duration: 2.5s;
+  -moz-animation-direction: inherit;
+  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  opacity: 1;
+}
+@keyframes leftEffect {
+  0% {
+    transform: translateX(-8%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.mainP {
+  display: flex;
+  justify-content: start;
+}
+.mainP span {
+  position: relative;
+}
+.mainP span:nth-child(odd) {
+  animation: topEffect;
+  animation-duration: 3.5s;
+  -moz-animation-direction: inherit;
+  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  opacity: 1;
+}
+.mainP span:nth-child(even) {
+  animation: downEffect;
+  animation-duration: 4s;
+  -moz-animation-direction: inherit;
+  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  opacity: 1;
+}
+@keyframes topEffect {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes downEffect {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

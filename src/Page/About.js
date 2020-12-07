@@ -3,6 +3,7 @@ import Page__nav from '../components/Page__nav';
 
 import '../styles/reset.css';
 import '../styles/About.css';
+import '../styles/headerEffect.css';
 import { Wrap, Cursor, Cursor2, AboutWrap, MainHeader, About__header, Section, SectionWrap, SectionLi,
         SectionHeader, MapWrap, SectionBody, Footer } from './About__styled';
 
@@ -69,8 +70,20 @@ class About extends React.Component {
 
             <AboutWrap>
                 <MainHeader>
-                    <h1>ABOUT</h1>
-                    <p>저만의 이야기로 표현합니다.</p>
+                    <h1 className={"mainH"}>ABOUT</h1>
+                    <p className={"mainP"}>
+                        <span>저</span>
+                        <span>만</span>
+                        <span>의 이</span>
+                        <span>야</span>
+                        <span>기</span>
+                        <span>로 표</span>
+                        <span>현</span>
+                        <span>합</span>
+                        <span>니</span>
+                        <span>다.</span>
+                    </p>
+                    {/* <p className={"mainP"}>저만의 이야기로 표현합니다.</p> */}
                 </MainHeader>
                 <About__header className={"about__header"}>
                     <p>지금까지 습득해온 다양한 능력을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>

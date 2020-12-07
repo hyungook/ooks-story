@@ -3,6 +3,7 @@ import Page__nav from '../components/Page__nav';
 
 import '../styles/reset.css';
 import '../styles/Design.css';
+import '../styles/headerEffect.css';
 import { Wrap, Cursor, Cursor2, DesignWrap, MainHeader, 
     MainBody, BtnWrap, PortfoWrap, PortfoLi, Footer} from './Design__styled';
 import { data } from '../Data/Design__data'
@@ -89,8 +90,19 @@ class Design extends React.Component{
 
             <DesignWrap>
                 <MainHeader>
-                    <h1>DESIGN</h1>
-                    <p>색다른 즐거움을 전합니다.</p>
+                    <h1 className={"mainH"}>DESIGN</h1>
+                    <p className={"mainP"}>
+                        <span>색</span>
+                        <span>다</span>
+                        <span>른 즐</span>
+                        <span>거</span>
+                        <span>움</span>
+                        <span>을 전</span>
+                        <span>합</span>
+                        <span>니</span>
+                        <span>다.</span>
+                    </p>
+                    {/* <p>색다른 즐거움을 전합니다.</p> */}
                 </MainHeader>
                 <MainBody className={"mainBody"}>
                     <BtnWrap className={"btnWrap"}>

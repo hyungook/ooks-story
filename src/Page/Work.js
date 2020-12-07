@@ -3,6 +3,7 @@ import Page__nav from '../components/Page__nav';
 import { Header, Cursor, Cursor2, WorkWrap, MainHeader, MainBody,
     PortfoLI, PortfoA, WrapBox, PortfoImg, Footer } from './Work__styeld';
 import { data } from '../Data/Work__data'
+import '../styles/headerEffect.css';
 
 const url = process.env.PUBLIC_URL + '/image/work/';
 
@@ -46,8 +47,18 @@ class Work extends React.Component {
             <Page__nav />
             <WorkWrap className={"work__wrap"}>
                 <MainHeader>
-                    <h1>WORK</h1>
-                    <p>특별한 경험을 만듭니다.</p>
+                    <h1 className={"mainH"}>WORK</h1>
+                    <p className={"mainP"}>
+                        <span>특</span>
+                        <span>별</span>
+                        <span>한 경</span>
+                        <span>험</span>
+                        <span>을 만</span>
+                        <span>듭</span>
+                        <span>니</span>
+                        <span>다.</span>
+                    </p>
+                    {/* <p>특별한 경험을 만듭니다.</p> */}
                 </MainHeader>
                 <MainBody className={"mainBody"}>
                     <ul className={"itemWrap"}>

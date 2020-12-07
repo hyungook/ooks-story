@@ -1,8 +1,8 @@
-# HYUUGOOK OH Portfolio with Create React App
+# HYUUGOOK'S STORY with Create React App
 
-리액트(React)를 활용하여 반응형웹으로 제작한 hyungook의 포트폴리오 사이트입니다.
+리액트(React)를 활용하여 반응형웹으로 제작한 hyungook oh의 포트폴리오 사이트입니다.
 
-[Portfolio](https://hyungook.github.io/hyungook-portfolio/)
+[Portfolio](https://hyungook.github.io/hyungooks-story/)
 
 ### 사용 라이브러리
 

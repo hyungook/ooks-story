@@ -13,3 +13,22 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Squada+One&display=swap");
+
+.about__header p {
+  animation: downEffect;
+  animation-duration: 4s;
+  -moz-animation-direction: inherit;
+  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  opacity: 1;
+}
+
+@keyframes downEffect {
+  0% {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

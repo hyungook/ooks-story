@@ -76,11 +76,11 @@ export const MainHeader = styled.header`
         color: #bbbbbb;
     }
     p {
-        position: absolute;
         font-family: "SCDream1",sans-serif;
         font-size: 1.3rem;
         z-index: 999;
         color: #bbbbbb;
+        white-space:nowrap;
     }
 
     @media only screen and (min-width: 768px) {
@@ -94,7 +94,6 @@ export const MainHeader = styled.header`
             color: #bbbbbb;
         }
         p {
-            position: absolute;
             font-family: "SCDream1",sans-serif;
             font-size: 2.6rem;
             z-index: 999;

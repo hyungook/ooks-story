@@ -157,7 +157,7 @@ export const PortfoLI = styled.li`
     overflow: hidden;
     margin-bottom: 20px;
 
-    background-color: #222;
+    // background-color: #222;
 
     // 홀수
     :nth-child(odd) {

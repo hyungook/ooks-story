@@ -81,7 +81,7 @@ class Work extends React.Component {
                                 </div>
                             </WrapBox>
                         </PortfoA>
-                        <PortfoImg src={`${url+data["img"]}`} alt={data["alt"]}></PortfoImg>
+                        <PortfoImg src={`${url+data["img"]}`} alt={data["alt"]} className={"aniImg"}></PortfoImg>
                         </PortfoLI>
                     })}
                     </ul>

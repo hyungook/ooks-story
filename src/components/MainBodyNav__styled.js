@@ -91,9 +91,10 @@ export const NavBtn = styled.button`
     align-items: center;
     padding: 0.2rem 0;
     margin: 0.2rem 0;
-
+    opacity: 0;
     animation-name: opacityEffect;
-    animation-duration: 4000ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
 
     @keyframes opacityEffect {
@@ -150,7 +151,7 @@ export const NavBtn = styled.button`
         }
         .MainBtn:hover, .MainBtn:focus {
             cursor: none;
-            font-size: 13rem;
+            font-size: 14rem;
             color: #fff;
             letter-spacing: 0.9rem;
         }
@@ -159,7 +160,7 @@ export const NavBtn = styled.button`
     @media only screen and (min-width: 1281px) {
         // cursor: none;
         .MainBtn {
-            font-size: 11rem;
+            // font-size: 11rem;
         }
     }
 `;

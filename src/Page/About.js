@@ -6,7 +6,6 @@ import '../styles/About.css';
 import '../styles/headerEffect.css';
 import { Wrap, Cursor, Cursor2, AboutWrap, MainHeader, About__header, Section, SectionWrap, SectionLi,
         SectionHeader, MapWrap, SectionBody, Footer } from './About__styled';
-
 import { data } from '../Data/About__data'
 
 const url = process.env.PUBLIC_URL + '/image/skill/';
@@ -40,27 +39,13 @@ class About extends React.Component {
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
  
          })
- 
-         function mousechange() {
-             cursor.style.borderRadius = `0`;
-             cursor.style.border = `1px solid #ffffff`;
-             cursor.style.backgroundColor = `#2bd42e20`; 
-         }
-         
-         document.addEventListener('mouseover', (e) => {
-             let elem = e.target;
- 
-             if(elem.className == 'sc-hHftDr evQUgs'){
-                 mousechange()
-             } else if(elem.className == 'title') {
-                 mousechange()
-             } else {
-                 cursor.style.borderRadius = `50%`;
-                 cursor.style.border = `1px solid #c6c6c6`;
-                 cursor.style.background = `none`;
-             }  
-         })
+
+        //  window.addEventListener('scroll', () => {
+        //      console.log("hi")
+        //  })
+
     }
+
     render() {
         return <Wrap>
             <Page__nav />
@@ -93,13 +78,13 @@ class About extends React.Component {
                 </About__header>
                 <Section className={"section__body"}>
                     <SectionWrap className={"sectionWrap"}>
-                            <SectionLi className={"section__li"}>
+                            <SectionLi className={"section__li frontEnd"}>
                                 <SectionHeader>
                                     <strong>Front-end</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category == "front-end" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "front-end" && <SectionBody className={"section__body frontEnd"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -115,13 +100,13 @@ class About extends React.Component {
                             </MapWrap>
                             </SectionLi>
 
-                            <SectionLi className={"section__li"}>
+                            <SectionLi className={"section__li library"}>
                                 <SectionHeader>
                                     <strong>Library</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category == "Library" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "Library" && <SectionBody className={"section__body frontEnd"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -137,13 +122,13 @@ class About extends React.Component {
                             </MapWrap>
                             </SectionLi>
 
-                            <SectionLi className={"section__li"}>
+                            <SectionLi className={"section__li backEnd"}>
                                 <SectionHeader>
                                     <strong>Back-end</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category == "Back-End" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "Back-End" && <SectionBody className={"section__body frontEnd"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -159,13 +144,13 @@ class About extends React.Component {
                             </MapWrap>
                             </SectionLi>
 
-                            <SectionLi className={"section__li"}>
+                            <SectionLi className={"section__li design"}>
                                 <SectionHeader>
                                     <strong>Design</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category == "Design" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "Design" && <SectionBody className={"section__body frontEnd"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>

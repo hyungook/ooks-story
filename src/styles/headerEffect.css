@@ -4,8 +4,8 @@
   /* transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms; */
   animation: leftEffect;
   animation-duration: 2.5s;
-  -moz-animation-direction: inherit;
-  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  animation-direction: inherit;
+  animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
   opacity: 1;
 }
 @keyframes leftEffect {
@@ -20,24 +20,28 @@
 }
 .mainP {
   display: flex;
-  justify-content: start;
+  /* justify-content: start; */
 }
 .mainP span {
   position: relative;
+  opacity: 0;
 }
 .mainP span:nth-child(odd) {
   animation: topEffect;
-  animation-duration: 3.5s;
-  -moz-animation-direction: inherit;
-  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
-  opacity: 1;
+  animation-duration: 3s;
+  animation-direction: inherit;
+  animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  animation-fill-mode: forwards;
+  /* opacity: 1; */
 }
 .mainP span:nth-child(even) {
   animation: downEffect;
-  animation-duration: 4s;
-  -moz-animation-direction: inherit;
-  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
-  opacity: 1;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-direction: inherit;
+  animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  animation-fill-mode: forwards;
+  /* opacity: 1; */
 }
 @keyframes topEffect {
   0% {
@@ -56,6 +60,37 @@
   }
   100% {
     transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* work image effect */
+.aniImg {
+  animation: imgEffect;
+  -moz-animation-direction: inherit;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-duration: 2s;
+  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+}
+.item:nth-child(1) .aniImg {
+}
+.item:nth-child(2) .aniImg {
+  animation-delay: 0.5s;
+}
+.item:nth-child(3) .aniImg {
+  animation-delay: 1s;
+}
+.item:nth-child(4) .aniImg {
+  animation-delay: 1.5s;
+}
+@keyframes imgEffect {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
     opacity: 1;
   }
 }

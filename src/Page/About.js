@@ -17,32 +17,44 @@ class About extends React.Component {
         // mouse Effect
 
          // Cursor Effect 변수
-         let cursor = document.querySelector('.cursor');
-         let cursor2 = document.querySelector('.cursor2');
-         const cursorRect = cursor.getBoundingClientRect();
-         const cursor2Rect = cursor2.getBoundingClientRect();
+        let cursor = document.querySelector('.cursor');
+        let cursor2 = document.querySelector('.cursor2');
+        const cursorRect = cursor.getBoundingClientRect();
+        const cursor2Rect = cursor2.getBoundingClientRect();
  
-         const cursorHalfWidth = cursorRect.width / 2;
-         const cursorHalfHeight = cursorRect.height / 2;
+        const cursorHalfWidth = cursorRect.width / 2;
+        const cursorHalfHeight = cursorRect.height / 2;
  
-         const cursor2HalfWidth = cursor2Rect.width / 2;
-         const cursor2HalfHeight = cursor2Rect.height / 2;
-         cursor2.style.backgroundColor = `#2bd42e`;
+        const cursor2HalfWidth = cursor2Rect.width / 2;
+        const cursor2HalfHeight = cursor2Rect.height / 2;
+        cursor2.style.backgroundColor = `#2bd42e`;
  
-         // Cursor Effect
-         document.addEventListener("mousemove", (e) => {
-             // cursor.styled.cssText = cursor2.styled.cssText = "left" + e.clientX + "px; top:" + e.clientY + "px;";
-             const y = e.clientY;
-             const x = e.clientX;
+        // Cursor Effect
+        document.addEventListener("mousemove", (e) => {
+            // cursor.styled.cssText = cursor2.styled.cssText = "left" + e.clientX + "px; top:" + e.clientY + "px;";
+            const y = e.clientY;
+            const x = e.clientX;
          
-             cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
-             cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
+            cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
+            cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
  
-         })
+        })
 
-        //  window.addEventListener('scroll', () => {
-        //      console.log("hi")
-        //  })
+        let winH =  window.innerHeight;
+        let objs = document.querySelectorAll('.section__li');
+        let front = document.querySelector('.frontEnd');
+        let library = document.querySelector('.library');
+        let backEnd = document.querySelector('.backEnd');
+        let design = document.querySelector('.design');
+
+        //  let scrollT = document.documentElement.scrollTop;
+        let windY = 0;
+        let frontH = front.getBoundingClientRect();
+
+        window.addEventListener('scroll', () => {
+            windY = window.scrollY;
+            console.log(windY);
+        })
 
     }
 
@@ -53,7 +65,7 @@ class About extends React.Component {
             <Cursor className={"cursor"}></Cursor>
             <Cursor2 className={"cursor2"}></Cursor2>
 
-            <AboutWrap>
+            <AboutWrap className={"mainBody"}>
                 <MainHeader>
                     <h1 className={"mainH"}>ABOUT</h1>
                     <p className={"mainP"}>
@@ -106,7 +118,7 @@ class About extends React.Component {
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category === "Library" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "Library" && <SectionBody className={"section__body library"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -128,7 +140,7 @@ class About extends React.Component {
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category === "Back-End" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "Back-End" && <SectionBody className={"section__body backEnd"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -150,7 +162,7 @@ class About extends React.Component {
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category === "Design" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "Design" && <SectionBody className={"section__body design"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>

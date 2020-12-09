@@ -40,17 +40,20 @@ export const Cursor2 = styled.div`
 
 export const Wrap = styled.section`
     width: 100%;
+    height: auto;
     box-sizing: border-box;
-
     background-color: #111;
 `;
 
 export const AboutWrap = styled.div`
 
     width: 100%;
+    height: auto;
     padding: 4rem 0 0 0;
     box-sizing: border-box;
     overflow: hidden;
+    // overflow-X: hidden;
+    background-color: #111;
 
     @media only screen and (min-width: 1025px) {
         margin: 0;

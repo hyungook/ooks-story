@@ -67,13 +67,11 @@
 /* work image effect */
 .aniImg {
   animation: imgEffect;
-  -moz-animation-direction: inherit;
+  animation-direction: inherit;
   animation-fill-mode: forwards;
   opacity: 0;
   animation-duration: 2s;
-  -moz-animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
-}
-.item:nth-child(1) .aniImg {
+  animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
 }
 .item:nth-child(2) .aniImg {
   animation-delay: 0.5s;
@@ -91,6 +89,27 @@
   }
   100% {
     width: 100%;
+    opacity: 1;
+  }
+}
+/* scroll effect */
+.fadeIn {
+  animation: scrollEffect;
+  animation-delay: 0.4s;
+  animation-duration: 2.5s;
+  animation-direction: inherit;
+  animation-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes scrollEffect {
+  0% {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }

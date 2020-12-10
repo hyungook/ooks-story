@@ -33,45 +33,43 @@ export const Cursor2 = styled.div`
         pointer-events: none;
         transform: translate(-50%, -50%);
         transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
-    
         z-index: 99999;
     }
 `;
 
 export const Wrap = styled.section`
+    position: relative;
     width: 100%;
-    height: auto;
     box-sizing: border-box;
     background-color: #111;
+    
+    @media only screen and (min-width: 1025px) {
+        display: flex;
+        justify-content: space-between;
+    }
 `;
 
 export const AboutWrap = styled.div`
-
     width: 100%;
-    height: auto;
     padding: 4rem 0 0 0;
     box-sizing: border-box;
-    overflow: hidden;
-    // overflow-X: hidden;
-    background-color: #111;
 
     @media only screen and (min-width: 1025px) {
-        margin: 0;
+        right: 0;
+        // margin: 0;
+        margin-left : 16%;
         width: 84%;
-        height: 100vh;
-        overflow-y: scroll;
-        float: right;
+        height: 100%;
+        // overflow-y: scroll;
         padding: 80px 0 0 40px;
         box-sizing: border-box;
     }
 `;
 
 export const MainHeader = styled.header`
-
     position: relative;
-    width: 100%;
-    margin: 1rem 1rem 2rem 1rem;
-    
+    padding: 1rem 0 2rem 1rem;
+
     h1 {
         font-size: 4rem;
         font-family: "Squada One", cursive;
@@ -108,9 +106,6 @@ export const MainHeader = styled.header`
     }
 
     @media only screen and (min-width: 1025px) {
-        clear: both;
-        margin-bottom: 5.4rem;
-        
         h1 {
             // position: absolute;
             font-size: 190px;
@@ -147,7 +142,7 @@ export const About__header = styled.section`
         width: 100%;
         height: 20vh;
         overflow: hidden;
-        background-color: #999;
+        background-color: #111;
         object-fit: cover;
 
         .aboutImage {
@@ -199,7 +194,7 @@ export const About__header = styled.section`
 export const Section = styled.section`
     width: 100%;
     padding: 0;
-
+    
     @media only screen and (min-width: 1025px) {
         padding: 0 9rem 0 7rem;
     }
@@ -209,6 +204,7 @@ export const SectionWrap = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
+
     padding: 0 1rem;
     border-bottom: 1px solid rgba(187, 187, 187, 0.2);
     
@@ -273,6 +269,8 @@ export const SectionBody = styled.div`
     width: 100%;
     height: auto;
     margin-bottom: 3rem;
+
+    opacity: 0;
 
     .skill__header {
         width: 100%;
@@ -383,7 +381,7 @@ export const SectionBody = styled.div`
     @media only screen and (min-width: 1025px) {
         width: 100%;
         height: auto;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
 
         .skill__header {
             width: 100%;

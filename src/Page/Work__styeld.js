@@ -1,12 +1,4 @@
 import styled from 'styled-components';
-
-export const Header = styled.header`
-    width: 100%;
-    height: 100vh;
-    color: #fff;
-    cursor: none;
-    overflow-y: scroll;
-`;
 export const Cursor = styled.div`
     display:none;
 
@@ -44,24 +36,30 @@ export const Cursor2 = styled.div`
         z-index: 99999;
     }
 `;
+export const Header = styled.header`
+    width: 100%;
+    // height: 100vh;
+    color: #fff;
+    cursor: none;
+
+    background-color: #111;
+`;
 export const WorkWrap = styled.section`
-    margin-top: 3rem;
-    padding: 1rem 0;    
+    padding: 4rem 0 1rem 0;    
     
     @media only screen and (min-width: 768px) {
-        margin-top: 4.4rem;
+        padding: 6rem 0 0 0;
     }
     @media only screen and (min-width: 1025px) {
         margin: 0;
         width: 84%;
-        float: right;
-        padding: 80px 0 0 40px;
+        margin-left : 16%;
+        padding: 5rem 0 0 4rem;
         box-sizing: border-box;
     }
 `;
 
 export const MainHeader = styled.header`
-
     position: relative;
     width: 100%;
     margin-bottom: 4.5rem;
@@ -101,14 +99,9 @@ export const MainHeader = styled.header`
     }
 
     @media only screen and (min-width: 1025px) {
-        clear: both;
-
         margin-bottom: 140px;
         
-        // background-color: #333;
-        
         h1 {
-            // position: absolute;
             font-size: 190px;
             font-family: "Squada One", cursive;
             font-weight: 400;
@@ -126,14 +119,12 @@ export const MainHeader = styled.header`
 
 export const MainBody = styled.section`
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
 
     margin-bottom: 2rem;
-    
     ul {
         width: 100%;
     }
@@ -142,22 +133,17 @@ export const MainBody = styled.section`
 export const PortfoUl = styled.ul`
     width: 100%;
     @media only screen and (min-width: 1281px) {
-
     }
 `;
 
 export const PortfoLI = styled.li`
-
     position: relative;
-    // width: 100%;
     width: 48%;
     height: 120px;
     display: inline-block;
     box-sizing: border-box;
     overflow: hidden;
     margin-bottom: 20px;
-
-    // background-color: #222;
 
     // 홀수
     :nth-child(odd) {
@@ -428,6 +414,7 @@ export const Footer = styled.footer`
         margin: 0 0 40px 0;
         line-height: 1.4rem;
         color: #bbbbbb;
+        opacity: 0;
     }
     .subTitle {
         // position: absolute;
@@ -436,6 +423,7 @@ export const Footer = styled.footer`
         margin-top: 10px;
         margin-bottom: 20px;
         color: #bbbbbb;
+        opacity: 0;
     }
     .mainText {
         width: 86%;
@@ -444,11 +432,33 @@ export const Footer = styled.footer`
         font-weight: 400;
         line-height: 1.5rem;
         color: #bbbbbb;
+        opacity: 0;
     }
 
+    @media only screen and (min-width: 768px) {
+        padding: 3rem 0 6rem 1rem;
 
-    @media only screen and (min-width: 1024px) {
-        padding: 0 0 300px 0;
+        strong {
+            font-size: 60px;
+            margin: 0 0 10px 0;
+            line-height: 80px;
+        }
+        .subTitle {
+            font-family: "SCDream1",sans-serif;
+            font-size: 30px;
+            margin: 0 0 30px 0;
+        }
+        .mainText {
+            width: 86%;
+            font-family: "SCDream1",sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.7rem;
+        }
+    }
+
+    @media only screen and (min-width: 1025px) {
+        padding: 2rem 0 10rem 0;
 
         strong {
             font-size: 60px;

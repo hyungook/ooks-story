@@ -36,6 +36,15 @@ class Work extends React.Component {
              cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
          })
+
+
+
+        window.addEventListener('scroll', () => {
+            console.log("hi")
+        })
+
+        // scroll event
+        animation().init();
     }
 
     render() {
@@ -87,11 +96,11 @@ class Work extends React.Component {
                     </ul>
                 </MainBody>
                 <Footer>
-                    <strong>Determination</strong>
-                    <p className={"subTitle"}>
+                    <strong className={"faded"}>Determination</strong>
+                    <p className={"subTitle faded"}>
                         한 걸음 더 나가고 싶은 오형욱 입니다.
                     </p>
-                    <p className={"mainText"}>
+                    <p className={"mainText faded"}>
                         본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
                         본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
                         본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
@@ -101,5 +110,39 @@ class Work extends React.Component {
             </Header>
     }
 }
+
+
+
+function animation() {
+    let items;
+    let winH;
+
+    function initModule() {
+        // items = document.querySelectorAll(".section__li");
+        items = document.querySelectorAll(".faded");
+        winH = window.innerHeight;
+        _addEventHandlers();
+    }
+    function _addEventHandlers() {
+        window.addEventListener("scroll", _checkPosition);
+        window.addEventListener("load", _checkPosition);
+        window.addEventListener("resize", initModule);
+    }
+    function _checkPosition() {
+        for (var i = 0; i < items.length; i++) {
+            var posFromTop = items[i].getBoundingClientRect().top;
+            if (winH > posFromTop) {
+            items[i].classList.add("fadeIn");
+            // console.log(i);
+            }
+        }
+    }
+    return {
+        init: initModule
+    }
+}
+
+
+
 
 export default Work;

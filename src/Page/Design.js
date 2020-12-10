@@ -80,6 +80,10 @@ class Design extends React.Component{
                 return;
             }
         })
+
+
+        // scroll event
+        animation().init();
     }
 
     render(){
@@ -137,11 +141,11 @@ class Design extends React.Component{
                     </PortfoWrap>
                 </MainBody>
                 <Footer>
-                    <strong>Determination</strong>
-                    <p className={"subTitle"}>
+                    <strong className={"faded"}>Determination</strong>
+                    <p className={"subTitle faded"}>
                         감각적인 디자인으로 보는 즐거움을 전하다.
                     </p>
-                    <p className={"mainText"}>
+                    <p className={"mainText faded"}>
                         지금까지 습득해온 다양한 디자인 능력을 통해 고객과 소통하며 보는 즐거움을 전할 수 있는 결과를 만들어냅니다. <br />
                         트렌디한 개발 능력에 감각적인 디자인을 더해 색다른 즐거움을 전달 할 수 있는 개발자가 되겠습니다.
                         <br /><br /> <span>* 이랜드 랜섬웨어 사건으로 사내 공용 폴더에서 작업물을 가져오지 못하고 있습니다.</span>
@@ -151,5 +155,38 @@ class Design extends React.Component{
         </Wrap>
     }
 }
+
+
+
+function animation() {
+    let items;
+    let winH;
+
+    function initModule() {
+        // items = document.querySelectorAll(".section__li");
+        items = document.querySelectorAll(".faded");
+        winH = window.innerHeight;
+        _addEventHandlers();
+    }
+    function _addEventHandlers() {
+        window.addEventListener("scroll", _checkPosition);
+        window.addEventListener("load", _checkPosition);
+        window.addEventListener("resize", initModule);
+    }
+    function _checkPosition() {
+        for (var i = 0; i < items.length; i++) {
+            var posFromTop = items[i].getBoundingClientRect().top;
+            if (winH > posFromTop) {
+            items[i].classList.add("fadeIn");
+            // console.log(i);
+            }
+        }
+    }
+    return {
+        init: initModule
+    }
+}
+
+
 
 export default Design;

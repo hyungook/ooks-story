@@ -40,31 +40,16 @@ class About extends React.Component {
  
         })
 
-        let winH =  window.innerHeight;
-        let objs = document.querySelectorAll('.section__li');
-        let front = document.querySelector('.frontEnd');
-        let library = document.querySelector('.library');
-        let backEnd = document.querySelector('.backEnd');
-        let design = document.querySelector('.design');
-
-        //  let scrollT = document.documentElement.scrollTop;
-        let windY = 0;
-        let frontH = front.getBoundingClientRect();
-
-        window.addEventListener('scroll', () => {
-            windY = window.scrollY;
-            console.log(windY);
-        })
-
+        // scroll event
+        animation().init();
     }
 
     render() {
         return <Wrap>
-            <Page__nav />
 
             <Cursor className={"cursor"}></Cursor>
             <Cursor2 className={"cursor2"}></Cursor2>
-
+            <Page__nav />
             <AboutWrap className={"mainBody"}>
                 <MainHeader>
                     <h1 className={"mainH"}>ABOUT</h1>
@@ -84,19 +69,19 @@ class About extends React.Component {
                 </MainHeader>
                 <About__header className={"about__header"}>
                     <p>지금까지 습득해온 다양한 능력을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>
-                    <div className={"image__box"}>
+                    <div className={"image__box aniImg"}>
                         <img src={`${img}about.png`} className={"aboutImage"}></img>
                     </div>
                 </About__header>
                 <Section className={"section__body"}>
                     <SectionWrap className={"sectionWrap"}>
-                            <SectionLi className={"section__li frontEnd"}>
-                                <SectionHeader>
+                            <SectionLi className={"section__li"}>
+                                <SectionHeader className={"faded"}>
                                     <strong>Front-end</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category === "front-end" && <SectionBody className={"section__body frontEnd"}>
+                                return data.category === "front-end" && <SectionBody  className={"faded"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -112,13 +97,13 @@ class About extends React.Component {
                             </MapWrap>
                             </SectionLi>
 
-                            <SectionLi className={"section__li library"}>
-                                <SectionHeader>
+                            <SectionLi className={"section__li"}>
+                                <SectionHeader className={"faded"}>
                                     <strong>Library</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category === "Library" && <SectionBody className={"section__body library"}>
+                                return data.category === "Library" && <SectionBody className={"faded"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -134,13 +119,13 @@ class About extends React.Component {
                             </MapWrap>
                             </SectionLi>
 
-                            <SectionLi className={"section__li backEnd"}>
-                                <SectionHeader>
+                            <SectionLi className={"section__li"}>
+                                <SectionHeader className={"faded"}>
                                     <strong>Back-end</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category === "Back-End" && <SectionBody className={"section__body backEnd"}>
+                                return data.category === "Back-End" && <SectionBody className={"faded"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -156,13 +141,13 @@ class About extends React.Component {
                             </MapWrap>
                             </SectionLi>
 
-                            <SectionLi className={"section__li design"}>
-                                <SectionHeader>
+                            <SectionLi className={"section__li"}>
+                                <SectionHeader className={"faded"}>
                                     <strong>Design</strong>
                                 </SectionHeader>
                                 <MapWrap className={"map__wrap"}>
                                 {data.map((data, idx) => {
-                                return data.category === "Design" && <SectionBody className={"section__body design"}>
+                                return data.category === "Design" && <SectionBody className={"faded"}>
                                         <div className={"skill__header"}>
                                             <div className={"skillIcon"}>
                                                 <img src={`${url+data["image"]}`} alt={data.alt}></img>
@@ -181,20 +166,50 @@ class About extends React.Component {
                 </Section>
 
                 <Footer>
-                    <div className={"footer__header"}>
+                    <div className={"footer__header faded"}>
                         <p>특별한 이야기를<br />만나보세요.</p>
                     </div>
                     <div className={"footer__body"}>
                         <ul className={"communi"}>
-                            <li className={"communi__li"}>nenonenoberneno@gmail.com</li>
-                            <li className={"communi__li"}>+82 10 4100 2497</li>
-                            <li className={"communi__li"}>#hyungookoh</li>
+                            <li className={"communi__li faded"}>nenonenoberneno@gmail.com</li>
+                            <li className={"communi__li faded"}>+82 10 4100 2497</li>
+                            <li className={"communi__li faded"}>#hyungookoh</li>
                         </ul>
                     </div>
                 </Footer>
 
             </AboutWrap>
         </Wrap>
+    }
+}
+
+
+function animation() {
+    let items;
+    let winH;
+
+    function initModule() {
+        // items = document.querySelectorAll(".section__li");
+        items = document.querySelectorAll(".faded");
+        winH = window.innerHeight;
+        _addEventHandlers();
+    }
+    function _addEventHandlers() {
+        window.addEventListener("scroll", _checkPosition);
+        window.addEventListener("load", _checkPosition);
+        window.addEventListener("resize", initModule);
+    }
+    function _checkPosition() {
+        for (var i = 0; i < items.length; i++) {
+            var posFromTop = items[i].getBoundingClientRect().top;
+            if (winH > posFromTop) {
+            items[i].classList.add("fadeIn");
+            // console.log(i);
+            }
+        }
+    }
+    return {
+        init: initModule
     }
 }
 

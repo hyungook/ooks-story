@@ -55,7 +55,7 @@ export const DesignWrap = styled.section`
     @media only screen and (min-width: 1025px) {
         margin-top: 0;
         width: 84%;
-        float: right;
+        margin-left : 16%;
         padding: 1.4rem 0 0 40px;
         box-sizing: border-box;
     }
@@ -98,7 +98,6 @@ export const MainHeader = styled.header`
     }
     @media only screen and (min-width: 1025px) {
         padding: 0 1rem;
-        clear: both;
         margin-bottom: 3rem;
         
         h1 {
@@ -290,7 +289,7 @@ export const PortfoLi = styled.li`
         }
       }
 
-      @media only screen and (min-width: 1024px) {
+      @media only screen and (min-width: 1025px) {
         margin-bottom: 2rem;
     
         .portfoImgBox {
@@ -350,6 +349,7 @@ export const Footer = styled.footer`
         margin: 0 0 40px 0;
         line-height: 1.4rem;
         color: #bbbbbb;
+        opacity: 0;
     }
     .subTitle {
         // position: absolute;
@@ -358,6 +358,7 @@ export const Footer = styled.footer`
         margin-top: 10px;
         margin-bottom: 20px;
         color: #bbbbbb;
+        opacity: 0;
     }
     .mainText {
         width: 86%;
@@ -366,6 +367,7 @@ export const Footer = styled.footer`
         font-weight: 400;
         line-height: 1.5rem;
         color: #bbbbbb;
+        opacity: 0;
 
         span {
             opacity: 0.8;

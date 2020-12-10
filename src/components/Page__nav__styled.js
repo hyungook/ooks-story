@@ -5,13 +5,11 @@ export const Section = styled.section`
     position: fixed;
     display: flex;
     padding: 0.4rem 1rem;
-    
-    z-index: 999999;
-    background-color: #111;
-    background-color: hsla(0, 0%, 7%, 0.6);;
+    box-sizing: border-box;
 
-    // filter: blur(10px);
-    // -webkit-filter: blur(10px);
+    z-index: 999;
+    background-color: #111;
+
     @media only screen and (min-width: 768px) {
 
     }
@@ -21,14 +19,12 @@ export const Section = styled.section`
         width: 16%;
         height: 100vh;
         padding: 0;
-        position: fixed;
-        float: left;
         z-index: 10;
     }
 
-    @media only screen and (min-width: 1281px) {
-        background-color: #111;
-    }
+    // @media only screen and (min-width: 1281px) {
+    //     background-color: #111;
+    // }
 `;
 
 export const Header__top = styled.div`
@@ -40,7 +36,7 @@ export const Header__top = styled.div`
     cursor: none;
 
     @media only screen and (min-width: 1025px) {
-        clear: both;    
+        // clear: both;
         width: 100%;
         height: 50%;
 

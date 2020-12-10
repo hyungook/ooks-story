@@ -52,18 +52,16 @@ export const Header = styled.header`
 
 export const WorkWrap = styled.section`
 
-    margin-top: 2.8rem;
-
-    padding: 1rem 1rem;    
+    padding: 4rem 0 1rem 0;   
 
     @media only screen and (min-width: 768px) {
-        margin-top: 4.4rem;
+        padding: 6rem 0 0 0;
     }
     @media only screen and (min-width: 1025px) {
         margin: 0;
         width: 84%;
-        float: right;
-        padding: 80px 0 0 40px;
+        margin-left : 16%;
+        padding: 5rem 0 0 40px;
         box-sizing: border-box;
     }
 `;
@@ -93,6 +91,7 @@ export const MainHeader = styled.header`
 
     @media only screen and (min-width: 768px) {
         margin-bottom: 140px;
+        padding: 0 0 0 1rem;
         h1 {
             font-size: 7rem;
             font-family: "Squada One", cursive;
@@ -110,12 +109,7 @@ export const MainHeader = styled.header`
 
 
     @media only screen and (min-width: 1025px) {
-        clear: both;
-
         margin-bottom: 140px;
-        
-        // background-color: #333;
-        
         h1 {
             // position: absolute;
             font-size: 190px;
@@ -334,7 +328,6 @@ export const PortfoLi = styled.li`
             display: inline-block;
             width: 48%;
             height: 420px;
-            float: left;
             margin-bottom: 0;
             margin-right: 4%;
             transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
@@ -440,8 +433,10 @@ export const Footer = styled.footer`
         line-height: 1.3rem;
         color: #bbbbbb;
     }
-    @media only screen and (min-width: 1024px) {
-        padding: 2rem 0 300px 0;
+
+    
+    @media only screen and (min-width: 768px) {
+        padding: 3rem 0 6rem 1rem;
 
         strong {
             font-size: 60px;
@@ -449,11 +444,36 @@ export const Footer = styled.footer`
             line-height: 80px;
         }
         .subTitle {
+            font-family: "SCDream1",sans-serif;
+            font-size: 30px;
+            margin: 0 0 30px 0;
+        }
+        .mainText {
+            width: 86%;
+            font-family: "SCDream1",sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.7rem;
+        }
+    }
+
+    @media only screen and (min-width: 1025px) {
+        padding: 2rem 0 10rem 0;
+
+        strong {
+            font-size: 60px;
+            margin: 0 0 10px 0;
+            line-height: 80px;
+        }
+        
+        .subTitle {
+            font-family: "SCDream1",sans-serif;
             font-size: 30px;
             margin: 0 0 30px 0;
         }
         .mainText {
             width: 80%;
+            font-family: "SCDream1",sans-serif;
             font-size: 1.1rem;
             font-weight: 400;
             line-height: 1.7rem;

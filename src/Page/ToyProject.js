@@ -78,7 +78,13 @@ class ToyProject extends React.Component {
                 return;
             }
         })
+
+
+        // scroll event
+        animation().init();
     }
+
+
     render() {
         return <Header>
 
@@ -140,11 +146,11 @@ class ToyProject extends React.Component {
                     </PortfoWrap>
                 </MainBody>
                 <Footer>
-                    <strong>Determination</strong>
-                    <p className={"subTitle"}>
+                    <strong className={"faded"}>Determination</strong>
+                    <p className={"subTitle faded"}>
                         한 걸음 더 나가고 싶은 오형욱 입니다.
                     </p>
-                    <p className={"mainText"}>
+                    <p className={"mainText faded"}>
                         아직은 프론트엔드 개발자로서 코드 구조, 알고리즘 등 부족한 부분이 많다고 생각합니다. <br />
                         스스로 부족함을 느끼기 때문에, 끊임없이 학습하고 어제보다는 오늘 더 발전하려 노력하게 되는 것 같습니다. <br />
                         작은 프로젝트라도 열과 성을 다해 차근차근 공부하며, 최고를 꿈꾸며 성장하고 있습니다.
@@ -154,5 +160,35 @@ class ToyProject extends React.Component {
             </Header>
     }
 }
+
+function animation() {
+    let items;
+    let winH;
+
+    function initModule() {
+        // items = document.querySelectorAll(".section__li");
+        items = document.querySelectorAll(".faded");
+        winH = window.innerHeight;
+        _addEventHandlers();
+    }
+    function _addEventHandlers() {
+        window.addEventListener("scroll", _checkPosition);
+        window.addEventListener("load", _checkPosition);
+        window.addEventListener("resize", initModule);
+    }
+    function _checkPosition() {
+        for (var i = 0; i < items.length; i++) {
+            var posFromTop = items[i].getBoundingClientRect().top;
+            if (winH > posFromTop) {
+            items[i].classList.add("fadeIn");
+            // console.log(i);
+            }
+        }
+    }
+    return {
+        init: initModule
+    }
+}
+
 
 export default ToyProject;

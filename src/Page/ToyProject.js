@@ -3,7 +3,7 @@ import Page__nav from '../components/Page__nav';
 
 import '../styles/reset.css';
 import '../styles/headerEffect.css';
-import { Header, Cursor, Cursor2, WorkWrap, MainHeader, 
+import { Wrap, Cursor, Cursor2, WorkWrap, MainHeader, 
     MainBody, BtnWrap, PortfoWrap, PortfoLi, Footer } from './ToyProject__styled';
 import { data } from '../Data/Toy__data'
 
@@ -80,13 +80,17 @@ class ToyProject extends React.Component {
         })
 
 
+        window.addEventListener('scroll', ()=> {
+            console.log('hi');
+        })
+
         // scroll event
         animation().init();
     }
 
 
     render() {
-        return <Header>
+        return <Wrap>
 
             <Cursor className={"cursor"}></Cursor>
             <Cursor2 className={"cursor2"}></Cursor2>
@@ -118,18 +122,16 @@ class ToyProject extends React.Component {
                         <ul className={"slideWrap"}>
                             {data.map((data, idx) => { 
                                 return<PortfoLi className={"portfoLi"}>
-                                {/* <div className={"portfoImgBox"}> */}
-                                <a href={data["url"]} target={"blank"} className={"portfoImgBox"}>
+                                <a href={data["url"]} target={"blank"} className={"portfoImgBox fadeIn"}>
                                     <button className={"goBtn"}>GO</button>
                                     <img src={`${url+data["img"]}`} alt={data.alt} className={"mainImage"}></img>
                                 </a>
-                                {/* </div> */}
                                 <div className={"portfoInfo"}>
-                                    <div className={"titleWrap"}>
+                                    <div className={"titleWrap fadeIn"}>
                                         <div className={"title"}>{data["title"]}</div>
                                         <div className={"subtitle"}>{data["subTitle"]}</div>
                                     </div>
-                                    <div className={"infoWrap"}>
+                                    <div className={"infoWrap fadeIn"}>
                                         <div className={"info"}>{data["info"]}</div>
                                         <div className={"skill"}>
                                             <a href={data["github"]} target={"blank"} className={"github"}>GitHub</a>
@@ -157,10 +159,9 @@ class ToyProject extends React.Component {
                     </p>
                 </Footer>
             </WorkWrap>
-            </Header>
+            </Wrap>
     }
 }
-
 function animation() {
     let items;
     let winH;

@@ -68,7 +68,7 @@ class About extends React.Component {
                     {/* <p className={"mainP"}>저만의 이야기로 표현합니다.</p> */}
                 </MainHeader>
                 <About__header className={"about__header"}>
-                    <p>지금까지 습득해온 다양한 능력을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>
+                    <p>지금까지 습득해온 개발/디자인 등의 다양한 능력을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>
                     <div className={"image__box aniImg"}>
                         <img src={`${img}about.png`} className={"aboutImage"}></img>
                     </div>
@@ -182,7 +182,6 @@ class About extends React.Component {
         </Wrap>
     }
 }
-
 
 function animation() {
     let items;

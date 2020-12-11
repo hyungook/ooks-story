@@ -37,12 +37,6 @@ class Work extends React.Component {
              cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
          })
 
-
-
-        window.addEventListener('scroll', () => {
-            console.log("hi")
-        })
-
         // scroll event
         animation().init();
     }
@@ -98,20 +92,19 @@ class Work extends React.Component {
                 <Footer>
                     <strong className={"faded"}>Determination</strong>
                     <p className={"subTitle faded"}>
-                        한 걸음 더 나가고 싶은 오형욱 입니다.
+                        평범한 프로젝트에 '특별함'을 더합니다.
                     </p>
                     <p className={"mainText faded"}>
-                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
-                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리 본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
-                        본문이 들어갈 자리본문이 들어갈 자리본문이 들어갈 자리
+                    현재 웹 개발자는 많습니다. 하지만 감각적인 웹을 제작할 수 있는 개발자는 많지 않습니다. <br />
+                    3년간 쌓은 디자인적 감각을 더해 고객의 목적과 니즈에 부합하는 웹을 제작합니다. <br />
+                    커머스 웹, 인터랙티브 웹 그리고 최신 기술을 활용한 웹까지.
+                    평범할 수 있는 웹 페이지에 특별함을 더하고 있습니다.
                     </p>
                 </Footer>
             </WorkWrap>
             </Header>
     }
 }
-
-
 
 function animation() {
     let items;

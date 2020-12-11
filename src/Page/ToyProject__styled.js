@@ -39,19 +39,15 @@ export const Cursor2 = styled.div`
 `;
 
 
-export const Header = styled.header`
+export const Wrap = styled.header`
     width: 100%;
-    height: 100vh;
     color: #fff;
-    // cursor: pointer;
     cursor: none;
-
-    overflow-y: scroll;
-    
+    background-color: #111;
+    // overflow-y: scroll;  
 `;
 
 export const WorkWrap = styled.section`
-
     padding: 4rem 0 1rem 0;   
 
     @media only screen and (min-width: 768px) {
@@ -72,7 +68,7 @@ export const MainHeader = styled.header`
     position: relative;
     width: 100%;
     margin-bottom: 54px;
-    
+    padding: 0 0 0 1rem;
     h1 {
         font-size: 4rem;
         font-family: "Squada One", cursive;
@@ -109,7 +105,7 @@ export const MainHeader = styled.header`
 
 
     @media only screen and (min-width: 1025px) {
-        margin-bottom: 140px;
+        margin-bottom: 8rem;
         h1 {
             // position: absolute;
             font-size: 190px;
@@ -215,9 +211,11 @@ export const PortfoLi = styled.li`
         width: 100%;
         height: 200px;
         margin-bottom: 1.7rem;
-        background-color: blue;
+        background-color: #111;
         overflow: hidden;
         z-index:99;
+
+        opacity: 0;
 
         .mainImage {
             width: 100%;
@@ -246,9 +244,11 @@ export const PortfoLi = styled.li`
         display: block;
         position: relative;
         width: 100%;
-
+        padding: 0 0 0 1rem;
         .titleWrap {
             width: 100%;
+            opacity: 0;
+
             .title {
                 font-size: 3.2rem;
                 font-family: "Squada One", "cursive";
@@ -268,6 +268,7 @@ export const PortfoLi = styled.li`
         }
         .infoWrap {
             width: 100%;
+            opacity: 0;
             .info {
                 font-family: "SCDream1", sans-serif;
                 font-weight: 600;
@@ -377,7 +378,7 @@ export const PortfoLi = styled.li`
             }
             .infoWrap {
                 .info {
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     line-height: 1.4rem;
                     width: 80%;
                     height: 70px;
@@ -408,7 +409,7 @@ export const PortfoLi = styled.li`
 export const Footer = styled.footer`
     border-top: 1px solid #ffffff40;
     width: 100%;
-    padding: 3rem 0 100px 0;
+    padding: 3rem 0 100px 1rem;
     strong {
         font-size: 2rem;
         font-family: "Squada One", cursive;
@@ -416,6 +417,8 @@ export const Footer = styled.footer`
         margin: 0 0 40px 0;
         line-height: 1.4rem;
         color: #bbbbbb;
+
+        opacity: 0;
     }
     .subTitle {
         // position: absolute;
@@ -424,6 +427,8 @@ export const Footer = styled.footer`
         margin-top: 10px;
         margin-bottom: 20px;
         color: #bbbbbb;
+
+        opacity: 0;
     }
     .mainText {
         width: 86%;
@@ -432,6 +437,8 @@ export const Footer = styled.footer`
         font-weight: 400;
         line-height: 1.3rem;
         color: #bbbbbb;
+
+        opacity: 0;
     }
 
     
@@ -450,7 +457,6 @@ export const Footer = styled.footer`
         }
         .mainText {
             width: 86%;
-            font-family: "SCDream1",sans-serif;
             font-size: 1.1rem;
             font-weight: 400;
             line-height: 1.7rem;
@@ -473,8 +479,7 @@ export const Footer = styled.footer`
         }
         .mainText {
             width: 80%;
-            font-family: "SCDream1",sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 400;
             line-height: 1.7rem;
         }

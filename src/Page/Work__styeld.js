@@ -351,16 +351,15 @@ export const WrapBox = styled.div`
             }
         }
         .info {
-            width: 84%;
+            width: 90%;
             height: 120px;
             display: inline-block;
             font-family: "SCDream1",sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            line-height: 22px;
-            margin: 0 0 0.4rem 0;
+            line-height: 24px;
+            margin: 0 0 1rem 0;
             color: #ffffff90;
-
         }
 
         .infoWrap {
@@ -474,7 +473,7 @@ export const Footer = styled.footer`
         .mainText {
             width: 80%;
             font-family: "SCDream1",sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 400;
             line-height: 1.7rem;
         }

@@ -117,15 +117,15 @@ class Design extends React.Component{
                         <ul className={"slideWrap"}>
                             {data.map((data, idx) => { 
                                 return<PortfoLi className={"portfoLi"}>
-                                <div className={"portfoImgBox"}>
+                                <div className={"portfoImgBox fadeIn"}>
                                     <img src={`${url+data["img"]}`} alt={data.alt}></img>
                                 </div>
                                 <div className={"portfoInfo"}>
-                                    <div className={"titleWrap"}>
+                                    <div className={"titleWrap fadeIn"}>
                                         <div className={"title"}>{data["title"]}</div>
                                         <div className={"subtitle"}>{data["subTitle"]}</div>
                                     </div>
-                                    <div className={"infoWrap"}>
+                                    <div className={"infoWrap fadeIn"}>
                                         <div className={"info"}>{data["info"]}</div>
                                         <div className={"skill"}>
                                         <a href={data["url"]} target={"blank"} className={"link"}>Link</a>

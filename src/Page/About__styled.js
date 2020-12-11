@@ -56,7 +56,6 @@ export const AboutWrap = styled.div`
 
     @media only screen and (min-width: 1025px) {
         right: 0;
-        // margin: 0;
         margin-left : 16%;
         width: 84%;
         height: 100%;
@@ -79,7 +78,6 @@ export const MainHeader = styled.header`
         color: #bbbbbb;
     }
     p {
-        // position: absolute;
         font-family: "SCDream1",sans-serif;
         font-size: 1.3rem;
         z-index: 999;
@@ -230,6 +228,7 @@ export const SectionHeader = styled.div`
     width: 100%;
     height: auto;
     padding: 2rem 0 3rem 0;
+    opacity: 0;
 
     strong {
         font-size: 1.9rem;
@@ -256,12 +255,10 @@ export const SectionHeader = styled.div`
 
 export const MapWrap = styled.section`
     width: 100%;
-    overflow: hidden;
     
     @media only screen and (min-width: 768px) {
         min-width: 60%;
         width: 60%;
-        overflow: hidden;
     }
 `;
 
@@ -448,6 +445,8 @@ export const Footer = styled.footer`
         color: #bbb;
         font-family: "SCDream3", "Noto Sans KR", "sans-serif";
         margin-bottom: 3rem;
+
+        opacity: 0;
     }
     .footer__body {
         .communi li {
@@ -457,6 +456,8 @@ export const Footer = styled.footer`
             word-break: keep-all;
             color: #bbb;
             font-family: "SCDream3","sans-serif";
+
+            opacity: 0;
         }
     }
     @media only screen and (min-width: 768px) {
@@ -478,7 +479,6 @@ export const Footer = styled.footer`
     }
     @media only screen and (min-width: 1025px) {
         padding: 7rem;
-
         .footer__header {
             width: 50%;
             font-size: 2.6rem;

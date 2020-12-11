@@ -1,6 +1,6 @@
 # HYUUGOOK'S STORY with Create React App
 
-리액트(React)를 활용하여 반응형웹으로 제작한 hyungook oh의 포트폴리오 사이트입니다.
+리액트(React)를 활용하여 제작한 hyungook oh의 포트폴리오 반응형 웹사이트입니다.
 
 [Portfolio](https://hyungook.github.io/hyungooks-story/)
 

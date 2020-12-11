@@ -201,6 +201,7 @@ export const PortfoLi = styled.li`
         margin-bottom: 1.7rem;
         background-color: #222;
         overflow: hidden;
+        opacity: 0;
 
         img {
             width: 100%;
@@ -217,6 +218,7 @@ export const PortfoLi = styled.li`
 
         .titleWrap {
             width: 100%;
+            opacity: 0;
             .title {
                 font-size: 3.2rem;
                 font-family: "Squada One", "cursive";
@@ -235,6 +237,7 @@ export const PortfoLi = styled.li`
               }
         }
         .infoWrap {
+            opacity: 0;
             width: 100%;
             .info {
                 font-family: "SCDream1", sans-serif;
@@ -322,9 +325,9 @@ export const PortfoLi = styled.li`
             }
             .infoWrap {
                 .info {
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     line-height: 1.6rem;
-                    width: 60%;
+                    width: 70%;
                     height: 64px;
                     margin: 0 0 3rem 0;
                 }
@@ -387,7 +390,7 @@ export const Footer = styled.footer`
         }
         .mainText {
             width: 80%;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 400;
             line-height: 1.7rem;
         }

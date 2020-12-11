@@ -5,7 +5,7 @@ export const data =[
         alt: "Javascript",
         skillName: "Javascript",
         level: "5",
-        text: "자바스크립트와 친해지기 위해 게임도 만들어보고, 지금도 꾸준히 재미있는 시도들을 하고 있습니다. 원하는 기능들은 어찌어찌 구현은 하는데 아직 많이 부족하다 생각합니다. 라이브러리보다는 vanilla javascript 위주로 공부하고 있습니다.",
+        text: "자바스크립트와 친해지기 위해 게임도 만들어보고, 지금도 꾸준히 재미있는 시도들을 하고 있습니다. 원하는 기능들은 어찌어찌 구현은 하는데 아직 많이 부족하다 생각합니다. 라이브러리보다는 Vanilla Javascript 위주로 공부하고 있습니다.",
         color : "#ffc600",
     },
     {

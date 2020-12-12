@@ -6,14 +6,14 @@
 
 ### 사용 라이브러리
 
+- React
 - Styled-components
-- Image slide-library
 - Font Awesome
 
 ### 사용 스킬
 
-- map
+- Map
 - Router
-- media query
+- MediaQuery
 
 ###### 본 작업물은 'hyungook oh'의 개인 포트폴리오 작업물입니다.

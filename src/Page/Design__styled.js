@@ -46,7 +46,7 @@ export const Wrap = styled.section`
 
 export const DesignWrap = styled.section`
     margin-top: 2.8rem;
-    padding: 1rem 1rem;    
+    padding: 1rem 0;    
     
 
     @media only screen and (min-width: 768px) {
@@ -56,6 +56,7 @@ export const DesignWrap = styled.section`
         margin-top: 0;
         width: 84%;
         margin-left : 16%;
+        // padding: 1.4rem 0 0 0;
         padding: 1.4rem 0 0 40px;
         box-sizing: border-box;
     }
@@ -65,6 +66,7 @@ export const MainHeader = styled.header`
     position: relative;
     width: 100%;
     margin: 1rem 1rem 2rem 0;
+    padding: 0 1rem;
     h1 {
         font-size: 3rem;
         font-family: "Squada One", "cursive";
@@ -215,6 +217,7 @@ export const PortfoLi = styled.li`
         position: relative;
         width: 100%;
 
+        padding: 0 1rem;
 
         .titleWrap {
             width: 100%;
@@ -294,7 +297,6 @@ export const PortfoLi = styled.li`
 
       @media only screen and (min-width: 1025px) {
         margin-bottom: 2rem;
-    
         .portfoImgBox {
             display: inline-block;
             // width: 48%;
@@ -304,7 +306,6 @@ export const PortfoLi = styled.li`
             margin-bottom: 2rem;
             // margin-right: 4%;
         }
-        
         .portfoInfo {
             display: inline-block;
             // position: absolute;
@@ -344,7 +345,7 @@ export const PortfoLi = styled.li`
 export const Footer = styled.footer`
     border-top: 1px solid #ffffff40;
     width: 100%;
-    padding: 3rem 0 100px 0;
+    padding: 3rem 0 100px 1rem;
     strong {
         font-size: 2rem;
         font-family: "Squada One", cursive;
@@ -352,6 +353,7 @@ export const Footer = styled.footer`
         margin: 0 0 40px 0;
         line-height: 1.4rem;
         color: #bbbbbb;
+
         opacity: 0;
     }
     .subTitle {
@@ -361,6 +363,7 @@ export const Footer = styled.footer`
         margin-top: 10px;
         margin-bottom: 20px;
         color: #bbbbbb;
+
         opacity: 0;
     }
     .mainText {
@@ -368,16 +371,15 @@ export const Footer = styled.footer`
         font-family: "SCDream1",sans-serif;
         font-size: 0.8rem;
         font-weight: 400;
-        line-height: 1.5rem;
+        line-height: 1.3rem;
         color: #bbbbbb;
-        opacity: 0;
 
-        span {
-            opacity: 0.8;
-        }
+        opacity: 0;
     }
-    @media only screen and (min-width: 1024px) {
-        padding: 2rem 0 300px 0;
+
+    
+    @media only screen and (min-width: 768px) {
+        padding: 3rem 0 6rem 1rem;
 
         strong {
             font-size: 60px;
@@ -385,6 +387,29 @@ export const Footer = styled.footer`
             line-height: 80px;
         }
         .subTitle {
+            font-family: "SCDream1",sans-serif;
+            font-size: 30px;
+            margin: 0 0 30px 0;
+        }
+        .mainText {
+            width: 86%;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.7rem;
+        }
+    }
+
+    @media only screen and (min-width: 1025px) {
+        padding: 2rem 0 10rem 0;
+
+        strong {
+            font-size: 60px;
+            margin: 0 0 10px 0;
+            line-height: 80px;
+        }
+        
+        .subTitle {
+            font-family: "SCDream1",sans-serif;
             font-size: 30px;
             margin: 0 0 30px 0;
         }

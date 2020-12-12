@@ -147,6 +147,7 @@ export const MainBody = styled.section`
 export const BtnWrap = styled.div`
     
     display: none;
+    
 
     @media only screen and (min-width: 1024px) {
         position: absolute;
@@ -237,6 +238,8 @@ export const PortfoLi = styled.li`
             background-color: #fff;
             cursor: none;
             transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
+
+            
         }
     }
 
@@ -352,6 +355,7 @@ export const PortfoLi = styled.li`
             :hover {
                 .goBtn {
                     opacity: 1;
+                    box-shadow: 0 0 8px #11111150;
                 }
             }
             

@@ -17,7 +17,7 @@ export const NameBox = styled.div`
         height: 140px;
     }
 `;
-export const ToyBtn = styled.button`
+export const ToyBtn = styled.a`
     font-family: "Squada One", sans-serif;
     font-weight: 400;
     position: absolute;
@@ -25,6 +25,7 @@ export const ToyBtn = styled.button`
     padding: 0;
     color: #999;
     border-bottom: 2px solid #2966ff;
+    text-decoration: none;
 
     @media only screen and (min-width: 768px) {
         font-size: 3rem;

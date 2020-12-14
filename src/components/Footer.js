@@ -11,11 +11,10 @@ class Footer extends React.Component {
         // let parallaxInstance = new Parallax(scene);
     }
 
-
     render() {
         return <footer>
             <NameBox className={"name__box scene"}>
-                <ToyBtn className={"toy__button"} data-depth={"0.3"}>
+                <ToyBtn href={"https://hyungook.github.io/modern-resume/"} className={"toy__button"} data-depth={"0.3"} target={"_blank"}>
                     HYUNGOOK'S STORY
                 </ToyBtn>
             </NameBox>

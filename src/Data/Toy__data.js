@@ -13,6 +13,19 @@ export const data = [
         technic4: "HTML"
     },
     {
+        url: "https://hyungook.github.io/habit-tracker/",
+        github: "https://github.com/hyungook/habit-tracker",
+        img: "habitTracker.png",
+        alt: "thumnail image",
+        title: "Habit Tracker",
+        subTitle: "Habit Tracker made with React",
+        info: "React state, props, Lifecycle을 정리하기 위해 제작한 토이프로젝트입니다.",
+        technic1: "React",
+        technic2: "Javascript",
+        technic3: "CSS3",
+        technic4: "HTML"
+    },
+    {
         url: "https://hyungook.github.io/CarrotGame/",
         github: "https://github.com/hyungook/CarrotGame",
         img: "CarrotGame.png",

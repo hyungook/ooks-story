@@ -5,9 +5,9 @@ import Header from '../components/Header';
 import MainBodyNav from '../components/MainBodyNav';
 import Footer from '../components/Footer';
 
-class Home extends React.Component{
-  render() {
-    return <div className={"mainWrap"}>
+
+const Home = () => {
+    return (<div className={"mainWrap"}>
         <div className={"line"}>
             <span></span>
         </div>
@@ -15,8 +15,7 @@ class Home extends React.Component{
         <MainBodyNav />
         <Footer />
     </div>
-  }
-}
+    )}
 
 
 export default Home;

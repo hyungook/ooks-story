@@ -1,39 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Route } from 'react-router-dom';
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Work from '../Page/Work';
 import About from '../Page/About';
 import ToyProj from '../Page/ToyProject';
-
 import '../styles/reset.css';
 import '../styles/MainBodyNav.css';
 import { Section, MainNav, MainNavWrap,
     NavBtn, ButtonBackBox, BackBox } from './MainBodyNav__styled';
 
-class MainBodyNav extends React.Component {
 
-    constructor(props){
-        super(props)
-        this.state = {
-            page: 0,
-        }
-    }
+const MainBodyNav = () => {
 
-    componentDidMount() {
-        // document.addEventListener('mouseover', (e) => {
-        //     const Btn = document.querySelectorAll('.Btn');
-        //     let elem = e.target;
-
-        //     Btn.addEventListener('mouseover', () => {
-        //         if(elem == Btn) {
-        //             console.log('ok');
-        //         } else {
-        //             console.log('no')
-        //         }
-        //     }) 
-        // })
-
+    useEffect(()=> {
         window.addEventListener('resize', () => {
             // console.log(`${window.innerWidth}`);
         })
@@ -98,37 +77,37 @@ class MainBodyNav extends React.Component {
         } else {
             return;
         }
-    }
-    render() {
-        return <Section>
-        <MainNav>
-            <MainNavWrap className={"main__nav__wrap"}>
-                <NavBtn className={"nav__btn__1"}>
-                    <Link to="/about" className={"MainBtn MainBtn__1 Btn"}>ABOUT</Link>
-                </NavBtn>
-                <NavBtn className={"nav__btn__2"}>
-                    <Link to="/work" className={"MainBtn MainBtn__2 Btn"}>WORK</Link>
-                </NavBtn>
-                <NavBtn className={"nav__btn__3"}>
-                    <Link to="/ToyProject" className={"MainBtn MainBtn__3"}>TOY-PJ</Link>
-                </NavBtn>
-            </MainNavWrap>
-        </MainNav>
+    },[])
 
-        <ButtonBackBox className={"button__back__box"}>
-            <BackBox className={"back__box"}></BackBox>
-            <BackBox className={"back__box"}></BackBox>
-        </ButtonBackBox>
+    return (
+        <Section>
+                <MainNav>
+                    <MainNavWrap className={"main__nav__wrap"}>
+                        <NavBtn className={"nav__btn__1"}>
+                            <Link to="/about" className={"MainBtn MainBtn__1 Btn"}>ABOUT</Link>
+                        </NavBtn>
+                        <NavBtn className={"nav__btn__2"}>
+                            <Link to="/work" className={"MainBtn MainBtn__2 Btn"}>WORK</Link>
+                        </NavBtn>
+                        <NavBtn className={"nav__btn__3"}>
+                            <Link to="/ToyProject" className={"MainBtn MainBtn__3"}>TOY-PJ</Link>
+                        </NavBtn>
+                    </MainNavWrap>
+                </MainNav>
 
-        <main>
-            <Route exact path="/Work" component={Work} />
-            <Route exact path="/Aobut" component={About} />
-            <Route exact path="/ToyProject" component={ToyProj} />
-        </main>
+                <ButtonBackBox className={"button__back__box"}>
+                    <BackBox className={"back__box"}></BackBox>
+                    <BackBox className={"back__box"}></BackBox>
+                </ButtonBackBox>
 
-    </Section>
-    }
+                <main>
+                    <Route exact path="/Work" component={Work} />
+                    <Route exact path="/Aobut" component={About} />
+                    <Route exact path="/ToyProject" component={ToyProj} />
+                </main>
 
+            </Section>
+    )
 }
 
 export default MainBodyNav;

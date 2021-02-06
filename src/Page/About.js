@@ -1,6 +1,5 @@
-import React from 'react';
-import Page__nav from '../components/Page__nav';
-
+import React, { useEffect } from 'react';
+import PageNav from '../components/PageNav';
 import '../styles/reset.css';
 import '../styles/About.css';
 import '../styles/headerEffect.css';
@@ -11,45 +10,62 @@ import { data } from '../Data/About__data'
 const url = process.env.PUBLIC_URL + '/image/skill/';
 const img = process.env.PUBLIC_URL + '/image/';
 
-class About extends React.Component {
-
-    componentDidMount() {
-        // mouse Effect
-
-         // Cursor Effect 변수
-        let cursor = document.querySelector('.cursor');
-        let cursor2 = document.querySelector('.cursor2');
-        const cursorRect = cursor.getBoundingClientRect();
-        const cursor2Rect = cursor2.getBoundingClientRect();
- 
-        const cursorHalfWidth = cursorRect.width / 2;
-        const cursorHalfHeight = cursorRect.height / 2;
- 
-        const cursor2HalfWidth = cursor2Rect.width / 2;
-        const cursor2HalfHeight = cursor2Rect.height / 2;
-        cursor2.style.backgroundColor = `#2bd42e`;
- 
-        // Cursor Effect
-        document.addEventListener("mousemove", (e) => {
-            // cursor.styled.cssText = cursor2.styled.cssText = "left" + e.clientX + "px; top:" + e.clientY + "px;";
-            const y = e.clientY;
-            const x = e.clientX;
-         
-            cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
-            cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
- 
-        })
-
-        // scroll event
-        animation().init();
+const About = () => {
+            
+    function animation() {
+        let items;
+        let winH;
+    
+        function initModule() {
+            items = document.querySelectorAll(".faded");
+            winH = window.innerHeight;
+            _addEventHandlers();
+        }
+        function _addEventHandlers() {
+            window.addEventListener("scroll", _checkPosition);
+            window.addEventListener("load", _checkPosition);
+            window.addEventListener("resize", initModule);
+        }
+        function _checkPosition() {
+            for (var i = 0; i < items.length; i++) {
+                var posFromTop = items[i].getBoundingClientRect().top;
+                if (winH > posFromTop) {
+                items[i].classList.add("fadeIn");
+                // console.log(i);
+                }
+            }
+        }
+        return {
+            init: initModule
+        }
     }
+    
+    useEffect(() => {
+        animation().init();
+        let cursor = document.querySelector('.cursor');
+            let cursor2 = document.querySelector('.cursor2');
+            const cursorRect = cursor.getBoundingClientRect()
+            const cursor2Rect = cursor2.getBoundingClientRect();
+     
+            const cursorHalfWidth = cursorRect.width / 2;
+            const cursorHalfHeight = cursorRect.height / 2;
+     
+            const cursor2HalfWidth = cursor2Rect.width / 2;
+            const cursor2HalfHeight = cursor2Rect.height / 2;
+            cursor2.style.backgroundColor = `#2bd42e`;
+     
+            document.addEventListener("mousemove", (e) => {
+                const y = e.clientY;
+                const x = e.clientX;
+                cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
+                cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
+            })
+    },[])
 
-    render() {
-        return <Wrap>
-
+    return (<Wrap>
             <Cursor className={"cursor"}></Cursor>
             <Cursor2 className={"cursor2"}></Cursor2>
-            <Page__nav />
+            <PageNav />
             <AboutWrap className={"mainBody"}>
                 <MainHeader>
                     <h1 className={"mainH"}>ABOUT</h1>
@@ -177,39 +193,9 @@ class About extends React.Component {
                         </ul>
                     </div>
                 </Footer>
-
             </AboutWrap>
         </Wrap>
-    }
-}
-
-function animation() {
-    let items;
-    let winH;
-
-    function initModule() {
-        // items = document.querySelectorAll(".section__li");
-        items = document.querySelectorAll(".faded");
-        winH = window.innerHeight;
-        _addEventHandlers();
-    }
-    function _addEventHandlers() {
-        window.addEventListener("scroll", _checkPosition);
-        window.addEventListener("load", _checkPosition);
-        window.addEventListener("resize", initModule);
-    }
-    function _checkPosition() {
-        for (var i = 0; i < items.length; i++) {
-            var posFromTop = items[i].getBoundingClientRect().top;
-            if (winH > posFromTop) {
-            items[i].classList.add("fadeIn");
-            // console.log(i);
-            }
-        }
-    }
-    return {
-        init: initModule
-    }
+    )
 }
 
 export default About;

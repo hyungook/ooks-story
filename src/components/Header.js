@@ -1,19 +1,11 @@
-import React from 'react'
-
-// import Parallax from 'parallax-js'
-import { Link, Route } from 'react-router-dom';
-import Design from '../Page/Design';
-
+import React, {useEffect} from 'react'
 import '../styles/reset.css';
 import '../styles/Header.css'
 import { Header__Wrap, Container, Cursor, Cursor2,
     HeaderUl, HeaderLi, HeaderA } from './Header__styled';
 
-
-class Header extends React.Component {
-
-    componentDidMount() {
-
+const Header = () => {
+    useEffect(()=>{
         // Cursor Effect 변수
         let cursor = document.querySelector('.cursor');
         let cursor2 = document.querySelector('.cursor2');
@@ -26,61 +18,24 @@ class Header extends React.Component {
         const cursor2HalfWidth = cursor2Rect.width / 2;
         const cursor2HalfHeight = cursor2Rect.height / 2;
         cursor2.style.backgroundColor = `#2bd42e`;
-        
 
-        let headerUl = document.querySelector('.header__ul');
-        let mainNavWrap = document.querySelector('.main__nav__wrap');
-        let nameBox = document.querySelector('.name__box');
-        
-
-        let tf = true;
 
         // Cursor Effect
         document.addEventListener("mousemove", (e) => {
-            // cursor.styled.cssText = cursor2.styled.cssText = "left" + e.clientX + "px; top:" + e.clientY + "px;";
             const y = e.clientY;
             const x = e.clientX;
         
             cursor.style.transform = `translate(${x - cursorHalfWidth}px, ${y - cursorHalfHeight}px)`;
             cursor2.style.transform = `translate(${x - cursor2HalfWidth}px, ${y - cursor2HalfHeight}px)`;
-
-            function mousechange() {
-                cursor.style.borderRadius = `0`;
-                cursor.style.border = `1px solid #ffffff`;
-                cursor.style.backgroundColor = `#2bd42e20`;  
-            }
-            
-            document.addEventListener('mouseover', (e) => {
-                let elem = e.target;
-    
-                // console.log(elem.className)
-                if(elem.className == 'sc-fubCfw ckSEsn header__a'){
-                    // console.log('ok');
-                    mousechange()
-                } else if(elem.className == 'MainBtn') {
-                    mousechange()
-                } else if(elem.className == 'sc-bYEvPH iirIK toy__button') {
-                    mousechange()
-                } else {
-                    // console.log('no')
-                    cursor.style.borderRadius = `50%`;
-                    cursor.style.border = `1px solid #c6c6c6`;
-                    cursor.style.background = `none`;
-                }  
-            })
-
         })
+    },[])
 
-        // let scene = document.querySelector('.scene');
-        // let parallaxInstance = new Parallax(scene);
-    }
-
-    render() {
-        return <Header__Wrap>
+    return(
+        <Header__Wrap>
             <Container>
                 <HeaderUl className={"header__ul"}>
                     <HeaderLi>
-                        <HeaderA href={"https://www.notion.so/React-Basic-Course-Study-Plan-Template-1ed484aa0fba43f8a1c194ac420f21dd"} className={"header__a"} target={"_blank"}>
+                        <HeaderA href={"https://www.notion.so/React-Basic-Course-Study-Plan-1ed484aa0fba43f8a1c194ac420f21dd"} className={"header__a"} target={"_blank"}>
                             Notion
                         </HeaderA>
                     </HeaderLi>
@@ -90,23 +45,16 @@ class Header extends React.Component {
                         </HeaderA>
                     </HeaderLi>
                     <HeaderLi>
-                        <HeaderA href={"#"} className={"header__a"}>
-                            {/* Design */}
-                            <Link to="/Design" className={"MainBtn MainBtn__4"}>Design</Link>
+                        <HeaderA href={"#"} className={"header__a"}  target={"_blank"}>
+                            Velog
                         </HeaderA>
                     </HeaderLi>
                 </HeaderUl>
             </Container>
                 <Cursor className={"cursor"}></Cursor>
                 <Cursor2 className={"cursor2"}></Cursor2>
-
-
-        <main>
-            <Route exact path="/Design" component={Design} />
-        </main>
-
         </Header__Wrap>
-    }
+    )
 }
 
 export default Header;

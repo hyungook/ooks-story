@@ -1,14 +1,10 @@
 import React, { useEffect } from 'react'
 import { Link, Route } from 'react-router-dom';
-
 import Work from '../Page/Work';
 import About from '../Page/About';
 import ToyProj from '../Page/ToyProject';
 import '../styles/reset.css';
-import '../styles/MainBodyNav.css';
-import { Section, MainNav, MainNavWrap,
-    NavBtn, ButtonBackBox, BackBox } from './MainBodyNav__styled';
-
+import styles from '../styles/mainBodyNav.module.css';
 
 const MainBodyNav = () => {
 
@@ -80,25 +76,25 @@ const MainBodyNav = () => {
     },[])
 
     return (
-        <Section>
-                <MainNav>
-                    <MainNavWrap className={"main__nav__wrap"}>
-                        <NavBtn className={"nav__btn__1"}>
-                            <Link to="/about" className={"MainBtn MainBtn__1 Btn"}>ABOUT</Link>
-                        </NavBtn>
-                        <NavBtn className={"nav__btn__2"}>
-                            <Link to="/work" className={"MainBtn MainBtn__2 Btn"}>WORK</Link>
-                        </NavBtn>
-                        <NavBtn className={"nav__btn__3"}>
-                            <Link to="/ToyProject" className={"MainBtn MainBtn__3"}>TOY-PJ</Link>
-                        </NavBtn>
-                    </MainNavWrap>
-                </MainNav>
+        <section className={styles.section}>
+                <nav className={styles.mainNav}>
+                    <div className={styles.mainNavWrap}>
+                        <button className={` ${styles.btn} ${styles.btn1} nav__btn__1`}>
+                            <Link to="/about" className={`${styles.MainBtn} MainBtn__1 Btn`}>ABOUT</Link>
+                        </button>
+                        <button className={` ${styles.btn} ${styles.btn2} nav__btn__2`}>
+                            <Link to="/work" className={`${styles.MainBtn} MainBtn__2 Btn`}>WORK</Link>
+                        </button>
+                        <button className={` ${styles.btn} ${styles.btn3} nav__btn__3`}>
+                            <Link to="/ToyProject" className={`${styles.MainBtn} MainBtn__3`}>TOY-PJ</Link>
+                        </button>
+                    </div>
+                </nav>
 
-                <ButtonBackBox className={"button__back__box"}>
-                    <BackBox className={"back__box"}></BackBox>
-                    <BackBox className={"back__box"}></BackBox>
-                </ButtonBackBox>
+                <div className={styles.backBoxs}>
+                    <div className={styles.backBox}></div>
+                    <div className={styles.backBox}></div>
+                </div>
 
                 <main>
                     <Route exact path="/Work" component={Work} />
@@ -106,7 +102,7 @@ const MainBodyNav = () => {
                     <Route exact path="/ToyProject" component={ToyProj} />
                 </main>
 
-            </Section>
+            </section>
     )
 }
 

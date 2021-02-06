@@ -1,15 +1,16 @@
 import React from 'react'
 import '../styles/reset.css';
-import { NameBox, ToyBtn } from './Footer__styled';
+import styles from '../styles/footer.module.css';
+// import { NameBox, ToyBtn } from './Footer__styled';
 
 const Footer = () => {
     return(
         <footer>
-            <NameBox className={"name__box scene"}>
-                <ToyBtn href={"https://hyungook.github.io/modern-resume/"} className={"toy__button"} data-depth={"0.3"} target={"_blank"}>
+            <div className={styles.nameBox}>
+                <a href={"https://hyungook.github.io/modern-resume/"} className={styles.toyBtn} data-depth={"0.3"} target={"_blank"}>
                     HYUNGOOK'S STORY
-                </ToyBtn>
-            </NameBox>
+                </a>
+            </div>
         </footer>
     )
 } 

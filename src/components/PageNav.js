@@ -1,13 +1,11 @@
 import React,{ useEffect } from'react'
 import '../styles/reset.css'
-import '../styles/page.css'
+import styles from '../styles/page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import { Section, Header__top, Header__bottom, Backword, Menu__button, HomeMenu } from './Page__nav__styled';
 
 const PageNav = () => {
-
     useEffect(() => {
         // menu button handler
         let onOff = true;
@@ -18,13 +16,13 @@ const PageNav = () => {
         const navClick = menuBtn.addEventListener('click', () => {
 
             if(onOff) {
-                homeMenu.classList.add("open");
-                menuBtn.classList.add("openBtn");
+                homeMenu.classList.add(`${styles.open}`);
+                menuBtn.classList.add(`${styles.openBtn}`);
                 console.log(onOff);
                 onOff = false;
             } else {
-                homeMenu.classList.remove("open");
-                menuBtn.classList.remove("openBtn");
+                homeMenu.classList.remove(`${styles.open}`);
+                menuBtn.classList.remove(`${styles.openBtn}`);
                 homeMenu.style.outline = `none`;
                 console.log(onOff);
                 onOff = true;
@@ -33,27 +31,27 @@ const PageNav = () => {
     },[])
 
     return (
-        <Section className={"header"}>
-            <Header__top className={"header__top"}>
-                <Backword className={"backward"}>
-                    <Link to="/" className={"MainBtn"}>
-                        <FontAwesomeIcon icon={faAngleLeft} className={"icon"}/>
+        <section className={styles.section}>
+            <div className={styles.headerTop}>
+                <button className={styles.backward}>
+                    <Link to="/" className={`${styles.mainBtn} MainBtn`}>
+                        <FontAwesomeIcon icon={faAngleLeft} className={styles.icon}/>
                     </Link>
-                </Backword>
-            </Header__top>
-            <Header__bottom className={"header__bottom"}>
-                <Menu__button className={"menuBtn"}>
-                    <span className={"span"}></span>
-                    <span className={"span"}></span>
-                    <span className={"span"}></span>
-                </Menu__button>
-                <HomeMenu className={"homeMenu"}>
-                    <li className={"menuLink"}><Link to="/work" className={"MainBtn"}>WORK</Link></li>
-                    <li className={"menuLink"}><Link to="/about" className={"MainBtn"}>ABOUT</Link></li>
-                    <li className={"menuLink"}><Link to="/ToyProject" className={"MainBtn"}>TOY-PJ</Link></li>
-                </HomeMenu>
-            </Header__bottom>
-        </Section>
+                </button>
+            </div>
+            <div className={styles.headerButtom}>
+                <div className={`${styles.menuBtn} menuBtn`}>
+                    <span className={`${styles.span} span`}></span>
+                    <span className={`${styles.span} span`}></span>
+                    <span className={`${styles.span} span`}></span>
+                </div>
+                <ul className={`${styles.homeMenu} homeMenu`}>
+                    <li className={`${styles.menuLink} menuLink`}><Link to="/work" className={styles.mainBtn}>WORK</Link></li>
+                    <li className={`${styles.menuLink} menuLink`}><Link to="/about" className={styles.mainBtn}>ABOUT</Link></li>
+                    <li className={`${styles.menuLink} menuLink`}><Link to="/ToyProject" className={styles.mainBtn}>TOY-PJ</Link></li>
+                </ul>
+            </div>
+        </section>
     )
 };
 

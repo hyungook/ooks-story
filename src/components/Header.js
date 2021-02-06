@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react'
 import '../styles/reset.css';
-import '../styles/Header.css'
-import { Header__Wrap, Container, Cursor, Cursor2,
-    HeaderUl, HeaderLi, HeaderA } from './Header__styled';
+import styles from '../styles/header.module.css';
 
 const Header = () => {
     useEffect(()=>{
@@ -14,11 +12,10 @@ const Header = () => {
 
         const cursorHalfWidth = cursorRect.width / 2;
         const cursorHalfHeight = cursorRect.height / 2;
-
+        
         const cursor2HalfWidth = cursor2Rect.width / 2;
         const cursor2HalfHeight = cursor2Rect.height / 2;
         cursor2.style.backgroundColor = `#2bd42e`;
-
 
         // Cursor Effect
         document.addEventListener("mousemove", (e) => {
@@ -31,29 +28,29 @@ const Header = () => {
     },[])
 
     return(
-        <Header__Wrap>
-            <Container>
-                <HeaderUl className={"header__ul"}>
-                    <HeaderLi>
-                        <HeaderA href={"https://www.notion.so/React-Basic-Course-Study-Plan-1ed484aa0fba43f8a1c194ac420f21dd"} className={"header__a"} target={"_blank"}>
+        <section className={styles.headerWrap}>
+            <div className={styles.container}>
+                <ul className={styles.headerUl}>
+                    <li className={styles.headerLi}>
+                        <a className={styles.headerA} href={"https://www.notion.so/React-Basic-Course-Study-Plan-1ed484aa0fba43f8a1c194ac420f21dd"} target={"_blank"}>
                             Notion
-                        </HeaderA>
-                    </HeaderLi>
-                    <HeaderLi>
-                        <HeaderA href={"https://github.com/hyungook"} className={"header__a"} target={"_blank"}>
+                        </a>
+                    </li>
+                    <li className={styles.headerLi}>
+                        <a className={styles.headerA} href={"https://github.com/hyungook"} target={"_blank"}>
                             GitHub
-                        </HeaderA>
-                    </HeaderLi>
-                    <HeaderLi>
-                        <HeaderA href={"#"} className={"header__a"}  target={"_blank"}>
+                        </a>
+                    </li>
+                    <li className={styles.headerLi}>
+                        <a className={styles.headerA} href={"https://velog.io/@nenonenoberneno"} target={"_blank"}>
                             Velog
-                        </HeaderA>
-                    </HeaderLi>
-                </HeaderUl>
-            </Container>
-                <Cursor className={"cursor"}></Cursor>
-                <Cursor2 className={"cursor2"}></Cursor2>
-        </Header__Wrap>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                <div className={`${styles.cursor} cursor`}></div>
+                <div className={`${styles.cursor2} cursor2`}></div>
+        </section>
     )
 }
 

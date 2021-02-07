@@ -55,6 +55,15 @@ export const data =[
     },
     {
         category: "Library",
+        image: "PostCSS.png",
+        alt: "PostCSS",
+        skillName: "PostCSS",
+        level: "5",
+        text: "개발 트렌트에 맞춰 2020년 가장 높은 점유율을 가지고 있는 CSS 전처리기 PostCSS를 사용합니다.",
+        color : "#dd3a0a",
+    },
+    {
+        category: "Library",
         image: "jquery.png",
         alt: "Jquery",
         skillName: "Jquery",
@@ -70,6 +79,15 @@ export const data =[
         level: "1",
         text: "WebPack, MongoDB 등을 사용해 본 경험이 있습니다.",
         color : "#8fc53f",
+    },
+    {
+        category: "Back-End",
+        image: "firebase.png",
+        alt: "Firebase",
+        skillName: "Firebase",
+        level: "3",
+        text: "Firebase를 이용하여 Authentication과 RealTime Databse 그리고 Storage기능을 사용해 간단한 웹 어플리캐이션을 제작할 수 있습니다.",
+        color : "#ffcb2c",
     },
     {
         category: "Design",

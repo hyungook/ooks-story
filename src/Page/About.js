@@ -80,8 +80,8 @@ const About = () => {
                     </p>
                 </header>
                 <section className={`${styles.aboutHeader} about__header`}>
-                    <p>지금까지 습득해온 개발/디자인 등의 다양한 능력을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>
-                    <div className={`${styles.imageBox} ${styles.imgBox} image__box aniImg`}>
+                    <p>지금까지 습득해온 개발/디자인 등 다양한 기술을 저만의 이야기로 멈추지 않고, <br />프로젝트를 통해 대중과 소통하고 교류할 수 있는 개발자가 되고 싶습니다.</p>
+                    <div className={`${styles.imageBox} ${styles.imgBox} image__box faded`}>
                         <img src={`${img}about.png`} className={`${styles.aboutImage} aboutImage`}></img>
                     </div>
                 </section>

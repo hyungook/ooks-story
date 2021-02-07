@@ -347,7 +347,7 @@
   }
   .portfoImgBox:hover > .goBtn {
     opacity: 1;
-    box-shadow: 0 0 8px #11111150;
+    box-shadow: 0 0 8px #11111160;
   }
   .portfoInfo {
     display: inline-block;

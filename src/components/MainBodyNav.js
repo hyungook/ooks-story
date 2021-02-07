@@ -9,9 +9,7 @@ import styles from '../styles/mainBodyNav.module.css';
 const MainBodyNav = () => {
 
     useEffect(()=> {
-        window.addEventListener('resize', () => {
-            // console.log(`${window.innerWidth}`);
-        })
+        
         const innerWidth = window.innerWidth;
 
         if(innerWidth >= 1281) {
@@ -79,13 +77,13 @@ const MainBodyNav = () => {
         <section className={styles.section}>
                 <nav className={styles.mainNav}>
                     <div className={styles.mainNavWrap}>
-                        <button className={` ${styles.btn} ${styles.btn1} nav__btn__1`}>
-                            <Link to="/about" className={`${styles.MainBtn} MainBtn__1 Btn`}>ABOUT</Link>
+                        <button className={`${styles.btn} nav__btn__1`}>
+                            <Link to="/about" className={`${styles.MainBtn} MainBtn__1`}>ABOUT</Link>
                         </button>
-                        <button className={` ${styles.btn} ${styles.btn2} nav__btn__2`}>
-                            <Link to="/work" className={`${styles.MainBtn} MainBtn__2 Btn`}>WORK</Link>
+                        <button className={`${styles.btn} nav__btn__2`}>
+                            <Link to="/work" className={`${styles.MainBtn} MainBtn__2`}>WORK</Link>
                         </button>
-                        <button className={` ${styles.btn} ${styles.btn3} nav__btn__3`}>
+                        <button className={`${styles.btn} nav__btn__3`}>
                             <Link to="/ToyProject" className={`${styles.MainBtn} MainBtn__3`}>TOY-PJ</Link>
                         </button>
                     </div>

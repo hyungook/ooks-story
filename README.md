@@ -2,7 +2,7 @@
 
 리액트(React)를 활용하여 제작한 hyungook oh의 포트폴리오 반응형 웹사이트입니다.
 
-[Portfolio]()
+[link] :https://hyungook.github.io/ooks-story/
 
 ### 사용 라이브러리
 

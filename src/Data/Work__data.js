@@ -12,7 +12,7 @@ export const data =[
         technic3 : "Javascript",
         technic4 : "HTML"},
     {
-        url : "https://hyungook.github.io/hyungooks-story/",
+        url : "https://hyungook.github.io/ooks-story/",
         img : "hyungookstory.png",
         alt : "thumnail image",
         title : "OOK's Story ver2.0",

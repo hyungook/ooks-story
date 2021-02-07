@@ -141,7 +141,7 @@ const ToyProject = () => {
                                 <div className={`${styles.infoWrap} fadeIn`}>
                                     <div className={styles.info}>{data["info"]}</div>
                                     <div className={styles.skill}>
-                                        <a href={data[`${styles.github} github`]} target={"blank"} className={"github"}>GitHub</a>
+                                        <a href={data["github"]} target={"blank"} className={"github"}>GitHub</a>
                                         <span className={"technic"}>{data["technic1"]}</span>
                                         <span className={"technic"}>{data["technic2"]}</span>
                                         <span className={"technic"}>{data["technic3"]}</span>

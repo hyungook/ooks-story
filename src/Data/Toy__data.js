@@ -1,7 +1,7 @@
 export const data = [
     {
-        url: "https://github.com/hyungook/movie_app",
-        github: "https://hyungook.github.io/movie_app/#/",
+        url: "https://hyungook.github.io/movie_app/#/",
+        github: "https://github.com/hyungook/movie_app",
         img: "movieApp.png",
         alt: "thumnail image",
         title: " Movie App",

@@ -99,6 +99,7 @@ const Work = () => {
                                 <div className={"technic"}>{data["technic2"]}</div>
                                 <div className={"technic"}>{data["technic3"]}</div>
                                 <div className={"technic"}>{data["technic4"]}</div>
+                                <div className={"technic"}>{data["technic5"]}</div>
                             </div>
                         </div>
                     </a>

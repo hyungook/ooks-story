@@ -1,5 +1,18 @@
 export const data = [
     {
+        url: "https://github.com/hyungook/movie_app",
+        github: "https://hyungook.github.io/movie_app/#/",
+        img: "movieApp.png",
+        alt: "thumnail image",
+        title: " Movie App",
+        subTitle: "Movie Introduction Page",
+        info: "JSX, State, Porps, Data Fetching 등을 연습하기 위해 제작한 토이프로젝트입니다.",
+        technic1: "React",
+        technic2: "Javascript",
+        technic3: "CSS3",
+        technic4: "HTML"
+    },
+    {
         url: "https://hyungook.github.io/best-video/",
         github: "https://github.com/hyungook/best-video",
         img: "bestvideo.png",

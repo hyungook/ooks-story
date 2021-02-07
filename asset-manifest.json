@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/ooks-story/static/css/main.392054d9.chunk.css",
-    "main.js": "/ooks-story/static/js/main.f115acc6.chunk.js",
-    "main.js.map": "/ooks-story/static/js/main.f115acc6.chunk.js.map",
+    "main.js": "/ooks-story/static/js/main.c5b59cb6.chunk.js",
+    "main.js.map": "/ooks-story/static/js/main.c5b59cb6.chunk.js.map",
     "runtime-main.js": "/ooks-story/static/js/runtime-main.18926954.js",
     "runtime-main.js.map": "/ooks-story/static/js/runtime-main.18926954.js.map",
-    "static/js/2.9ad58a0f.chunk.js": "/ooks-story/static/js/2.9ad58a0f.chunk.js",
-    "static/js/2.9ad58a0f.chunk.js.map": "/ooks-story/static/js/2.9ad58a0f.chunk.js.map",
+    "static/js/2.30515b11.chunk.js": "/ooks-story/static/js/2.30515b11.chunk.js",
+    "static/js/2.30515b11.chunk.js.map": "/ooks-story/static/js/2.30515b11.chunk.js.map",
     "index.html": "/ooks-story/index.html",
     "static/css/main.392054d9.chunk.css.map": "/ooks-story/static/css/main.392054d9.chunk.css.map",
-    "static/js/2.9ad58a0f.chunk.js.LICENSE.txt": "/ooks-story/static/js/2.9ad58a0f.chunk.js.LICENSE.txt",
+    "static/js/2.30515b11.chunk.js.LICENSE.txt": "/ooks-story/static/js/2.30515b11.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/ooks-story/static/media/SCDream9.c8e7afd8.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.18926954.js",
-    "static/js/2.9ad58a0f.chunk.js",
+    "static/js/2.30515b11.chunk.js",
     "static/css/main.392054d9.chunk.css",
-    "static/js/main.f115acc6.chunk.js"
+    "static/js/main.c5b59cb6.chunk.js"
   ]
 }

@@ -7,8 +7,8 @@
 ### 사용 라이브러리
 
 - React
-- Styled-components
 - Font Awesome
+- Post CSS
 
 ### 사용 스킬
 

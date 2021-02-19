@@ -37,15 +37,6 @@ export const data =[
     },
     {
         category: "Library",
-        image: "react.png",
-        alt: "React Native",
-        skillName: "React Native",
-        level: "1",
-        text: "현재 개발 중입니다.",
-        color : "#01d7fe",
-    },
-    {
-        category: "Library",
         image: "typescript.png",
         alt: "Typescript",
         skillName: "Typescript",

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link, Route } from 'react-router-dom';
 import Work from '../Page/Work';
 import About from '../Page/About';
@@ -8,66 +8,68 @@ import styles from '../styles/mainBodyNav.module.css';
 
 const MainBodyNav = () => {
 
-    useEffect(()=> {
-        
-        const innerWidth = window.innerWidth;
-
-        if(innerWidth >= 1281) {
-            const MainBtn__1 = document.querySelector('.MainBtn__1')
-            const MainBtn__2 = document.querySelector('.MainBtn__2')
-            const MainBtn__3 = document.querySelector('.MainBtn__3')
-
-        // MainBtn__1
-        MainBtn__1.addEventListener('mouseover', () => {
-            MainBtn__1.style.transform = `translateX(10%)`;
-            MainBtn__2.style.transform = `translateX(70%)`;
-            MainBtn__3.style.transform = `translateX(70%)`;
+    const innerWidth = window.innerWidth;
     
-            MainBtn__2.style.opacity = `0.3`;
-            MainBtn__3.style.opacity = `0.3`;
-        })
-        MainBtn__1.addEventListener('mouseout', () => {
-            MainBtn__1.style.transform = `translateX(-50%)`;
-            MainBtn__2.style.transform = `translateX(0)`;
-            MainBtn__3.style.transform = `translateX(50%)`;
-            
-            MainBtn__2.style.opacity = `1`;
-            MainBtn__3.style.opacity = `1`;
-        })
-        // MainBtn__2
-        MainBtn__2.addEventListener('mouseover', () => {
-            MainBtn__1.style.transform = `translateX(-70%)`;
-            MainBtn__2.style.transform = `translateX(0%)`;
-            MainBtn__3.style.transform = `translateX(70%)`;
-            
-            MainBtn__1.style.opacity = `0.3`;
-            MainBtn__3.style.opacity = `0.3`;
-        })
-        MainBtn__2.addEventListener('mouseout', () => {
-            MainBtn__1.style.transform = `translateX(-50%)`;
-            MainBtn__2.style.transform = `translateX(0)`;
-            MainBtn__3.style.transform = `translateX(50%)`;
-            
-            MainBtn__1.style.opacity = `1`;
-            MainBtn__3.style.opacity = `1`;
-        })
-        // MainBtn__3
-        MainBtn__3.addEventListener('mouseover', () => {
-            MainBtn__1.style.transform = `translateX(-70%)`;
-            MainBtn__2.style.transform = `translateX(-70%)`;
-            MainBtn__3.style.transform = `translateX(-10%)`;
-            
-            MainBtn__1.style.opacity = `0.3`;
-            MainBtn__2.style.opacity = `0.3`;
-        })
-        MainBtn__3.addEventListener('mouseout', () => {
-            MainBtn__1.style.transform = `translateX(-50%)`;
-            MainBtn__2.style.transform = `translateX(0)`;
-            MainBtn__3.style.transform = `translateX(50%)`;
-            
-            MainBtn__1.style.opacity = `1`;
-            MainBtn__2.style.opacity = `1`;
-        })
+    const navBtn__1 = useRef();
+    const navBtn__2 = useRef();
+    const navBtn__3 = useRef();
+
+    // if(innerWidth >= 1281) {
+    // } else {
+    //     return;
+    // }
+
+    // one
+    const oneHover = () => {
+        // console.log(navBtn__1.current);
+        // console.log('o');
+        navBtn__1.current.style.transform = `translateX(10%)`;
+        navBtn__2.current.style.transform = `translateX(70%)`;
+        navBtn__3.current.style.transform = `translateX(70%)`;
+
+        navBtn__2.current.style.opacity = `0.3`;
+        navBtn__3.current.style.opacity = `0.3`;
+    };
+
+    // two
+    const twoHover = () => {
+        // console.log(navBtn__2.current);
+        navBtn__1.current.style.transform = `translateX(-70%)`;
+        navBtn__2.current.style.transform = `translateX(0%)`;
+        navBtn__3.current.style.transform = `translateX(70%)`;
+
+        navBtn__1.current.style.opacity = `0.3`;
+        navBtn__3.current.style.opacity = `0.3`;
+    };
+
+    // three
+    const threeHover = () => {
+        // console.log(navBtn__3.current);
+        navBtn__1.current.style.transform = `translateX(-70%)`;
+        navBtn__2.current.style.transform = `translateX(-70%)`;
+        navBtn__3.current.style.transform = `translateX(-10%)`;
+
+        navBtn__1.current.style.opacity = `0.3`;
+        navBtn__2.current.style.opacity = `0.3`;
+    };
+
+    // leave
+    const btnLeave = () => {
+        // console.log('x');
+        navBtn__1.current.style.transform = `translateX(-50%)`;
+        navBtn__2.current.style.transform = `translateX(0)`;
+        navBtn__3.current.style.transform = `translateX(50%)`;
+
+        navBtn__1.current.style.opacity = `1`;
+        navBtn__2.current.style.opacity = `1`;
+        navBtn__3.current.style.opacity = `1`;
+    };
+
+    useEffect(()=> {
+        if(innerWidth >= 1281) {
+            navBtn__1.current.style.transform = `translateX(-50%)`;
+            navBtn__2.current.style.transform = `translateX(0)`;
+            navBtn__3.current.style.transform = `translateX(50%)`;
         } else {
             return;
         }
@@ -77,14 +79,14 @@ const MainBodyNav = () => {
         <section className={styles.section}>
                 <nav className={styles.mainNav}>
                     <div className={styles.mainNavWrap}>
-                        <button className={`${styles.btn} nav__btn__1`}>
-                            <Link to="/about" className={`${styles.MainBtn} MainBtn__1`}>ABOUT</Link>
+                        <button className={styles.btn} ref={navBtn__1} onMouseOver={oneHover} onMouseLeave={btnLeave} >
+                            <Link to="/about" className={`${styles.MainBtn} navBtn__1`}>ABOUT</Link>
                         </button>
-                        <button className={`${styles.btn} nav__btn__2`}>
-                            <Link to="/work" className={`${styles.MainBtn} MainBtn__2`}>WORK</Link>
+                        <button className={styles.btn} ref={navBtn__2} onMouseOver={twoHover} onMouseLeave={btnLeave}>
+                            <Link to="/work" className={`${styles.MainBtn} navBtn__2`}>WORK</Link>
                         </button>
-                        <button className={`${styles.btn} nav__btn__3`}>
-                            <Link to="/ToyProject" className={`${styles.MainBtn} MainBtn__3`}>TOY-PJ</Link>
+                        <button className={styles.btn} ref={navBtn__3} onMouseOver={threeHover} onMouseLeave={btnLeave}>
+                            <Link to="/ToyProject" className={`${styles.MainBtn} navBtn__3`}>TOY-PJ</Link>
                         </button>
                     </div>
                 </nav>

@@ -1,8 +1,14 @@
 @charset 'utf-8';
+
+.footer {
+  /* width: 100%;
+  box-sizing: border-box;
+  position: relative; */
+}
 .nameBox {
   width: 100%;
-  height: 80px;
-  position: absolute;
+  height: 60px;
+  /* position: absolute; */
   left: 0;
   bottom: 0;
 
@@ -21,6 +27,37 @@
   color: #999;
   border-bottom: 2px solid #2966ff;
   text-decoration: none;
+}
+
+.alert {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  text-decoration: none;
+  font-family: Noto Sans KR, sans-serif;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1.1px;
+  animation: aniAlert;
+  animation-duration: 1.6s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+
+  opacity: 0;
+}
+
+@keyframes aniAlert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -68,4 +105,9 @@
     transform: scaleY(1);
     transform-origin: top;
   }
+
+  .alert {
+    font-size: 0.9rem;
+  }
+
 }

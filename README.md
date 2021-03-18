@@ -17,3 +17,4 @@
 - MediaQuery
 
 ###### 본 작업물은 'hyungook oh'의 개인 포트폴리오 작업물입니다.
+- 본 포트폴리오는 Google Chrome에서 정상 작동합니다.

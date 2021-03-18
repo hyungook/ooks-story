@@ -3,7 +3,11 @@ import '../styles/reset.css';
 import styles from '../styles/header.module.css';
 
 const Header = () => {
+
+
     useEffect(()=>{
+        window.alert('본 포트폴리오는 Chrome에서 정상작동합니다')
+
         // Cursor Effect 변수
         let cursor = document.querySelector('.cursor');
         let cursor2 = document.querySelector('.cursor2');

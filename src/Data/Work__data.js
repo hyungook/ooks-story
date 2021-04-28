@@ -24,6 +24,18 @@ export const data =[
         technic3 : "Javascript",
         technic4 : "HTML"},
     {
+        url : "https://hyungook.github.io/ohtube/",
+        img : "ohtube.png",
+        alt : "thumnail image",
+        title : "OHtube",
+        subTitle : "OHtube Video Service",
+        info : "YouTube API를 활용하여 제작한 Mobile First 디자인의 영상 웹서비스 페이지 입니다. 제가 좋아하는 유튜브를 저장하고 검색하여 시청할 수 있습니다.",
+        github : "https://github.com/hyungook/ohtube",
+        technic1 : "React",
+        technic2 : "PostCSS",
+        technic3 : "Javascript",
+        technic4 : "HTML"},
+    {
         url : "https://hyungook.github.io/business-card-maker/",
         img : "cardmaker.png",
         alt : "thumnail image",

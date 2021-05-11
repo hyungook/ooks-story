@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ooks-story/static/css/main.3fab9c5f.chunk.css",
+    "main.css": "/ooks-story/static/css/main.c5c55f89.chunk.css",
     "main.js": "/ooks-story/static/js/main.68b4efb2.chunk.js",
     "main.js.map": "/ooks-story/static/js/main.68b4efb2.chunk.js.map",
     "runtime-main.js": "/ooks-story/static/js/runtime-main.18926954.js",
@@ -8,14 +8,14 @@
     "static/js/2.587a56a0.chunk.js": "/ooks-story/static/js/2.587a56a0.chunk.js",
     "static/js/2.587a56a0.chunk.js.map": "/ooks-story/static/js/2.587a56a0.chunk.js.map",
     "index.html": "/ooks-story/index.html",
-    "static/css/main.3fab9c5f.chunk.css.map": "/ooks-story/static/css/main.3fab9c5f.chunk.css.map",
+    "static/css/main.c5c55f89.chunk.css.map": "/ooks-story/static/css/main.c5c55f89.chunk.css.map",
     "static/js/2.587a56a0.chunk.js.LICENSE.txt": "/ooks-story/static/js/2.587a56a0.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/ooks-story/static/media/SCDream9.c8e7afd8.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.18926954.js",
     "static/js/2.587a56a0.chunk.js",
-    "static/css/main.3fab9c5f.chunk.css",
+    "static/css/main.c5c55f89.chunk.css",
     "static/js/main.68b4efb2.chunk.js"
   ]
 }

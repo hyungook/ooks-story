@@ -44,6 +44,6 @@
 
 @media (min-width: 1281px) {
   * {
-    cursor: none;
+    /* cursor: none; */
   }
 }

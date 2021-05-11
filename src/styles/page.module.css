@@ -111,7 +111,7 @@
 .mainBtn > .icon {
   font-size: 2rem;
   color: #fff;
-  cursor: none;
+  /* cursor: none; */
   transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 }
 .backward:hover {
@@ -173,10 +173,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: none;
+    /* cursor: none; */
   }
   .backward {
-    cursor: none;
+    /* cursor: none; */
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
   }
   .mainBtn {
@@ -191,7 +191,7 @@
     height: 50%;
 
     justify-content: center;
-    cursor: none;
+    /* cursor: none; */
     position: relative;
   }
   .menuBtn {
@@ -199,7 +199,7 @@
     height: 50px;
     padding: 0 10px;
     align-items: start;
-    cursor: none;
+    /* cursor: none; */
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
   }
 

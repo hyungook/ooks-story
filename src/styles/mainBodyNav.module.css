@@ -45,7 +45,7 @@
   white-space: nowrap;
   text-decoration: none;
   transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
-  cursor: none;
+  /* cursor: none; */
   line-height: 1;
 }
 .backBoxs {
@@ -167,14 +167,14 @@
     align-items: center;
     text-transform: uppercase;
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 1s;
-    cursor: none;
+    /* cursor: none; */
   }
   .MainBtn {
     font-size: 13rem;
   }
   .MainBtn:hover,
   .MainBtn:focus {
-    cursor: none;
+    /* cursor: none; */
     font-size: 14rem;
     color: #fff;
     letter-spacing: 0.9rem;
@@ -244,6 +244,6 @@
     z-index: 9999;
   }
   .section {
-    cursor: none;
+    /* cursor: none; */
   }
 }

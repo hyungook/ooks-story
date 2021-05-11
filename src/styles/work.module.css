@@ -417,6 +417,6 @@
     z-index: 9999;
   }
   .section {
-    cursor: none;
+    /* cursor: none; */
   }
 }

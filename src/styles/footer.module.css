@@ -75,7 +75,7 @@
     color: #777;
     border-bottom: 1px solid #2966ff;
     line-height: 1.2;
-    cursor: none;
+    /* cursor: none; */
     transition-timing-function: cubic-bezier(0.33, 0.78, 0.41, 1);
     z-index: 1;
   }
@@ -109,5 +109,4 @@
   .alert {
     font-size: 0.9rem;
   }
-
 }

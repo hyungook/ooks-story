@@ -3,7 +3,7 @@
 .section {
   width: 100%;
   color: #fff;
-  cursor: none;
+  /* cursor: none; */
   background-color: #111;
 }
 .wrap {
@@ -123,7 +123,7 @@
   right: 0;
   color: #111;
   background-color: #fff;
-  cursor: none;
+  /* cursor: none; */
   transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
 }
 .portfoInfo {
@@ -342,7 +342,7 @@
     right: 0;
     color: #111;
     background-color: #fff;
-    cursor: none;
+    /* cursor: none; */
     transition: all cubic-bezier(0.33, 0.78, 0.41, 1) 500ms;
   }
   .portfoImgBox:hover > .goBtn {
@@ -443,6 +443,6 @@
     z-index: 9999;
   }
   .section {
-    cursor: none;
+    /* cursor: none; */
   }
 }

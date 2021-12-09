@@ -7,7 +7,8 @@ const Footer = () => {
     return(
         <footer className={styles.footer}>
             <div className={styles.nameBox}>
-                <a href={"https://hyungook.github.io/modern-resume/"} className={styles.toyBtn} data-depth={"0.3"} target={"_blank"}>
+                {/* <a href={"https://hyungook.github.io/modern-resume/"} className={styles.toyBtn} data-depth={"0.3"} target={"_blank"}> */}
+                <a href={""} className={styles.toyBtn} data-depth={"0.3"} target={"_blank"}>
                     HYUNGOOK'S STORY
                 </a>
             </div>
